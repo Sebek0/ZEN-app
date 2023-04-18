@@ -1,7 +1,7 @@
 import uvicorn
 
 
-host="0.0.0.0"
+host="127.0.0.1" # For development only, in prod use 0.0.0.0
 port=8002
 app_name="app.main:app"
 
