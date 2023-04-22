@@ -131,6 +131,6 @@ dmypy.json
 # Configuration files
 config.ini
 
+frontend/node_modules
 # Database files
 *.db
-frontend/node_modules
