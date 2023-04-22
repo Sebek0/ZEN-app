@@ -130,3 +130,6 @@ dmypy.json
 
 # Configuration files
 config.ini
+
+# Database files
+*.db
