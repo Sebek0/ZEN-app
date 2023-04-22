@@ -1,6 +1,7 @@
 from pydantic import BaseModel
 from typing import Literal
 
+
 class WeaponBase(BaseModel):
     weapon_instance_id: int
     name: str
@@ -14,7 +15,8 @@ class WeaponBase(BaseModel):
 
 class WeaponCreate(WeaponBase):
     pass
-        
+
+
 class Weapon(WeaponBase):
     id: int
     character_id: int
