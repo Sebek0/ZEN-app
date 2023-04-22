@@ -1,4 +1,26 @@
 from pydantic import BaseModel
+from typing import Literal
+
+class WeaponBase(BaseModel):
+    weapon_instance_id: int
+    name: str
+    slot: Literal['kinetic', 'energy', 'power']
+    state: int
+    stats: dict = {}
+    damage_type: Literal['kinetic', 'arc', 'solar', 'void', 'stasis', 'strand']
+    perks: dict = {}
+    damage_type: str
+
+
+class WeaponCreate(WeaponBase):
+    pass
+        
+class Weapon(WeaponBase):
+    id: int
+    character_id: int
+
+    class Config:
+        orm_mode = True
 
 
 class ArmorBase(BaseModel):
@@ -32,11 +54,12 @@ class CharacterBase(BaseModel):
 
 class CharacterCreate(CharacterBase):
     pass
-   
-        
+
+
 class Character(CharacterBase):
     id: int
     guardian_id: int
+    weapons: list[Weapon] = []
     armors: list[Armor] = []
 
     class Config:
