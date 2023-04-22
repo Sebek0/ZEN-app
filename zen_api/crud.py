@@ -96,7 +96,7 @@ def create_character(db: Session, character: schemas.CharacterCreate, guardian_i
 
 def get_character(db: Session, character_id: int):
     return db.query(models.Character).filter(models.Character.id == character_id).first()
-    
+
 ###########################################
 def create_armor(db: Session, armor: schemas.Armor, character_id: int):
     db_armor = models.Armor(**armor.dict(), character_id=character_id)
@@ -105,9 +105,19 @@ def create_armor(db: Session, armor: schemas.Armor, character_id: int):
     db.refresh(db_armor)
     return db_armor
 
+def create_weapon(db: Session, weapon: schemas.WeaponCreate, character_id: int):
+    db_weapon = models.Weapon(**weapon.dict(), character_id=character_id)
+    db.add(db_weapon)
+    db.commit()
+    db.refresh(db_weapon)
+    return db_weapon
+
 def get_armor(db: Session, armor_id: int):
     return db.query(models.Armor).filter(models.Armor.id == armor_id).first()
-
+def get_weapons(db: Session):
+    return db.query(models.Weapon)
+def get_weapon_by_id(db: Session, weapon_id: int):
+    return db.query(models.Weapon).filter(models.Weapon.id == weapon_id).first()
 
 # def create_user_item(db: Session, item: schemas.ItemCreate, user_id: int):
 #     db_item = models.Item(**item.dict(), owner_id=user_id)

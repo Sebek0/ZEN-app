@@ -9,7 +9,9 @@ def create_guardian(payload):
 def create_character(guardian_id, payload):
     response = requests.post(f'http://127.0.0.1:8000/guardians/{guardian_id}/character/', json=payload)
     print(f"Char: {response}")
-    
+
+def create_weapon(character_id, payload):
+    response = requests.post(f'http: //127.0.0.1: 8000/guardians/{guardian_id}/character/{character_id}/weapons', json=payload)
     
 names = ['andrzej', 'filip', 'piotr']
 for i in range(1, 250):

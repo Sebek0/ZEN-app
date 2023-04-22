@@ -2,7 +2,8 @@ from fastapi import Depends, FastAPI, HTTPException
 from sqlalchemy.orm import Session
 
 from . import crud, models, schemas
-from .database import SessionLocal, engine
+from .database import SessionLocal, engine, get_db
+from .routers import weapons
 
 models.Base.metadata.create_all(bind=engine)
 
@@ -46,15 +47,7 @@ app = FastAPI(
     description=description,
     version="0.0.1",
 )
-
-
-# Dependency
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
+app.include_router(weapons.router)
 
 
 # @app.post("/users/", response_model=schemas.User)
