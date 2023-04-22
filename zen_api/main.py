@@ -153,11 +153,40 @@ def delete_user(guardian_id: int, db: Session = Depends(get_db)):
 #     users = crud.get_users(db, skip=skip, limit=limit)
 #     return users
 
-@app.post("/guardians/{guardian_id}/character/", response_model=schemas.Character, tags=['Characters'])
+@app.post("/guardians/{guardian_id}/", response_model=schemas.Character, tags=['Characters'])
 def create_character_for_guardian(
     guardian_id: int, character: schemas.CharacterCreate, db: Session = Depends(get_db)
 ):
     return crud.create_character(db=db, character=character, guardian_id=guardian_id)
+
+@app.get("/characters/{character_id}", response_model=schemas.Character, tags=['Characters'])
+def read_character(character_id: int, db: Session = Depends(get_db)):
+    db_character = crud.get_character(db, character_id=character_id)
+    if db_character is None:
+        raise HTTPException(status_code=404, detail="Character not found")
+    return db_character
+
+
+@app.get('/guardians/{guardian_id}', response_model=schemas.Guardian, tags=['Guardians'])
+def read_guardian(guardian_id: int, db: Session = Depends(get_db)):
+    db_guardian = crud.get_guardian(db, guardian_id=guardian_id)
+    if db_guardian is None:
+        raise HTTPException(status_code=404, detail="Guardian not found")
+    return db_guardian
+
+###################################################################
+@app.post("/characters/{character_id}/armors/", response_model=schemas.Armor, tags=['Armors'])
+def create_armor_for_character(
+    character_id: int, armor: schemas.ArmorCreate, db: Session = Depends(get_db)   
+):
+    return crud.create_armor(db=db, armor=armor, character_id=character_id)
+
+@app.get("/armors/{armor_id}", response_model=schemas.Armor, tags=['Armors'])
+def read_armor_by_id(armor_id: int, db: Session = Depends(get_db)):
+    db_armor = crud.get_armor(db, armor_id=armor_id)
+    if db_armor is None:
+        raise HTTPException(status_code=404, detail="Armor not found")
+    return db_armor
 
 """functionality	    method	    path
 create a todo item	    POST	    /todo

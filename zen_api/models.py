@@ -5,6 +5,7 @@ from sqlalchemy.ext.mutable import MutableList, MutableDict
 
 from .database import Base
 
+
 class Guardian(Base):
     __tablename__ = 'guardians'
     
@@ -28,38 +29,22 @@ class Character(Base):
     emblem = Column(String)
     title = Column(String)
     
-    weapons = relationship("Weapon", back_populates='character')
-    #armor = relationship("Armor", back_populates='character')
+    armors = relationship("Armor", back_populates='character')
     guardian = relationship("Guardian", back_populates="characters")
 
 
-class Weapon(Base):
-    __tablename__ = 'weapons'
+class Armor(Base):
+    __tablename__ = 'armors'
     
     id = Column(Integer, primary_key=True, index=True)
-    weapon_instance_id = Column(Integer, unique=True)
+    armor_instance_id = Column(String, unique=True, index=True)
     character_id = Column(Integer, ForeignKey('characters.id'))
     name = Column(String)
     inventory_slot = Column(String)
-    state = Column(String)
-    stats = Column(MutableList.as_mutable(PickleType), default=[])
-    damage_type = Column(String)
+    state = Column(Integer)
+    stats = Column(MutableDict.as_mutable(PickleType), default={})
     
-    character = relationship("Character", back_populates='weapons')
-
-
-# class Armor(Base):
-#     __tablename__ = 'armors'
-    
-#     id = Column(Integer, primary_key=True, index=True)
-#     armor_instance_id = Column(String, unique=True, index=True)
-#     character_id = Column(Integer, ForeignKey('characters.id'))
-#     name = Column(String, index=True)
-#     inventory_slot = Column(String, index=True)
-#     state = Column(String, index=True)
-#     stats = Column(MutableList.as_mutable(PickleType), default=[])
-    
-#     character = relationship("Character", back_populates='armors')
+    character = relationship("Character", back_populates='armors')
     
 
     

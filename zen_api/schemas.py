@@ -1,32 +1,12 @@
 from pydantic import BaseModel
 
-class WeaponBase(BaseModel):
-    weapon_instance_id: int
-    name: str
-    inventory_slot: str
-    state: str
-    #stats = list[WeaponStats] = []
-    damage_type: str
-
-
-class WeaponCreate(WeaponBase):
-    pass
-   
-        
-class Weapon(WeaponBase):
-    id: int
-    character_id: int
-
-    class Config:
-        orm_mode = True
-
 
 class ArmorBase(BaseModel):
     armor_instance_id: str
     name: str
     inventory_slot: str
-    state: str
-    #stats = list[ArmorStats] = []
+    state: int
+    stats: dict = {}
 
 
 class ArmorCreate(ArmorBase):
@@ -57,6 +37,7 @@ class CharacterCreate(CharacterBase):
 class Character(CharacterBase):
     id: int
     guardian_id: int
+    armors: list[Armor] = []
 
     class Config:
         orm_mode = True
