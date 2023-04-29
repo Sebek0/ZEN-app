@@ -10,11 +10,13 @@ Should contain this variables
 ```Bungie API KEY can be found on bungie developer portal```
 BUNGIE_API_KEY = ''
 
-```Bungie API URLs```
-MANIFEST_URL = 'http://www.bungie.net/Platform/Destiny2/Manifest/'
-GROUP_URL = 'https://www.bungie.net/Platform/GroupV2/'
-USER_URL = 'https://www.bungie.net/Platform/User/'
-DESTINY2_URL = 'https://www.bungie.net/Platform/Destiny2/'
+**Bungie API URLs**
+<ul>
+<li>MANIFEST_URL = 'http://www.bungie.net/Platform/Destiny2/Manifest/'</li>
+<li>GROUP_URL = 'https://www.bungie.net/Platform/GroupV2/'</li>
+<li>USER_URL = 'https://www.bungie.net/Platform/User/'</li>
+<li>DESTINY2_URL = 'https://www.bungie.net/Platform/Destiny2/'</li>
+</ul>
 
 ```Auth token contact owner for one```
 ZEN_API_TOKEN = ''
