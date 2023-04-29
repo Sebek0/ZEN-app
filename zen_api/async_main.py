@@ -7,9 +7,17 @@ import time
 import aiohttp  
 
 from dotenv import load_dotenv
-from bungie_api_wrapper import BAPI
 
-load_dotenv()
+#Bungie API
+from bungie_api_wrapper import BAPI
+from bungie_api_wrapper.manifest import Manifest
+
+# ZEN API
+from zen_api_wrapper import ZENAPI
+
+man = Manifest() # When declaring Manifest() it will load all manifest files
+
+load_dotenv() # Loads environment variables from .env
 
 API_KEY = os.getenv('BUNGIE_API_KEY')
 
@@ -30,6 +38,7 @@ async def get_characters(destiny_membership_id: int, platform: int):
     """
 
     destiny = BAPI(API_KEY)
+    zen = ZENAPI()
     characters_informations = {}
     
     # get user profile from API request
@@ -37,6 +46,13 @@ async def get_characters(destiny_membership_id: int, platform: int):
                                                     platform, [100, 200, 205])
     
     characters_ids = profile['Response']['profile']['data']['characterIds']
+    
+    # POST guardian to database
+    name = profile['Response']['profile']['data']['userInfo']['bungieGlobalDisplayName']
+    code = profile['Response']['profile']['data']['userInfo']['bungieGlobalDisplayNameCode']
+    plat = profile['Response']['profile']['data']['userInfo']['membershipType']
+    payload = {'bungie_id': destiny_membership_id, 'name': f'{name}#{code}', 'platform': plat}
+    await zen.api.post_create_guardian(payload=payload)
     
     async def character(profile, character_id):
         """Add character information in hash values to characters dictionary.
@@ -89,7 +105,17 @@ async def get_characters(destiny_membership_id: int, platform: int):
                 # logger.error(f'{k_error} Bucket: {item[i]["bucketHash"]} \
                 #       Item: {item[i]["itemHash"]} Class: {char_data["classHash"]} \
                 #           ItemInstanceId: {item[i]["itemInstanceId"]}')
-                
+        
+        char_payload = {
+            'char_id': character_id,
+            'char_class': char_data['classHash'],
+            'stats': char_data['stats'],
+            'emblem': char_data['emblemPath'],
+            'title': 'Reckoner',
+            'last_login': char_data['dateLastPlayed']
+        }        
+        await zen.api.post_create_character(1, payload=char_payload)
+        
         characters_informations[char_data['classHash']] = {
             'dateLastPlayed': char_data['dateLastPlayed'],
             'emblemBackgroundPath': char_data['emblemBackgroundPath'],
@@ -106,12 +132,17 @@ async def get_characters(destiny_membership_id: int, platform: int):
     await asyncio.gather(
         *[character(profile, char_id) for char_id in characters_ids]
     )
-    
     await destiny.close()
-    with open('characters.json', 'w') as file:
-        json.dump(characters_informations, indent=2, sort_keys=True, fp=file)
-    print(characters_informations)
-    return characters_informations
+    await zen.close()
+    #$await save_guardian(json: dict):
+    
+    decoded_character = man.decode_characters_from_manifest(characters_informations)
+    print('x')
+    # print(json.dumps(decoded_character, indent=2))
+    # with open('characters.json', 'w') as file:
+    #     json.dump(decoded_character, indent=2, sort_keys=True, fp=file)
+    
+    return decoded_character
     
 
 async def main(destiny_membership_ids: int):
@@ -128,8 +159,7 @@ async def main(destiny_membership_ids: int):
 
 
 if __name__ == '__main__':
-    destiny_membership_ids = [4611686018468563973, 4611686018468563973, 4611686018468563973,
-                              4611686018468563973, 4611686018468563973, 4611686018468563973]  # ...
+    destiny_membership_ids = [4611686018468563973]  # ...
     start_time = time.time()
     asyncio.run(main(destiny_membership_ids))  
     print("--- %s seconds ---" % (time.time() - start_time))
