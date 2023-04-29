@@ -2,8 +2,11 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from .. import crud, schemas
 from ..database import get_db
+from fastapi.security.api_key import APIKey
+from ..auth import get_api_key
 
 router = APIRouter()
+
 
 @router.post("/guardians/", response_model=schemas.Guardian, tags=['Guardians'])
 def create_guardian(guardian: schemas.GuardianCreate, db: Session = Depends(get_db)):
@@ -35,7 +38,8 @@ def read_guardian_by_name(name: str, db: Session = Depends(get_db)):
     return db_guardian
 
 @router.get("/guardians/", response_model=list[schemas.Guardian], tags=['Guardians'])
-def read_guardians(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+def read_guardians(skip: int = 0, limit: int = 100, db: Session = Depends(get_db),
+                   api_key: APIKey = Depends(get_api_key)):
     guardians = crud.get_guardians(db, skip=skip, limit=limit)
     return guardians
 
