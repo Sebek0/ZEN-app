@@ -1,1650 +1,1330 @@
 {
-  "671679327": {
+  "Hunter": {
     "dateLastPlayed": "2023-03-30T19:23:07Z",
     "emblemBackgroundPath": "/common/destiny2_content/icons/8c22047edb1abda0f611c1808b4ae40a.jpg",
-    "emblemHash": 3931192719,
+    "emblemName": "Scourge of Nothing",
     "emblemPath": "/common/destiny2_content/icons/35564e16cd31ad5f8c8933eb6e63fc9d.jpg",
     "items": {
-      "14239492": {
+      "Chest Armor": {
         "common_data": {
-          "bucketHash": 14239492,
-          "itemHash": 597199405
+          "item_bucket": "Chest Armor",
+          "item_icon": "/common/destiny2_content/icons/b5b5019342c5ba7be84ea22371a510e6.jpg",
+          "item_name": "TM-Earp Custom Vest",
+          "item_watermark": "/common/destiny2_content/icons/1a68ada4fb21371c5f2b7e2eae1ebce8.png"
         },
-        "perks": [
-          {
-            "iconPath": "/common/destiny2_content/icons/dc0ee3947aeff1737a52afdf0ef4bd97.png",
-            "isActive": true,
-            "perkHash": 3225643779,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/dc0ee3947aeff1737a52afdf0ef4bd97.png",
-            "isActive": true,
-            "perkHash": 3225643779,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/dc0ee3947aeff1737a52afdf0ef4bd97.png",
-            "isActive": true,
-            "perkHash": 3225643779,
-            "visible": true
+        "perks": {
+          "Arc Reserves": {
+            "icon": "/common/destiny2_content/icons/dc0ee3947aeff1737a52afdf0ef4bd97.png",
+            "name": "Arc Reserves"
           }
-        ],
+        },
         "stats": {
-          "144602215": {
-            "statHash": 144602215,
-            "value": 12
+          "Discipline": {
+            "icon": "/common/destiny2_content/icons/ca62128071dc254fe75891211b98b237.png",
+            "value": "18"
           },
-          "1735777505": {
-            "statHash": 1735777505,
-            "value": 18
+          "Intellect": {
+            "icon": "/common/destiny2_content/icons/59732534ce7060dba681d1ba84c055a6.png",
+            "value": "12"
           },
-          "1943323491": {
-            "statHash": 1943323491,
-            "value": 15
+          "Mobility": {
+            "icon": "/common/destiny2_content/icons/e26e0e93a9daf4fdd21bf64eb9246340.png",
+            "value": "6"
           },
-          "2996146975": {
-            "statHash": 2996146975,
-            "value": 6
+          "Recovery": {
+            "icon": "/common/destiny2_content/icons/128eee4ee7fc127851ab32eac6ca91cf.png",
+            "value": "15"
           },
-          "392767087": {
-            "statHash": 392767087,
-            "value": 9
+          "Resilience": {
+            "icon": "/common/destiny2_content/icons/202ecc1c6febeb6b97dafc856e863140.png",
+            "value": "9"
           },
-          "4244567218": {
-            "statHash": 4244567218,
-            "value": 2
+          "Strength": {
+            "icon": "/common/destiny2_content/icons/c7eefc8abbaa586eeab79e962a79d6ad.png",
+            "value": "2"
           }
         }
       },
-      "20886954": {
+      "Class Armor": {
         "common_data": {
-          "bucketHash": 20886954,
-          "itemHash": 1001356380
+          "item_bucket": "Class Armor",
+          "item_icon": "/common/destiny2_content/icons/9236b7d76602004fad2fc3cbf480700b.jpg",
+          "item_name": "Resonant Fury Cloak",
+          "item_watermark": "/common/destiny2_content/icons/4fe83598190610f122497d22579a1fd9.png"
         },
-        "perks": [
-          {
-            "iconPath": "/common/destiny2_content/icons/5922b375e4826163b594a571536e5705.png",
-            "isActive": true,
-            "perkHash": 3956055316,
-            "visible": true
-          },
-          {
-            "iconPath": "",
-            "isActive": true,
-            "perkHash": 1430090312,
-            "visible": false
+        "perks": {
+          "Time Dilation": {
+            "icon": "/common/destiny2_content/icons/fe63aa2d2147e6649f6810908dfe3413.png",
+            "name": "Time Dilation"
           }
-        ],
+        },
         "stats": {
-          "144602215": {
-            "statHash": 144602215,
-            "value": 16
+          "Discipline": {
+            "icon": "/common/destiny2_content/icons/ca62128071dc254fe75891211b98b237.png",
+            "value": "0"
           },
-          "1735777505": {
-            "statHash": 1735777505,
-            "value": 2
+          "Intellect": {
+            "icon": "/common/destiny2_content/icons/59732534ce7060dba681d1ba84c055a6.png",
+            "value": "0"
           },
-          "1943323491": {
-            "statHash": 1943323491,
-            "value": 15
+          "Mobility": {
+            "icon": "/common/destiny2_content/icons/e26e0e93a9daf4fdd21bf64eb9246340.png",
+            "value": "0"
           },
-          "2996146975": {
-            "statHash": 2996146975,
-            "value": 2
+          "Recovery": {
+            "icon": "/common/destiny2_content/icons/128eee4ee7fc127851ab32eac6ca91cf.png",
+            "value": "0"
           },
-          "392767087": {
-            "statHash": 392767087,
-            "value": 14
+          "Resilience": {
+            "icon": "/common/destiny2_content/icons/202ecc1c6febeb6b97dafc856e863140.png",
+            "value": "0"
           },
-          "4244567218": {
-            "statHash": 4244567218,
-            "value": 10
+          "Strength": {
+            "icon": "/common/destiny2_content/icons/c7eefc8abbaa586eeab79e962a79d6ad.png",
+            "value": "0"
           }
         }
       },
-      "953998645": {
+      "Energy Weapons": {
         "common_data": {
-          "bucketHash": 953998645,
-          "itemHash": 1903182562
+          "item_bucket": "Energy Weapons",
+          "item_icon": "/common/destiny2_content/icons/744408d69bc8eb8d3767ba30cf7187ac.jpg",
+          "item_name": "Funnelweb",
+          "item_watermark": "/common/destiny2_content/icons/4fe83598190610f122497d22579a1fd9.png"
         },
-        "perks": [
-          {
-            "iconPath": "",
-            "isActive": true,
-            "perkHash": 3435464613,
-            "visible": false
+        "perks": {
+          "Auto-Loading Holster": {
+            "icon": "/common/destiny2_content/icons/d355b1117307c9f187729249361cecc3.png",
+            "name": "Auto-Loading Holster"
           },
-          {
-            "iconPath": "/common/destiny2_content/icons/ad56b0e83d31592d9984cdf2f392452a.png",
-            "isActive": true,
-            "perkHash": 1907936296,
-            "visible": true
+          "Frenzy": {
+            "icon": "/common/destiny2_content/icons/5f346569b07ad452768b16a255ebd168.png",
+            "name": "Frenzy"
           },
-          {
-            "iconPath": "",
-            "isActive": true,
-            "perkHash": 300203516,
-            "visible": false
+          "Lightweight Frame": {
+            "icon": "/common/destiny2_content/icons/530b400d5cec3bf6aca7c5efc46fea20.png",
+            "name": "Lightweight Frame"
           },
-          {
-            "iconPath": "/common/destiny2_content/icons/53ead908917c9156457c7c9dd453d649.png",
-            "isActive": true,
-            "perkHash": 4120345915,
-            "visible": true
+          "Minor Spec": {
+            "icon": "/common/destiny2_content/icons/0a4ec1d5bb185c972f9bbdf4ebecedc5.png",
+            "name": "Minor Spec"
           },
-          {
-            "iconPath": "",
-            "isActive": true,
-            "perkHash": 2252751995,
-            "visible": false
+          "Veist Stinger": {
+            "icon": "/common/destiny2_content/icons/e41eeced6fd09493f6ba87e3cd20112f.png",
+            "name": "Veist Stinger"
           },
-          {
-            "iconPath": "/common/destiny2_content/icons/7381a042ca97533623f6dff66d8f0347.png",
-            "isActive": true,
-            "perkHash": 4185462686,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/3380d1210d16224ca4fcd5da53915a97.png",
-            "isActive": true,
-            "perkHash": 1490476358,
-            "visible": true
-          },
-          {
-            "iconPath": "",
-            "isActive": true,
-            "perkHash": 3469836202,
-            "visible": false
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/6e67f277fe19b93159c466a41542b7b3.png",
-            "isActive": true,
-            "perkHash": 2198256770,
-            "visible": true
+          "damage_type": {
+            "icon": "/common/destiny2_content/icons/DestinyDamageTypeDefinition_ceb2f6197dccf3958bb31cc783eb97a0.png",
+            "name": "Void"
           }
-        ],
+        },
         "stats": {
-          "1345609583": {
-            "statHash": 1345609583,
-            "value": 58
+          "Aim Assistance": {
+            "icon": null,
+            "value": "54"
           },
-          "155624089": {
-            "statHash": 155624089,
-            "value": 52
+          "Airborne Effectiveness": {
+            "icon": null,
+            "value": "20"
           },
-          "2523465841": {
-            "statHash": 2523465841,
-            "value": 66
+          "Handling": {
+            "icon": null,
+            "value": "65"
           },
-          "2714457168": {
-            "statHash": 2714457168,
-            "value": 10
+          "Impact": {
+            "icon": null,
+            "value": "15"
           },
-          "2715839340": {
-            "statHash": 2715839340,
-            "value": 77
+          "Magazine": {
+            "icon": null,
+            "value": "38"
           },
-          "3555269338": {
-            "statHash": 3555269338,
-            "value": 20
+          "Range": {
+            "icon": null,
+            "value": "39"
           },
-          "3614673599": {
-            "statHash": 3614673599,
-            "value": 53
+          "Recoil Direction": {
+            "icon": null,
+            "value": "100"
           },
-          "3871231066": {
-            "statHash": 3871231066,
-            "value": 1
+          "Reload Speed": {
+            "icon": null,
+            "value": "42"
           },
-          "4188031367": {
-            "statHash": 4188031367,
-            "value": 54
+          "Rounds Per Minute": {
+            "icon": null,
+            "value": "900"
           },
-          "4284893193": {
-            "statHash": 4284893193,
-            "value": 20
+          "Stability": {
+            "icon": null,
+            "value": "59"
           },
-          "943549884": {
-            "statHash": 943549884,
-            "value": 59
+          "Zoom": {
+            "icon": null,
+            "value": "14"
           }
         }
       },
-      "1498876634": {
+      "Helmet": {
         "common_data": {
-          "bucketHash": 1498876634,
-          "itemHash": 4070357005
+          "item_bucket": "Helmet",
+          "item_icon": "/common/destiny2_content/icons/9ea68e27db115ebe8638a16cc46d82ad.jpg",
+          "item_name": "Pyrrhic Ascent Mask",
+          "item_watermark": "/common/destiny2_content/icons/6a52f7cd9099990157c739a8260babea.png"
         },
-        "perks": [
-          {
-            "iconPath": "/common/destiny2_content/icons/90c4f7f35c9d24f4add016722a78404e.png",
-            "isActive": true,
-            "perkHash": 4040885430,
-            "visible": true
-          },
-          {
-            "iconPath": "",
-            "isActive": false,
-            "perkHash": 4158668558,
-            "visible": false
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/391c674efee7852092c36c1b82b097ca.png",
-            "isActive": true,
-            "perkHash": 3192673030,
-            "visible": true
-          },
-          {
-            "iconPath": "",
-            "isActive": true,
-            "perkHash": 3599664899,
-            "visible": false
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/5f346569b07ad452768b16a255ebd168.png",
-            "isActive": true,
-            "perkHash": 586210096,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/3dbef7e84474fa68bcc01c7f4c9c77b0.png",
-            "isActive": true,
-            "perkHash": 1390623640,
-            "visible": true
+        "perks": {
+          "Special Ammo Finder": {
+            "icon": "/common/destiny2_content/icons/00316667518291f27447b6927719cd3a.png",
+            "name": "Special Ammo Finder"
           }
-        ],
+        },
         "stats": {
-          "1240592695": {
-            "statHash": 1240592695,
-            "value": 68
+          "Discipline": {
+            "icon": "/common/destiny2_content/icons/ca62128071dc254fe75891211b98b237.png",
+            "value": "11"
           },
-          "1345609583": {
-            "statHash": 1345609583,
-            "value": 34
+          "Intellect": {
+            "icon": "/common/destiny2_content/icons/59732534ce7060dba681d1ba84c055a6.png",
+            "value": "14"
           },
-          "155624089": {
-            "statHash": 155624089,
-            "value": 39
+          "Mobility": {
+            "icon": "/common/destiny2_content/icons/e26e0e93a9daf4fdd21bf64eb9246340.png",
+            "value": "14"
           },
-          "2714457168": {
-            "statHash": 2714457168,
-            "value": 17
+          "Recovery": {
+            "icon": "/common/destiny2_content/icons/128eee4ee7fc127851ab32eac6ca91cf.png",
+            "value": "15"
           },
-          "2715839340": {
-            "statHash": 2715839340,
-            "value": 84
+          "Resilience": {
+            "icon": "/common/destiny2_content/icons/202ecc1c6febeb6b97dafc856e863140.png",
+            "value": "2"
           },
-          "3555269338": {
-            "statHash": 3555269338,
-            "value": 16
-          },
-          "3871231066": {
-            "statHash": 3871231066,
-            "value": 38
-          },
-          "4043523819": {
-            "statHash": 4043523819,
-            "value": 29
-          },
-          "4188031367": {
-            "statHash": 4188031367,
-            "value": 41
-          },
-          "4284893193": {
-            "statHash": 4284893193,
-            "value": 450
-          },
-          "943549884": {
-            "statHash": 943549884,
-            "value": 34
+          "Strength": {
+            "icon": "/common/destiny2_content/icons/c7eefc8abbaa586eeab79e962a79d6ad.png",
+            "value": "6"
           }
         }
       },
-      "1585787867": {
+      "Kinetic Weapons": {
         "common_data": {
-          "bucketHash": 1585787867,
-          "itemHash": 4124357755
+          "item_bucket": "Kinetic Weapons",
+          "item_icon": "/common/destiny2_content/icons/6dc41476bdb6ffbb6ab7a8bce24f9216.jpg",
+          "item_name": "Seventh Seraph Carbine",
+          "item_watermark": "/common/destiny2_content/icons/1a68ada4fb21371c5f2b7e2eae1ebce8.png"
         },
-        "perks": [
-          {
-            "iconPath": "/common/destiny2_content/icons/fe63aa2d2147e6649f6810908dfe3413.png",
-            "isActive": true,
-            "perkHash": 4292924113,
-            "visible": true
+        "perks": {
+          "Frenzy": {
+            "icon": "/common/destiny2_content/icons/5f346569b07ad452768b16a255ebd168.png",
+            "name": "Frenzy"
           },
-          {
-            "iconPath": "/common/destiny2_content/icons/fe63aa2d2147e6649f6810908dfe3413.png",
-            "isActive": true,
-            "perkHash": 4292924113,
-            "visible": true
+          "Precision Frame": {
+            "icon": "/common/destiny2_content/icons/90c4f7f35c9d24f4add016722a78404e.png",
+            "name": "Precision Frame"
           },
-          {
-            "iconPath": "/common/destiny2_content/icons/fe63aa2d2147e6649f6810908dfe3413.png",
-            "isActive": true,
-            "perkHash": 4292924113,
-            "visible": true
+          "Pugilist": {
+            "icon": "/common/destiny2_content/icons/391c674efee7852092c36c1b82b097ca.png",
+            "name": "Pugilist"
+          },
+          "Rasputin's Arsenal": {
+            "icon": "/common/destiny2_content/icons/3dbef7e84474fa68bcc01c7f4c9c77b0.png",
+            "name": "Rasputin's Arsenal"
           }
-        ],
+        },
         "stats": {
-          "144602215": {
-            "statHash": 144602215,
-            "value": 0
+          "Aim Assistance": {
+            "icon": null,
+            "value": "34"
           },
-          "1735777505": {
-            "statHash": 1735777505,
-            "value": 0
+          "Airborne Effectiveness": {
+            "icon": null,
+            "value": "17"
           },
-          "1943323491": {
-            "statHash": 1943323491,
-            "value": 0
+          "Handling": {
+            "icon": null,
+            "value": "34"
           },
-          "2996146975": {
-            "statHash": 2996146975,
-            "value": 0
+          "Impact": {
+            "icon": null,
+            "value": "29"
           },
-          "392767087": {
-            "statHash": 392767087,
-            "value": 0
+          "Magazine": {
+            "icon": null,
+            "value": "38"
           },
-          "4244567218": {
-            "statHash": 4244567218,
-            "value": 0
+          "Range": {
+            "icon": null,
+            "value": "68"
+          },
+          "Recoil Direction": {
+            "icon": null,
+            "value": "84"
+          },
+          "Reload Speed": {
+            "icon": null,
+            "value": "41"
+          },
+          "Rounds Per Minute": {
+            "icon": null,
+            "value": "450"
+          },
+          "Stability": {
+            "icon": null,
+            "value": "39"
+          },
+          "Zoom": {
+            "icon": null,
+            "value": "16"
           }
         }
       },
-      "2465295065": {
+      "Leg Armor": {
         "common_data": {
-          "bucketHash": 2465295065,
-          "itemHash": 3341893443
+          "item_bucket": "Leg Armor",
+          "item_icon": "/common/destiny2_content/icons/90190addf444371b5817524982b9ee5c.jpg",
+          "item_name": "Star-Eater Scales",
+          "item_watermark": "/common/destiny2_content/icons/b07d89064a1fc9a8e061f59b7c747fa5.png"
         },
-        "perks": [
-          {
-            "iconPath": "",
-            "isActive": true,
-            "perkHash": 279556661,
-            "visible": false
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/530b400d5cec3bf6aca7c5efc46fea20.png",
-            "isActive": true,
-            "perkHash": 656021262,
-            "visible": true
-          },
-          {
-            "iconPath": "",
-            "isActive": false,
-            "perkHash": 2946617881,
-            "visible": false
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/d355b1117307c9f187729249361cecc3.png",
-            "isActive": true,
-            "perkHash": 3527390035,
-            "visible": true
-          },
-          {
-            "iconPath": "",
-            "isActive": true,
-            "perkHash": 1056770387,
-            "visible": false
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/5f346569b07ad452768b16a255ebd168.png",
-            "isActive": true,
-            "perkHash": 586210096,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/0a4ec1d5bb185c972f9bbdf4ebecedc5.png",
-            "isActive": true,
-            "perkHash": 4081752884,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/e41eeced6fd09493f6ba87e3cd20112f.png",
-            "isActive": true,
-            "perkHash": 1697350647,
-            "visible": true
+        "perks": {
+          "Feast of Light": {
+            "icon": "/common/destiny2_content/icons/5922b375e4826163b594a571536e5705.png",
+            "name": "Feast of Light"
           }
-        ],
+        },
         "stats": {
-          "1240592695": {
-            "statHash": 1240592695,
-            "value": 39
+          "Discipline": {
+            "icon": "/common/destiny2_content/icons/ca62128071dc254fe75891211b98b237.png",
+            "value": "2"
           },
-          "1345609583": {
-            "statHash": 1345609583,
-            "value": 54
+          "Intellect": {
+            "icon": "/common/destiny2_content/icons/59732534ce7060dba681d1ba84c055a6.png",
+            "value": "16"
           },
-          "155624089": {
-            "statHash": 155624089,
-            "value": 59
+          "Mobility": {
+            "icon": "/common/destiny2_content/icons/e26e0e93a9daf4fdd21bf64eb9246340.png",
+            "value": "2"
           },
-          "2714457168": {
-            "statHash": 2714457168,
-            "value": 20
+          "Recovery": {
+            "icon": "/common/destiny2_content/icons/128eee4ee7fc127851ab32eac6ca91cf.png",
+            "value": "15"
           },
-          "2715839340": {
-            "statHash": 2715839340,
-            "value": 100
+          "Resilience": {
+            "icon": "/common/destiny2_content/icons/202ecc1c6febeb6b97dafc856e863140.png",
+            "value": "14"
           },
-          "3555269338": {
-            "statHash": 3555269338,
-            "value": 14
-          },
-          "3871231066": {
-            "statHash": 3871231066,
-            "value": 38
-          },
-          "4043523819": {
-            "statHash": 4043523819,
-            "value": 15
-          },
-          "4188031367": {
-            "statHash": 4188031367,
-            "value": 42
-          },
-          "4284893193": {
-            "statHash": 4284893193,
-            "value": 900
-          },
-          "943549884": {
-            "statHash": 943549884,
-            "value": 65
+          "Strength": {
+            "icon": "/common/destiny2_content/icons/c7eefc8abbaa586eeab79e962a79d6ad.png",
+            "value": "10"
           }
         }
       },
-      "3448274439": {
+      "Power Weapons": {
         "common_data": {
-          "bucketHash": 3448274439,
-          "itemHash": 1001798188
+          "item_bucket": "Power Weapons",
+          "item_icon": "/common/destiny2_content/icons/60e82cff849c342c3c1a0650a39a5b7b.jpg",
+          "item_name": "Blowout",
+          "item_watermark": "/common/destiny2_content/icons/1a68ada4fb21371c5f2b7e2eae1ebce8.png"
         },
-        "perks": [
-          {
-            "iconPath": "/common/destiny2_content/icons/00316667518291f27447b6927719cd3a.png",
-            "isActive": true,
-            "perkHash": 3204936245,
-            "visible": true
+        "perks": {
+          "Adaptive Frame": {
+            "icon": "/common/destiny2_content/icons/ad56b0e83d31592d9984cdf2f392452a.png",
+            "name": "Adaptive Frame"
           },
-          {
-            "iconPath": "/common/destiny2_content/icons/00316667518291f27447b6927719cd3a.png",
-            "isActive": true,
-            "perkHash": 3204936245,
-            "visible": true
+          "Boss Spec": {
+            "icon": "/common/destiny2_content/icons/3380d1210d16224ca4fcd5da53915a97.png",
+            "name": "Boss Spec"
           },
-          {
-            "iconPath": "/common/destiny2_content/icons/00316667518291f27447b6927719cd3a.png",
-            "isActive": true,
-            "perkHash": 3204936245,
-            "visible": true
+          "Demolitionist": {
+            "icon": "/common/destiny2_content/icons/53ead908917c9156457c7c9dd453d649.png",
+            "name": "Demolitionist"
+          },
+          "Explosive Light": {
+            "icon": "/common/destiny2_content/icons/7381a042ca97533623f6dff66d8f0347.png",
+            "name": "Explosive Light"
+          },
+          "Suros Synergy": {
+            "icon": "/common/destiny2_content/icons/6e67f277fe19b93159c466a41542b7b3.png",
+            "name": "Suros Synergy"
+          },
+          "damage_type": {
+            "icon": "/common/destiny2_content/icons/DestinyDamageTypeDefinition_092d066688b879c807c3b460afdd61e6.png",
+            "name": "Arc"
           }
-        ],
+        },
         "stats": {
-          "144602215": {
-            "statHash": 144602215,
-            "value": 14
+          "Aim Assistance": {
+            "icon": null,
+            "value": "58"
           },
-          "1735777505": {
-            "statHash": 1735777505,
-            "value": 11
+          "Airborne Effectiveness": {
+            "icon": null,
+            "value": "10"
           },
-          "1943323491": {
-            "statHash": 1943323491,
-            "value": 15
+          "Blast Radius": {
+            "icon": null,
+            "value": "53"
           },
-          "2996146975": {
-            "statHash": 2996146975,
-            "value": 14
+          "Handling": {
+            "icon": null,
+            "value": "59"
           },
-          "392767087": {
-            "statHash": 392767087,
-            "value": 2
+          "Magazine": {
+            "icon": null,
+            "value": "1"
           },
-          "4244567218": {
-            "statHash": 4244567218,
-            "value": 6
+          "Recoil Direction": {
+            "icon": null,
+            "value": "77"
+          },
+          "Reload Speed": {
+            "icon": null,
+            "value": "54"
+          },
+          "Rounds Per Minute": {
+            "icon": null,
+            "value": "20"
+          },
+          "Stability": {
+            "icon": null,
+            "value": "52"
+          },
+          "Velocity": {
+            "icon": null,
+            "value": "66"
+          },
+          "Zoom": {
+            "icon": null,
+            "value": "20"
           }
         }
       }
     },
     "light": 1781,
     "minutesPlayedTotal": "37155",
-    "raceHash": 2803282938,
+    "raceName": "Awoken",
     "stats": {
-      "144602215": 52,
-      "1735777505": 33,
-      "1935470627": 1781,
-      "1943323491": 65,
-      "2996146975": 21,
-      "392767087": 27,
-      "4244567218": 34
+      "Discipline": 33,
+      "Intellect": 52,
+      "Mobility": 21,
+      "Power": 1781,
+      "Recovery": 65,
+      "Resilience": 27,
+      "Strength": 34
     }
   },
-  "2271682572": {
-    "dateLastPlayed": "2023-04-18T22:47:14Z",
-    "emblemBackgroundPath": "/common/destiny2_content/icons/52f7cb993e02bf645b7f722efdcd76ec.jpg",
-    "emblemHash": 908153550,
-    "emblemPath": "/common/destiny2_content/icons/6d255d5590448eb99e2efa2113468603.jpg",
-    "items": {
-      "14239492": {
-        "common_data": {
-          "bucketHash": 14239492,
-          "itemHash": 2320830625
-        },
-        "perks": [
-          {
-            "iconPath": "/common/destiny2_content/icons/236085f26c0677c200d46d9314bef5e6.png",
-            "isActive": true,
-            "perkHash": 86466353,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/d2615bf1fb5d7b217ec35c36baf647f3.png",
-            "isActive": true,
-            "perkHash": 1612970558,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/7788ad2481f860b739879618113268c7.png",
-            "isActive": true,
-            "perkHash": 1737902835,
-            "visible": true
-          }
-        ],
-        "stats": {
-          "144602215": {
-            "statHash": 144602215,
-            "value": 18
-          },
-          "1735777505": {
-            "statHash": 1735777505,
-            "value": 9
-          },
-          "1943323491": {
-            "statHash": 1943323491,
-            "value": 23
-          },
-          "2996146975": {
-            "statHash": 2996146975,
-            "value": 4
-          },
-          "392767087": {
-            "statHash": 392767087,
-            "value": 22
-          },
-          "4244567218": {
-            "statHash": 4244567218,
-            "value": 12
-          }
-        }
-      },
-      "20886954": {
-        "common_data": {
-          "bucketHash": 20886954,
-          "itemHash": 138282166
-        },
-        "perks": [
-          {
-            "iconPath": "/common/destiny2_content/icons/82e9df4947a48fb052aa7fcdb43f4165.png",
-            "isActive": true,
-            "perkHash": 2874419691,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/c1cd894eba0335c7c2bb7f42b58712dd.png",
-            "isActive": true,
-            "perkHash": 4180002863,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/c1cd894eba0335c7c2bb7f42b58712dd.png",
-            "isActive": true,
-            "perkHash": 4180002863,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/c1cd894eba0335c7c2bb7f42b58712dd.png",
-            "isActive": true,
-            "perkHash": 4180002863,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/d2322bbcc6af2f2d9d96bf1c72e9957a.png",
-            "isActive": true,
-            "perkHash": 2845217635,
-            "visible": true
-          },
-          {
-            "iconPath": "",
-            "isActive": true,
-            "perkHash": 3603242643,
-            "visible": false
-          }
-        ],
-        "stats": {
-          "144602215": {
-            "statHash": 144602215,
-            "value": 20
-          },
-          "1735777505": {
-            "statHash": 1735777505,
-            "value": 11
-          },
-          "1943323491": {
-            "statHash": 1943323491,
-            "value": 28
-          },
-          "2996146975": {
-            "statHash": 2996146975,
-            "value": 10
-          },
-          "392767087": {
-            "statHash": 392767087,
-            "value": 12
-          },
-          "4244567218": {
-            "statHash": 4244567218,
-            "value": 4
-          }
-        }
-      },
-      "953998645": {
-        "common_data": {
-          "bucketHash": 953998645,
-          "itemHash": 2187717691
-        },
-        "perks": [
-          {
-            "iconPath": "",
-            "isActive": true,
-            "perkHash": 2015255840,
-            "visible": false
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/ad56b0e83d31592d9984cdf2f392452a.png",
-            "isActive": true,
-            "perkHash": 1907936296,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/5838b4ef410895011edfed3eaf11641f.png",
-            "isActive": true,
-            "perkHash": 2551856714,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/a2567013ed2aff582788b3dce292d990.png",
-            "isActive": true,
-            "perkHash": 2203436664,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/fae156cf9820daf831a54a25887c08da.png",
-            "isActive": true,
-            "perkHash": 628072539,
-            "visible": true
-          },
-          {
-            "iconPath": "",
-            "isActive": true,
-            "perkHash": 3469836202,
-            "visible": false
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/17df0bd4f13c2b188ccce1b23fe9e4d8.png",
-            "isActive": true,
-            "perkHash": 215980695,
-            "visible": true
-          }
-        ],
-        "stats": {
-          "1240592695": {
-            "statHash": 1240592695,
-            "value": 50
-          },
-          "1345609583": {
-            "statHash": 1345609583,
-            "value": 59
-          },
-          "155624089": {
-            "statHash": 155624089,
-            "value": 50
-          },
-          "2714457168": {
-            "statHash": 2714457168,
-            "value": 21
-          },
-          "2715839340": {
-            "statHash": 2715839340,
-            "value": 80
-          },
-          "3555269338": {
-            "statHash": 3555269338,
-            "value": 16
-          },
-          "3871231066": {
-            "statHash": 3871231066,
-            "value": 75
-          },
-          "4043523819": {
-            "statHash": 4043523819,
-            "value": 41
-          },
-          "4188031367": {
-            "statHash": 4188031367,
-            "value": 35
-          },
-          "4284893193": {
-            "statHash": 4284893193,
-            "value": 450
-          },
-          "943549884": {
-            "statHash": 943549884,
-            "value": 61
-          }
-        }
-      },
-      "1498876634": {
-        "common_data": {
-          "bucketHash": 1498876634,
-          "itemHash": 3193598749
-        },
-        "perks": [
-          {
-            "iconPath": "",
-            "isActive": true,
-            "perkHash": 2015255840,
-            "visible": false
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/d1ff65162c4a9d54a9612d9874b9fa88.png",
-            "isActive": true,
-            "perkHash": 281733738,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/d1ff65162c4a9d54a9612d9874b9fa88.png",
-            "isActive": false,
-            "perkHash": 682617678,
-            "visible": true
-          },
-          {
-            "iconPath": "",
-            "isActive": true,
-            "perkHash": 2445944915,
-            "visible": false
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/ff88499e7190f1d63e42a8d3fb314c68.png",
-            "isActive": true,
-            "perkHash": 729428564,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/971889be9ee14f50b4e31960b6e19b5d.png",
-            "isActive": true,
-            "perkHash": 1981262976,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/7a3d0704e2aac453bed2b6aa3419ffaf.png",
-            "isActive": true,
-            "perkHash": 1171737860,
-            "visible": true
-          },
-          {
-            "iconPath": "",
-            "isActive": true,
-            "perkHash": 3469836202,
-            "visible": false
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/cbe1ad11ae20ad853fadf38f96d4f59b.png",
-            "isActive": true,
-            "perkHash": 712697983,
-            "visible": true
-          }
-        ],
-        "stats": {
-          "1240592695": {
-            "statHash": 1240592695,
-            "value": 83
-          },
-          "1345609583": {
-            "statHash": 1345609583,
-            "value": 39
-          },
-          "155624089": {
-            "statHash": 155624089,
-            "value": 28
-          },
-          "2714457168": {
-            "statHash": 2714457168,
-            "value": 25
-          },
-          "2715839340": {
-            "statHash": 2715839340,
-            "value": 96
-          },
-          "3555269338": {
-            "statHash": 3555269338,
-            "value": 14
-          },
-          "3871231066": {
-            "statHash": 3871231066,
-            "value": 28
-          },
-          "4043523819": {
-            "statHash": 4043523819,
-            "value": 22
-          },
-          "4188031367": {
-            "statHash": 4188031367,
-            "value": 40
-          },
-          "4284893193": {
-            "statHash": 4284893193,
-            "value": 750
-          },
-          "943549884": {
-            "statHash": 943549884,
-            "value": 56
-          }
-        }
-      },
-      "1585787867": {
-        "common_data": {
-          "bucketHash": 1585787867,
-          "itemHash": 2716681465
-        },
-        "perks": [
-          {
-            "iconPath": "/common/destiny2_content/icons/82e9df4947a48fb052aa7fcdb43f4165.png",
-            "isActive": true,
-            "perkHash": 2874419691,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/fe63aa2d2147e6649f6810908dfe3413.png",
-            "isActive": true,
-            "perkHash": 4292924113,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/fe63aa2d2147e6649f6810908dfe3413.png",
-            "isActive": true,
-            "perkHash": 4292924113,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/460bd24f86d190fbf538e367e15aaf49.png",
-            "isActive": true,
-            "perkHash": 209830464,
-            "visible": true
-          }
-        ],
-        "stats": {
-          "144602215": {
-            "statHash": 144602215,
-            "value": 2
-          },
-          "1735777505": {
-            "statHash": 1735777505,
-            "value": 2
-          },
-          "1943323491": {
-            "statHash": 1943323491,
-            "value": 12
-          },
-          "2996146975": {
-            "statHash": 2996146975,
-            "value": 2
-          },
-          "392767087": {
-            "statHash": 392767087,
-            "value": 2
-          },
-          "4244567218": {
-            "statHash": 4244567218,
-            "value": 2
-          }
-        }
-      },
-      "2465295065": {
-        "common_data": {
-          "bucketHash": 2465295065,
-          "itemHash": 2603483885
-        },
-        "perks": [
-          {
-            "iconPath": "",
-            "isActive": true,
-            "perkHash": 3435464613,
-            "visible": false
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/805f820afb0628153a7579de758b7f59.png",
-            "isActive": true,
-            "perkHash": 449205635,
-            "visible": true
-          },
-          {
-            "iconPath": "",
-            "isActive": true,
-            "perkHash": 2920138167,
-            "visible": false
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/739ff170888c875a7cbc50355f21ed56.png",
-            "isActive": true,
-            "perkHash": 2401685184,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/44cc0f78fd98d462dc4914dbe203dc49.png",
-            "isActive": true,
-            "perkHash": 2178450081,
-            "visible": true
-          }
-        ],
-        "stats": {
-          "1240592695": {
-            "statHash": 1240592695,
-            "value": 60
-          },
-          "1345609583": {
-            "statHash": 1345609583,
-            "value": 68
-          },
-          "155624089": {
-            "statHash": 155624089,
-            "value": 64
-          },
-          "2714457168": {
-            "statHash": 2714457168,
-            "value": 7
-          },
-          "2715839340": {
-            "statHash": 2715839340,
-            "value": 68
-          },
-          "3555269338": {
-            "statHash": 3555269338,
-            "value": 50
-          },
-          "3871231066": {
-            "statHash": 3871231066,
-            "value": 7
-          },
-          "4043523819": {
-            "statHash": 4043523819,
-            "value": 55
-          },
-          "4188031367": {
-            "statHash": 4188031367,
-            "value": 40
-          },
-          "4284893193": {
-            "statHash": 4284893193,
-            "value": 140
-          },
-          "943549884": {
-            "statHash": 943549884,
-            "value": 86
-          }
-        }
-      },
-      "3448274439": {
-        "common_data": {
-          "bucketHash": 3448274439,
-          "itemHash": 3326914239
-        },
-        "perks": [
-          {
-            "iconPath": "/common/destiny2_content/icons/236085f26c0677c200d46d9314bef5e6.png",
-            "isActive": true,
-            "perkHash": 86466353,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/97325835ff38f222a6452d5be533311b.png",
-            "isActive": true,
-            "perkHash": 1644519823,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/bde7130eee758583d5f04ad0b67171ea.png",
-            "isActive": true,
-            "perkHash": 2114627531,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/c674167ad6437587445889ce071f4231.png",
-            "isActive": true,
-            "perkHash": 4121217336,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/702fcf89ec3c8bdbb96eb01c1bb97efe.png",
-            "isActive": true,
-            "perkHash": 4175356500,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/74aeb2f3d7bc16a31a6924822f850184.png",
-            "isActive": true,
-            "perkHash": 229248542,
-            "visible": true
-          }
-        ],
-        "stats": {
-          "144602215": {
-            "statHash": 144602215,
-            "value": 22
-          },
-          "1735777505": {
-            "statHash": 1735777505,
-            "value": 14
-          },
-          "1943323491": {
-            "statHash": 1943323491,
-            "value": 14
-          },
-          "2996146975": {
-            "statHash": 2996146975,
-            "value": 4
-          },
-          "392767087": {
-            "statHash": 392767087,
-            "value": 28
-          },
-          "4244567218": {
-            "statHash": 4244567218,
-            "value": 4
-          }
-        }
-      },
-      "3551918588": {
-        "common_data": {
-          "bucketHash": 3551918588,
-          "itemHash": 1406846351
-        },
-        "perks": [
-          {
-            "iconPath": "/common/destiny2_content/icons/236085f26c0677c200d46d9314bef5e6.png",
-            "isActive": true,
-            "perkHash": 86466353,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/172aec971d8f1de939453cc428288c88.png",
-            "isActive": true,
-            "perkHash": 266256247,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/6939d7377921c9e8a80558bec173f96b.png",
-            "isActive": true,
-            "perkHash": 13526844,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/21206bf51c47e1de0c30f6c91d11043b.png",
-            "isActive": true,
-            "perkHash": 2327879789,
-            "visible": true
-          }
-        ],
-        "stats": {
-          "144602215": {
-            "statHash": 144602215,
-            "value": 28
-          },
-          "1735777505": {
-            "statHash": 1735777505,
-            "value": 4
-          },
-          "1943323491": {
-            "statHash": 1943323491,
-            "value": 17
-          },
-          "2996146975": {
-            "statHash": 2996146975,
-            "value": 4
-          },
-          "392767087": {
-            "statHash": 392767087,
-            "value": 26
-          },
-          "4244567218": {
-            "statHash": 4244567218,
-            "value": 8
-          }
-        }
-      }
-    },
-    "light": 1824,
-    "minutesPlayedTotal": "176085",
-    "raceHash": 3887404748,
-    "stats": {
-      "144602215": 100,
-      "1735777505": 50,
-      "1935470627": 1824,
-      "1943323491": 104,
-      "2996146975": 24,
-      "392767087": 100,
-      "4244567218": 30
-    }
-  },
-  "3655393761": {
+  "Titan": {
     "dateLastPlayed": "2023-04-04T17:59:34Z",
     "emblemBackgroundPath": "/common/destiny2_content/icons/8c22047edb1abda0f611c1808b4ae40a.jpg",
-    "emblemHash": 3931192719,
+    "emblemName": "Scourge of Nothing",
     "emblemPath": "/common/destiny2_content/icons/35564e16cd31ad5f8c8933eb6e63fc9d.jpg",
     "items": {
-      "14239492": {
+      "Chest Armor": {
         "common_data": {
-          "bucketHash": 14239492,
-          "itemHash": 2321120637
+          "item_bucket": "Chest Armor",
+          "item_icon": "/common/destiny2_content/icons/ea1b68b6afd0da11a98d814774cc8900.jpg",
+          "item_name": "Cuirass of the Falling Star",
+          "item_watermark": "/common/destiny2_content/icons/6a52f7cd9099990157c739a8260babea.png"
         },
-        "perks": [
-          {
-            "iconPath": "/common/destiny2_content/icons/dc0ee3947aeff1737a52afdf0ef4bd97.png",
-            "isActive": true,
-            "perkHash": 3225643779,
-            "visible": true
+        "perks": {
+          "Arc Reserves": {
+            "icon": "/common/destiny2_content/icons/dc0ee3947aeff1737a52afdf0ef4bd97.png",
+            "name": "Arc Reserves"
           },
-          {
-            "iconPath": "/common/destiny2_content/icons/dc0ee3947aeff1737a52afdf0ef4bd97.png",
-            "isActive": true,
-            "perkHash": 3225643779,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/dc0ee3947aeff1737a52afdf0ef4bd97.png",
-            "isActive": true,
-            "perkHash": 3225643779,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/d22aab3566d92ba0207544349d9651c9.png",
-            "isActive": true,
-            "perkHash": 3525375944,
-            "visible": true
-          },
-          {
-            "iconPath": "",
-            "isActive": true,
-            "perkHash": 2674511307,
-            "visible": false
+          "Glorious Charge": {
+            "icon": "/common/destiny2_content/icons/d22aab3566d92ba0207544349d9651c9.png",
+            "name": "Glorious Charge"
           }
-        ],
+        },
         "stats": {
-          "144602215": {
-            "statHash": 144602215,
-            "value": 2
+          "Discipline": {
+            "icon": "/common/destiny2_content/icons/ca62128071dc254fe75891211b98b237.png",
+            "value": "14"
           },
-          "1735777505": {
-            "statHash": 1735777505,
-            "value": 14
+          "Intellect": {
+            "icon": "/common/destiny2_content/icons/59732534ce7060dba681d1ba84c055a6.png",
+            "value": "2"
           },
-          "1943323491": {
-            "statHash": 1943323491,
-            "value": 6
+          "Mobility": {
+            "icon": "/common/destiny2_content/icons/e26e0e93a9daf4fdd21bf64eb9246340.png",
+            "value": "24"
           },
-          "2996146975": {
-            "statHash": 2996146975,
-            "value": 24
+          "Recovery": {
+            "icon": "/common/destiny2_content/icons/128eee4ee7fc127851ab32eac6ca91cf.png",
+            "value": "6"
           },
-          "392767087": {
-            "statHash": 392767087,
-            "value": 2
+          "Resilience": {
+            "icon": "/common/destiny2_content/icons/202ecc1c6febeb6b97dafc856e863140.png",
+            "value": "2"
           },
-          "4244567218": {
-            "statHash": 4244567218,
-            "value": 15
+          "Strength": {
+            "icon": "/common/destiny2_content/icons/c7eefc8abbaa586eeab79e962a79d6ad.png",
+            "value": "15"
           }
         }
       },
-      "20886954": {
+      "Class Armor": {
         "common_data": {
-          "bucketHash": 20886954,
-          "itemHash": 3846650177
+          "item_bucket": "Class Armor",
+          "item_icon": "/common/destiny2_content/icons/eb5ac4e7407ab67df1129f940f74047d.jpg",
+          "item_name": "TM-Cogburn Custom Mark",
+          "item_watermark": "/common/destiny2_content/icons/1a68ada4fb21371c5f2b7e2eae1ebce8.png"
         },
-        "perks": [
-          {
-            "iconPath": "/common/destiny2_content/icons/12440e412ad8c3968f0580b885e76168.png",
-            "isActive": true,
-            "perkHash": 840874903,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/12440e412ad8c3968f0580b885e76168.png",
-            "isActive": true,
-            "perkHash": 840874903,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/12440e412ad8c3968f0580b885e76168.png",
-            "isActive": true,
-            "perkHash": 840874903,
-            "visible": true
+        "perks": {
+          "Time Dilation": {
+            "icon": "/common/destiny2_content/icons/fe63aa2d2147e6649f6810908dfe3413.png",
+            "name": "Time Dilation"
           }
-        ],
+        },
         "stats": {
-          "144602215": {
-            "statHash": 144602215,
-            "value": 12
+          "Discipline": {
+            "icon": "/common/destiny2_content/icons/ca62128071dc254fe75891211b98b237.png",
+            "value": "0"
           },
-          "1735777505": {
-            "statHash": 1735777505,
-            "value": 10
+          "Intellect": {
+            "icon": "/common/destiny2_content/icons/59732534ce7060dba681d1ba84c055a6.png",
+            "value": "0"
           },
-          "1943323491": {
-            "statHash": 1943323491,
-            "value": 8
+          "Mobility": {
+            "icon": "/common/destiny2_content/icons/e26e0e93a9daf4fdd21bf64eb9246340.png",
+            "value": "0"
           },
-          "2996146975": {
-            "statHash": 2996146975,
-            "value": 13
+          "Recovery": {
+            "icon": "/common/destiny2_content/icons/128eee4ee7fc127851ab32eac6ca91cf.png",
+            "value": "0"
           },
-          "392767087": {
-            "statHash": 392767087,
-            "value": 12
+          "Resilience": {
+            "icon": "/common/destiny2_content/icons/202ecc1c6febeb6b97dafc856e863140.png",
+            "value": "0"
           },
-          "4244567218": {
-            "statHash": 4244567218,
-            "value": 12
+          "Strength": {
+            "icon": "/common/destiny2_content/icons/c7eefc8abbaa586eeab79e962a79d6ad.png",
+            "value": "0"
           }
         }
       },
-      "953998645": {
+      "Energy Weapons": {
         "common_data": {
-          "bucketHash": 953998645,
-          "itemHash": 1763584999
+          "item_bucket": "Energy Weapons",
+          "item_icon": "/common/destiny2_content/icons/7c6119af7941e05155cef9d8860ff67c.jpg",
+          "item_name": "Nessa's Oblation",
+          "item_watermark": "/common/destiny2_content/icons/849de2c6bd5e9b8ced8abe8cca56d724.png"
         },
-        "perks": [
-          {
-            "iconPath": "",
-            "isActive": true,
-            "perkHash": 3435464613,
-            "visible": false
+        "perks": {
+          "Demolitionist": {
+            "icon": "/common/destiny2_content/icons/53ead908917c9156457c7c9dd453d649.png",
+            "name": "Demolitionist"
           },
-          {
-            "iconPath": "/common/destiny2_content/icons/b5b5c8ec30701e37c55687aabd74a87f.png",
-            "isActive": true,
-            "perkHash": 4172427697,
-            "visible": true
+          "Harmonic Resonance": {
+            "icon": "/common/destiny2_content/icons/b31523dc685e2986fe5da628cbeba96f.png",
+            "name": "Harmonic Resonance"
           },
-          {
-            "iconPath": "",
-            "isActive": true,
-            "perkHash": 4012328917,
-            "visible": false
+          "Paracausal Affinity": {
+            "icon": "/common/destiny2_content/icons/bcff2e25c8f1c404cb4ef65973c4758a.png",
+            "name": "Paracausal Affinity"
           },
-          {
-            "iconPath": "/common/destiny2_content/icons/98c67b9cb123c2cb48c111239712a998.png",
-            "isActive": true,
-            "perkHash": 1856211899,
-            "visible": true
+          "Pinpoint Slug Frame": {
+            "icon": "/common/destiny2_content/icons/90c4f7f35c9d24f4add016722a78404e.png",
+            "name": "Pinpoint Slug Frame"
           },
-          {
-            "iconPath": "/common/destiny2_content/icons/cd9a5fa6a5d92ce4300e6903794dbe0b.png",
-            "isActive": true,
-            "perkHash": 3946276225,
-            "visible": true
-          },
-          {
-            "iconPath": "",
-            "isActive": true,
-            "perkHash": 169506245,
-            "visible": false
+          "damage_type": {
+            "icon": "/common/destiny2_content/icons/DestinyDamageTypeDefinition_ceb2f6197dccf3958bb31cc783eb97a0.png",
+            "name": "Void"
           }
-        ],
+        },
         "stats": {
-          "1240592695": {
-            "statHash": 1240592695,
-            "value": 100
+          "Aim Assistance": {
+            "icon": null,
+            "value": "48"
           },
-          "1345609583": {
-            "statHash": 1345609583,
-            "value": 60
+          "Airborne Effectiveness": {
+            "icon": null,
+            "value": "5"
           },
-          "155624089": {
-            "statHash": 155624089,
-            "value": 100
+          "Handling": {
+            "icon": null,
+            "value": "72"
           },
-          "2714457168": {
-            "statHash": 2714457168,
-            "value": 11
+          "Impact": {
+            "icon": null,
+            "value": "70"
           },
-          "2715839340": {
-            "statHash": 2715839340,
-            "value": 59
+          "Magazine": {
+            "icon": null,
+            "value": "6"
           },
-          "3555269338": {
-            "statHash": 3555269338,
-            "value": 17
+          "Range": {
+            "icon": null,
+            "value": "73"
           },
-          "3871231066": {
-            "statHash": 3871231066,
-            "value": 70
+          "Recoil Direction": {
+            "icon": null,
+            "value": "59"
           },
-          "4043523819": {
-            "statHash": 4043523819,
-            "value": 53
+          "Reload Speed": {
+            "icon": null,
+            "value": "49"
           },
-          "4188031367": {
-            "statHash": 4188031367,
-            "value": 60
+          "Rounds Per Minute": {
+            "icon": null,
+            "value": "70"
           },
-          "4284893193": {
-            "statHash": 4284893193,
-            "value": 100
+          "Stability": {
+            "icon": null,
+            "value": "62"
           },
-          "943549884": {
-            "statHash": 943549884,
-            "value": 56
+          "Zoom": {
+            "icon": null,
+            "value": "12"
           }
         }
       },
-      "1498876634": {
+      "Helmet": {
         "common_data": {
-          "bucketHash": 1498876634,
-          "itemHash": 231031173
+          "item_bucket": "Helmet",
+          "item_icon": "/common/destiny2_content/icons/b53b0dac28e4c980609358e0c686a181.jpg",
+          "item_name": "War Numen's Crown",
+          "item_watermark": "/common/destiny2_content/icons/f359d68324ae21522c299983ff1ef9f2.png"
         },
-        "perks": [
-          {
-            "iconPath": "",
-            "isActive": true,
-            "perkHash": 2015255840,
-            "visible": false
+        "perks": {
+          "Heavy Ammo Finder": {
+            "icon": "/common/destiny2_content/icons/9cea835b4fa74d5fcd4bba7a990c20c6.png",
+            "name": "Heavy Ammo Finder"
           },
-          {
-            "iconPath": "/common/destiny2_content/icons/0ab090e93e19da9e841b0f94c5ab7de6.png",
-            "isActive": true,
-            "perkHash": 2747363862,
-            "visible": true
-          },
-          {
-            "iconPath": "",
-            "isActive": true,
-            "perkHash": 3340768010,
-            "visible": false
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/d8a615160ca06c9e2e761fe5f0ac43fb.png",
-            "isActive": true,
-            "perkHash": 800556114,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/8e910e56aa6e36b2c406804e1d78d04f.png",
-            "isActive": true,
-            "perkHash": 1781483875,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/b31523dc685e2986fe5da628cbeba96f.png",
-            "isActive": true,
-            "perkHash": 2552580315,
-            "visible": true
+          "Kinetic Siphon": {
+            "icon": "/common/destiny2_content/icons/c4082bafed059e95f00406e76bc431f7.png",
+            "name": "Kinetic Siphon"
           }
-        ],
+        },
         "stats": {
-          "1240592695": {
-            "statHash": 1240592695,
-            "value": 38
+          "Discipline": {
+            "icon": "/common/destiny2_content/icons/ca62128071dc254fe75891211b98b237.png",
+            "value": "13"
           },
-          "1345609583": {
-            "statHash": 1345609583,
-            "value": 61
+          "Intellect": {
+            "icon": "/common/destiny2_content/icons/59732534ce7060dba681d1ba84c055a6.png",
+            "value": "2"
           },
-          "155624089": {
-            "statHash": 155624089,
-            "value": 78
+          "Mobility": {
+            "icon": "/common/destiny2_content/icons/e26e0e93a9daf4fdd21bf64eb9246340.png",
+            "value": "8"
           },
-          "2714457168": {
-            "statHash": 2714457168,
-            "value": 25
+          "Recovery": {
+            "icon": "/common/destiny2_content/icons/128eee4ee7fc127851ab32eac6ca91cf.png",
+            "value": "13"
           },
-          "2715839340": {
-            "statHash": 2715839340,
-            "value": 96
+          "Resilience": {
+            "icon": "/common/destiny2_content/icons/202ecc1c6febeb6b97dafc856e863140.png",
+            "value": "10"
           },
-          "3555269338": {
-            "statHash": 3555269338,
-            "value": 12
-          },
-          "3871231066": {
-            "statHash": 3871231066,
-            "value": 18
-          },
-          "4043523819": {
-            "statHash": 4043523819,
-            "value": 35
-          },
-          "4188031367": {
-            "statHash": 4188031367,
-            "value": 62
-          },
-          "4284893193": {
-            "statHash": 4284893193,
-            "value": 450
-          },
-          "943549884": {
-            "statHash": 943549884,
-            "value": 58
+          "Strength": {
+            "icon": "/common/destiny2_content/icons/c7eefc8abbaa586eeab79e962a79d6ad.png",
+            "value": "16"
           }
         }
       },
-      "1585787867": {
+      "Kinetic Weapons": {
         "common_data": {
-          "bucketHash": 1585787867,
-          "itemHash": 506181038
+          "item_bucket": "Kinetic Weapons",
+          "item_icon": "/common/destiny2_content/icons/694ee7180d9c7a5f8900f9e6722d441e.jpg",
+          "item_name": "Mykel's Reverence",
+          "item_watermark": "/common/destiny2_content/icons/849de2c6bd5e9b8ced8abe8cca56d724.png"
         },
-        "perks": [
-          {
-            "iconPath": "/common/destiny2_content/icons/fe63aa2d2147e6649f6810908dfe3413.png",
-            "isActive": true,
-            "perkHash": 4292924113,
-            "visible": true
+        "perks": {
+          "Harmonic Resonance": {
+            "icon": "/common/destiny2_content/icons/b31523dc685e2986fe5da628cbeba96f.png",
+            "name": "Harmonic Resonance"
           },
-          {
-            "iconPath": "/common/destiny2_content/icons/fe63aa2d2147e6649f6810908dfe3413.png",
-            "isActive": true,
-            "perkHash": 4292924113,
-            "visible": true
+          "Rapid-Fire Frame": {
+            "icon": "/common/destiny2_content/icons/0ab090e93e19da9e841b0f94c5ab7de6.png",
+            "name": "Rapid-Fire Frame"
           },
-          {
-            "iconPath": "/common/destiny2_content/icons/fe63aa2d2147e6649f6810908dfe3413.png",
-            "isActive": true,
-            "perkHash": 4292924113,
-            "visible": true
+          "Rewind Rounds": {
+            "icon": "/common/destiny2_content/icons/d8a615160ca06c9e2e761fe5f0ac43fb.png",
+            "name": "Rewind Rounds"
+          },
+          "Tap the Trigger": {
+            "icon": "/common/destiny2_content/icons/8e910e56aa6e36b2c406804e1d78d04f.png",
+            "name": "Tap the Trigger"
+          },
+          "damage_type": {
+            "icon": "/common/destiny2_content/icons/DestinyDamageTypeDefinition_b2fe51a94f3533f97079dfa0d27a4096.png",
+            "name": "Strand"
           }
-        ],
+        },
         "stats": {
-          "144602215": {
-            "statHash": 144602215,
-            "value": 0
+          "Aim Assistance": {
+            "icon": null,
+            "value": "61"
           },
-          "1735777505": {
-            "statHash": 1735777505,
-            "value": 0
+          "Airborne Effectiveness": {
+            "icon": null,
+            "value": "25"
           },
-          "1943323491": {
-            "statHash": 1943323491,
-            "value": 0
+          "Handling": {
+            "icon": null,
+            "value": "58"
           },
-          "2996146975": {
-            "statHash": 2996146975,
-            "value": 0
+          "Impact": {
+            "icon": null,
+            "value": "35"
           },
-          "392767087": {
-            "statHash": 392767087,
-            "value": 0
+          "Magazine": {
+            "icon": null,
+            "value": "18"
           },
-          "4244567218": {
-            "statHash": 4244567218,
-            "value": 0
+          "Range": {
+            "icon": null,
+            "value": "38"
+          },
+          "Recoil Direction": {
+            "icon": null,
+            "value": "96"
+          },
+          "Reload Speed": {
+            "icon": null,
+            "value": "62"
+          },
+          "Rounds Per Minute": {
+            "icon": null,
+            "value": "450"
+          },
+          "Stability": {
+            "icon": null,
+            "value": "78"
+          },
+          "Zoom": {
+            "icon": null,
+            "value": "12"
           }
         }
       },
-      "2465295065": {
+      "Leg Armor": {
         "common_data": {
-          "bucketHash": 2465295065,
-          "itemHash": 135029084
+          "item_bucket": "Leg Armor",
+          "item_icon": "/common/destiny2_content/icons/ffa65c486af48434bb899a1baec295f2.jpg",
+          "item_name": "Greaves of Agony",
+          "item_watermark": "/common/destiny2_content/icons/849de2c6bd5e9b8ced8abe8cca56d724.png"
         },
-        "perks": [
-          {
-            "iconPath": "",
-            "isActive": true,
-            "perkHash": 279556661,
-            "visible": false
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/90c4f7f35c9d24f4add016722a78404e.png",
-            "isActive": true,
-            "perkHash": 2854449576,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/53ead908917c9156457c7c9dd453d649.png",
-            "isActive": true,
-            "perkHash": 4120345915,
-            "visible": true
-          },
-          {
-            "iconPath": "",
-            "isActive": true,
-            "perkHash": 2252751995,
-            "visible": false
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/bcff2e25c8f1c404cb4ef65973c4758a.png",
-            "isActive": true,
-            "perkHash": 4065580235,
-            "visible": true
-          },
-          {
-            "iconPath": "/common/destiny2_content/icons/b31523dc685e2986fe5da628cbeba96f.png",
-            "isActive": true,
-            "perkHash": 2552580315,
-            "visible": true
+        "perks": {
+          "Arc Weapon Surge": {
+            "icon": "/common/destiny2_content/icons/12440e412ad8c3968f0580b885e76168.png",
+            "name": "Arc Weapon Surge"
           }
-        ],
+        },
         "stats": {
-          "1240592695": {
-            "statHash": 1240592695,
-            "value": 73
+          "Discipline": {
+            "icon": "/common/destiny2_content/icons/ca62128071dc254fe75891211b98b237.png",
+            "value": "10"
           },
-          "1345609583": {
-            "statHash": 1345609583,
-            "value": 48
+          "Intellect": {
+            "icon": "/common/destiny2_content/icons/59732534ce7060dba681d1ba84c055a6.png",
+            "value": "12"
           },
-          "155624089": {
-            "statHash": 155624089,
-            "value": 62
+          "Mobility": {
+            "icon": "/common/destiny2_content/icons/e26e0e93a9daf4fdd21bf64eb9246340.png",
+            "value": "13"
           },
-          "2714457168": {
-            "statHash": 2714457168,
-            "value": 5
+          "Recovery": {
+            "icon": "/common/destiny2_content/icons/128eee4ee7fc127851ab32eac6ca91cf.png",
+            "value": "8"
           },
-          "2715839340": {
-            "statHash": 2715839340,
-            "value": 59
+          "Resilience": {
+            "icon": "/common/destiny2_content/icons/202ecc1c6febeb6b97dafc856e863140.png",
+            "value": "12"
           },
-          "3555269338": {
-            "statHash": 3555269338,
-            "value": 12
-          },
-          "3871231066": {
-            "statHash": 3871231066,
-            "value": 6
-          },
-          "4043523819": {
-            "statHash": 4043523819,
-            "value": 70
-          },
-          "4188031367": {
-            "statHash": 4188031367,
-            "value": 49
-          },
-          "4284893193": {
-            "statHash": 4284893193,
-            "value": 70
-          },
-          "943549884": {
-            "statHash": 943549884,
-            "value": 72
+          "Strength": {
+            "icon": "/common/destiny2_content/icons/c7eefc8abbaa586eeab79e962a79d6ad.png",
+            "value": "12"
           }
         }
       },
-      "3448274439": {
+      "Power Weapons": {
         "common_data": {
-          "bucketHash": 3448274439,
-          "itemHash": 26254737
+          "item_bucket": "Power Weapons",
+          "item_icon": "/common/destiny2_content/icons/e52215994fc192c2eb88dfa2a415d291.jpg",
+          "item_name": "Grand Overture",
+          "item_watermark": "/common/destiny2_content/icons/b0406992c49c84bdc5febad94048dc01.png"
         },
-        "perks": [
-          {
-            "iconPath": "/common/destiny2_content/icons/c4082bafed059e95f00406e76bc431f7.png",
-            "isActive": true,
-            "perkHash": 1393587302,
-            "visible": true
+        "perks": {
+          "Grand Overture Catalyst": {
+            "icon": "/common/destiny2_content/icons/cd9a5fa6a5d92ce4300e6903794dbe0b.png",
+            "name": "Grand Overture Catalyst"
           },
-          {
-            "iconPath": "/common/destiny2_content/icons/9cea835b4fa74d5fcd4bba7a990c20c6.png",
-            "isActive": true,
-            "perkHash": 653045601,
-            "visible": true
+          "Omega Strike": {
+            "icon": "/common/destiny2_content/icons/98c67b9cb123c2cb48c111239712a998.png",
+            "name": "Omega Strike"
           },
-          {
-            "iconPath": "/common/destiny2_content/icons/9cea835b4fa74d5fcd4bba7a990c20c6.png",
-            "isActive": true,
-            "perkHash": 653045601,
-            "visible": true
+          "Wrath of the Colossus": {
+            "icon": "/common/destiny2_content/icons/b5b5c8ec30701e37c55687aabd74a87f.png",
+            "name": "Wrath of the Colossus"
+          },
+          "damage_type": {
+            "icon": "/common/destiny2_content/icons/DestinyDamageTypeDefinition_092d066688b879c807c3b460afdd61e6.png",
+            "name": "Arc"
           }
-        ],
+        },
         "stats": {
-          "144602215": {
-            "statHash": 144602215,
-            "value": 2
+          "Aim Assistance": {
+            "icon": null,
+            "value": "60"
           },
-          "1735777505": {
-            "statHash": 1735777505,
-            "value": 13
+          "Airborne Effectiveness": {
+            "icon": null,
+            "value": "11"
           },
-          "1943323491": {
-            "statHash": 1943323491,
-            "value": 13
+          "Handling": {
+            "icon": null,
+            "value": "56"
           },
-          "2996146975": {
-            "statHash": 2996146975,
-            "value": 8
+          "Impact": {
+            "icon": null,
+            "value": "53"
           },
-          "392767087": {
-            "statHash": 392767087,
-            "value": 10
+          "Magazine": {
+            "icon": null,
+            "value": "70"
           },
-          "4244567218": {
-            "statHash": 4244567218,
-            "value": 16
+          "Range": {
+            "icon": null,
+            "value": "100"
+          },
+          "Recoil Direction": {
+            "icon": null,
+            "value": "59"
+          },
+          "Reload Speed": {
+            "icon": null,
+            "value": "60"
+          },
+          "Rounds Per Minute": {
+            "icon": null,
+            "value": "100"
+          },
+          "Stability": {
+            "icon": null,
+            "value": "100"
+          },
+          "Zoom": {
+            "icon": null,
+            "value": "17"
           }
         }
       }
     },
     "light": 1812,
     "minutesPlayedTotal": "36685",
-    "raceHash": 3887404748,
+    "raceName": "Human",
     "stats": {
-      "144602215": 24,
-      "1735777505": 48,
-      "1935470627": 1812,
-      "1943323491": 37,
-      "2996146975": 61,
-      "392767087": 26,
-      "4244567218": 60
+      "Discipline": 48,
+      "Intellect": 24,
+      "Mobility": 61,
+      "Power": 1812,
+      "Recovery": 37,
+      "Resilience": 26,
+      "Strength": 60
+    }
+  },
+  "Warlock": {
+    "dateLastPlayed": "2023-04-18T22:47:14Z",
+    "emblemBackgroundPath": "/common/destiny2_content/icons/52f7cb993e02bf645b7f722efdcd76ec.jpg",
+    "emblemName": "Crucible Ascendant Division",
+    "emblemPath": "/common/destiny2_content/icons/6d255d5590448eb99e2efa2113468603.jpg",
+    "items": {
+      "Chest Armor": {
+        "common_data": {
+          "item_bucket": "Chest Armor",
+          "item_icon": "/common/destiny2_content/icons/6f942df3d0719ba15e3d812138c76c7f.jpg",
+          "item_name": "Robes of Transcendence",
+          "item_watermark": "/common/destiny2_content/icons/8aae1c411642683d341b2c4f16a7130c.png"
+        },
+        "perks": {
+          "Stat Increase": {
+            "icon": "/common/destiny2_content/icons/236085f26c0677c200d46d9314bef5e6.png",
+            "name": "Stat Increase"
+          },
+          "Unflinching Arc Aim": {
+            "icon": "/common/destiny2_content/icons/7788ad2481f860b739879618113268c7.png",
+            "name": "Unflinching Arc Aim"
+          },
+          "Unflinching Kinetic Aim": {
+            "icon": "/common/destiny2_content/icons/d2615bf1fb5d7b217ec35c36baf647f3.png",
+            "name": "Unflinching Kinetic Aim"
+          }
+        },
+        "stats": {
+          "Discipline": {
+            "icon": "/common/destiny2_content/icons/ca62128071dc254fe75891211b98b237.png",
+            "value": "9"
+          },
+          "Intellect": {
+            "icon": "/common/destiny2_content/icons/59732534ce7060dba681d1ba84c055a6.png",
+            "value": "18"
+          },
+          "Mobility": {
+            "icon": "/common/destiny2_content/icons/e26e0e93a9daf4fdd21bf64eb9246340.png",
+            "value": "4"
+          },
+          "Recovery": {
+            "icon": "/common/destiny2_content/icons/128eee4ee7fc127851ab32eac6ca91cf.png",
+            "value": "23"
+          },
+          "Resilience": {
+            "icon": "/common/destiny2_content/icons/202ecc1c6febeb6b97dafc856e863140.png",
+            "value": "22"
+          },
+          "Strength": {
+            "icon": "/common/destiny2_content/icons/c7eefc8abbaa586eeab79e962a79d6ad.png",
+            "value": "12"
+          }
+        }
+      },
+      "Class Armor": {
+        "common_data": {
+          "item_bucket": "Class Armor",
+          "item_icon": "/common/destiny2_content/icons/df80f7c29e92dc445a3a905a6dd2b345.jpg",
+          "item_name": "Eidolon Pursuant Bond",
+          "item_watermark": "/common/destiny2_content/icons/81edbfbf0bacf8e2117c00d1d6115f1b.png"
+        },
+        "perks": {
+          "Stat Increase": {
+            "icon": "/common/destiny2_content/icons/82e9df4947a48fb052aa7fcdb43f4165.png",
+            "name": "Stat Increase"
+          },
+          "Time Dilation": {
+            "icon": "/common/destiny2_content/icons/fe63aa2d2147e6649f6810908dfe3413.png",
+            "name": "Time Dilation"
+          },
+          "Visage of the Reaper": {
+            "icon": "/common/destiny2_content/icons/460bd24f86d190fbf538e367e15aaf49.png",
+            "name": "Visage of the Reaper"
+          }
+        },
+        "stats": {
+          "Discipline": {
+            "icon": "/common/destiny2_content/icons/ca62128071dc254fe75891211b98b237.png",
+            "value": "2"
+          },
+          "Intellect": {
+            "icon": "/common/destiny2_content/icons/59732534ce7060dba681d1ba84c055a6.png",
+            "value": "2"
+          },
+          "Mobility": {
+            "icon": "/common/destiny2_content/icons/e26e0e93a9daf4fdd21bf64eb9246340.png",
+            "value": "2"
+          },
+          "Recovery": {
+            "icon": "/common/destiny2_content/icons/128eee4ee7fc127851ab32eac6ca91cf.png",
+            "value": "12"
+          },
+          "Resilience": {
+            "icon": "/common/destiny2_content/icons/202ecc1c6febeb6b97dafc856e863140.png",
+            "value": "2"
+          },
+          "Strength": {
+            "icon": "/common/destiny2_content/icons/c7eefc8abbaa586eeab79e962a79d6ad.png",
+            "value": "2"
+          }
+        }
+      },
+      "Energy Weapons": {
+        "common_data": {
+          "item_bucket": "Energy Weapons",
+          "item_icon": "/common/destiny2_content/icons/c365777c8302772a865d99fb63da8731.jpg",
+          "item_name": "Cloudstrike",
+          "item_watermark": "/common/destiny2_content/icons/0aff1f4463f6f44e9863370ab1ce6983.png"
+        },
+        "perks": {
+          "Mortal Polarity": {
+            "icon": "/common/destiny2_content/icons/805f820afb0628153a7579de758b7f59.png",
+            "name": "Mortal Polarity"
+          },
+          "Stormbringer": {
+            "icon": "/common/destiny2_content/icons/739ff170888c875a7cbc50355f21ed56.png",
+            "name": "Stormbringer"
+          },
+          "Triple Tap": {
+            "icon": "/common/destiny2_content/icons/44cc0f78fd98d462dc4914dbe203dc49.png",
+            "name": "Triple Tap"
+          },
+          "damage_type": {
+            "icon": "/common/destiny2_content/icons/DestinyDamageTypeDefinition_092d066688b879c807c3b460afdd61e6.png",
+            "name": "Arc"
+          }
+        },
+        "stats": {
+          "Aim Assistance": {
+            "icon": null,
+            "value": "68"
+          },
+          "Airborne Effectiveness": {
+            "icon": null,
+            "value": "7"
+          },
+          "Handling": {
+            "icon": null,
+            "value": "86"
+          },
+          "Impact": {
+            "icon": null,
+            "value": "55"
+          },
+          "Magazine": {
+            "icon": null,
+            "value": "7"
+          },
+          "Range": {
+            "icon": null,
+            "value": "60"
+          },
+          "Recoil Direction": {
+            "icon": null,
+            "value": "68"
+          },
+          "Reload Speed": {
+            "icon": null,
+            "value": "40"
+          },
+          "Rounds Per Minute": {
+            "icon": null,
+            "value": "140"
+          },
+          "Stability": {
+            "icon": null,
+            "value": "64"
+          },
+          "Zoom": {
+            "icon": null,
+            "value": "50"
+          }
+        }
+      },
+      "Gauntlets": {
+        "common_data": {
+          "item_bucket": "Gauntlets",
+          "item_icon": "/common/destiny2_content/icons/bfd278da367a0dafac57f097335e22a7.jpg",
+          "item_name": "Channeling Wraps (CODA)",
+          "item_watermark": "/common/destiny2_content/icons/796813aa6cf8afe55aed4efc2f9c609b.png"
+        },
+        "perks": {
+          "Fastball": {
+            "icon": "/common/destiny2_content/icons/6939d7377921c9e8a80558bec173f96b.png",
+            "name": "Fastball"
+          },
+          "Grenade Kickstart": {
+            "icon": "/common/destiny2_content/icons/172aec971d8f1de939453cc428288c88.png",
+            "name": "Grenade Kickstart"
+          },
+          "Kinetic Loader": {
+            "icon": "/common/destiny2_content/icons/21206bf51c47e1de0c30f6c91d11043b.png",
+            "name": "Kinetic Loader"
+          },
+          "Stat Increase": {
+            "icon": "/common/destiny2_content/icons/236085f26c0677c200d46d9314bef5e6.png",
+            "name": "Stat Increase"
+          }
+        },
+        "stats": {
+          "Discipline": {
+            "icon": "/common/destiny2_content/icons/ca62128071dc254fe75891211b98b237.png",
+            "value": "4"
+          },
+          "Intellect": {
+            "icon": "/common/destiny2_content/icons/59732534ce7060dba681d1ba84c055a6.png",
+            "value": "28"
+          },
+          "Mobility": {
+            "icon": "/common/destiny2_content/icons/e26e0e93a9daf4fdd21bf64eb9246340.png",
+            "value": "4"
+          },
+          "Recovery": {
+            "icon": "/common/destiny2_content/icons/128eee4ee7fc127851ab32eac6ca91cf.png",
+            "value": "17"
+          },
+          "Resilience": {
+            "icon": "/common/destiny2_content/icons/202ecc1c6febeb6b97dafc856e863140.png",
+            "value": "26"
+          },
+          "Strength": {
+            "icon": "/common/destiny2_content/icons/c7eefc8abbaa586eeab79e962a79d6ad.png",
+            "value": "8"
+          }
+        }
+      },
+      "Helmet": {
+        "common_data": {
+          "item_bucket": "Helmet",
+          "item_icon": "/common/destiny2_content/icons/aab485177301103a8ce67f410a16998c.jpg",
+          "item_name": "Deep Explorer Hood",
+          "item_watermark": "/common/destiny2_content/icons/81edbfbf0bacf8e2117c00d1d6115f1b.png"
+        },
+        "perks": {
+          "Artifice Armor": {
+            "icon": "/common/destiny2_content/icons/74aeb2f3d7bc16a31a6924822f850184.png",
+            "name": "Artifice Armor"
+          },
+          "Kinetic Targeting": {
+            "icon": "/common/destiny2_content/icons/97325835ff38f222a6452d5be533311b.png",
+            "name": "Kinetic Targeting"
+          },
+          "Powerful Friends": {
+            "icon": "/common/destiny2_content/icons/bde7130eee758583d5f04ad0b67171ea.png",
+            "name": "Powerful Friends"
+          },
+          "Radiant Light": {
+            "icon": "/common/destiny2_content/icons/c674167ad6437587445889ce071f4231.png",
+            "name": "Radiant Light"
+          },
+          "Stat Increase": {
+            "icon": "/common/destiny2_content/icons/702fcf89ec3c8bdbb96eb01c1bb97efe.png",
+            "name": "Stat Increase"
+          }
+        },
+        "stats": {
+          "Discipline": {
+            "icon": "/common/destiny2_content/icons/ca62128071dc254fe75891211b98b237.png",
+            "value": "14"
+          },
+          "Intellect": {
+            "icon": "/common/destiny2_content/icons/59732534ce7060dba681d1ba84c055a6.png",
+            "value": "22"
+          },
+          "Mobility": {
+            "icon": "/common/destiny2_content/icons/e26e0e93a9daf4fdd21bf64eb9246340.png",
+            "value": "4"
+          },
+          "Recovery": {
+            "icon": "/common/destiny2_content/icons/128eee4ee7fc127851ab32eac6ca91cf.png",
+            "value": "14"
+          },
+          "Resilience": {
+            "icon": "/common/destiny2_content/icons/202ecc1c6febeb6b97dafc856e863140.png",
+            "value": "28"
+          },
+          "Strength": {
+            "icon": "/common/destiny2_content/icons/c7eefc8abbaa586eeab79e962a79d6ad.png",
+            "value": "4"
+          }
+        }
+      },
+      "Kinetic Weapons": {
+        "common_data": {
+          "item_bucket": "Kinetic Weapons",
+          "item_icon": "/common/destiny2_content/icons/da70192a57ea1b86c2e30b4a0a6f1ed8.jpg",
+          "item_name": "The Immortal (Adept)",
+          "item_watermark": "/common/destiny2_content/icons/e6af18ae79b74e76dab327ec183f8228.png"
+        },
+        "perks": {
+          "Adept Range": {
+            "icon": "/common/destiny2_content/icons/7a3d0704e2aac453bed2b6aa3419ffaf.png",
+            "name": "Adept Range"
+          },
+          "Aggressive Frame": {
+            "icon": "/common/destiny2_content/icons/d1ff65162c4a9d54a9612d9874b9fa88.png",
+            "name": "Aggressive Frame"
+          },
+          "Field-Tested": {
+            "icon": "/common/destiny2_content/icons/cbe1ad11ae20ad853fadf38f96d4f59b.png",
+            "name": "Field-Tested"
+          },
+          "Keep Away": {
+            "icon": "/common/destiny2_content/icons/ff88499e7190f1d63e42a8d3fb314c68.png",
+            "name": "Keep Away"
+          },
+          "Target Lock": {
+            "icon": "/common/destiny2_content/icons/971889be9ee14f50b4e31960b6e19b5d.png",
+            "name": "Target Lock"
+          },
+          "damage_type": {
+            "icon": "/common/destiny2_content/icons/DestinyDamageTypeDefinition_b2fe51a94f3533f97079dfa0d27a4096.png",
+            "name": "Strand"
+          }
+        },
+        "stats": {
+          "Aim Assistance": {
+            "icon": null,
+            "value": "39"
+          },
+          "Airborne Effectiveness": {
+            "icon": null,
+            "value": "25"
+          },
+          "Handling": {
+            "icon": null,
+            "value": "56"
+          },
+          "Impact": {
+            "icon": null,
+            "value": "22"
+          },
+          "Magazine": {
+            "icon": null,
+            "value": "28"
+          },
+          "Range": {
+            "icon": null,
+            "value": "83"
+          },
+          "Recoil Direction": {
+            "icon": null,
+            "value": "96"
+          },
+          "Reload Speed": {
+            "icon": null,
+            "value": "40"
+          },
+          "Rounds Per Minute": {
+            "icon": null,
+            "value": "750"
+          },
+          "Stability": {
+            "icon": null,
+            "value": "28"
+          },
+          "Zoom": {
+            "icon": null,
+            "value": "14"
+          }
+        }
+      },
+      "Leg Armor": {
+        "common_data": {
+          "item_bucket": "Leg Armor",
+          "item_icon": "/common/destiny2_content/icons/78874c268891725a68bdcc35432fec9e.jpg",
+          "item_name": "Transversive Steps",
+          "item_watermark": null
+        },
+        "perks": {
+          "Arc Holster": {
+            "icon": "/common/destiny2_content/icons/c1cd894eba0335c7c2bb7f42b58712dd.png",
+            "name": "Arc Holster"
+          },
+          "Stat Increase": {
+            "icon": "/common/destiny2_content/icons/82e9df4947a48fb052aa7fcdb43f4165.png",
+            "name": "Stat Increase"
+          },
+          "Strange Protractor": {
+            "icon": "/common/destiny2_content/icons/d2322bbcc6af2f2d9d96bf1c72e9957a.png",
+            "name": "Strange Protractor"
+          }
+        },
+        "stats": {
+          "Discipline": {
+            "icon": "/common/destiny2_content/icons/ca62128071dc254fe75891211b98b237.png",
+            "value": "11"
+          },
+          "Intellect": {
+            "icon": "/common/destiny2_content/icons/59732534ce7060dba681d1ba84c055a6.png",
+            "value": "20"
+          },
+          "Mobility": {
+            "icon": "/common/destiny2_content/icons/e26e0e93a9daf4fdd21bf64eb9246340.png",
+            "value": "10"
+          },
+          "Recovery": {
+            "icon": "/common/destiny2_content/icons/128eee4ee7fc127851ab32eac6ca91cf.png",
+            "value": "28"
+          },
+          "Resilience": {
+            "icon": "/common/destiny2_content/icons/202ecc1c6febeb6b97dafc856e863140.png",
+            "value": "12"
+          },
+          "Strength": {
+            "icon": "/common/destiny2_content/icons/c7eefc8abbaa586eeab79e962a79d6ad.png",
+            "value": "4"
+          }
+        }
+      },
+      "Power Weapons": {
+        "common_data": {
+          "item_bucket": "Power Weapons",
+          "item_icon": "/common/destiny2_content/icons/ef20d07a27c1f99f4b22b6a41f203704.jpg",
+          "item_name": "Circular Logic",
+          "item_watermark": "/common/destiny2_content/icons/849de2c6bd5e9b8ced8abe8cca56d724.png"
+        },
+        "perks": {
+          "Adaptive Frame": {
+            "icon": "/common/destiny2_content/icons/ad56b0e83d31592d9984cdf2f392452a.png",
+            "name": "Adaptive Frame"
+          },
+          "Backup Mag": {
+            "icon": "/common/destiny2_content/icons/fae156cf9820daf831a54a25887c08da.png",
+            "name": "Backup Mag"
+          },
+          "Feeding Frenzy": {
+            "icon": "/common/destiny2_content/icons/5838b4ef410895011edfed3eaf11641f.png",
+            "name": "Feeding Frenzy"
+          },
+          "Golden Tricorn": {
+            "icon": "/common/destiny2_content/icons/a2567013ed2aff582788b3dce292d990.png",
+            "name": "Golden Tricorn"
+          },
+          "Nanotech Tracer Rockets": {
+            "icon": "/common/destiny2_content/icons/17df0bd4f13c2b188ccce1b23fe9e4d8.png",
+            "name": "Nanotech Tracer Rockets"
+          },
+          "damage_type": {
+            "icon": "/common/destiny2_content/icons/DestinyDamageTypeDefinition_b2fe51a94f3533f97079dfa0d27a4096.png",
+            "name": "Strand"
+          }
+        },
+        "stats": {
+          "Aim Assistance": {
+            "icon": null,
+            "value": "59"
+          },
+          "Airborne Effectiveness": {
+            "icon": null,
+            "value": "21"
+          },
+          "Handling": {
+            "icon": null,
+            "value": "61"
+          },
+          "Impact": {
+            "icon": null,
+            "value": "41"
+          },
+          "Magazine": {
+            "icon": null,
+            "value": "75"
+          },
+          "Range": {
+            "icon": null,
+            "value": "50"
+          },
+          "Recoil Direction": {
+            "icon": null,
+            "value": "80"
+          },
+          "Reload Speed": {
+            "icon": null,
+            "value": "35"
+          },
+          "Rounds Per Minute": {
+            "icon": null,
+            "value": "450"
+          },
+          "Stability": {
+            "icon": null,
+            "value": "50"
+          },
+          "Zoom": {
+            "icon": null,
+            "value": "16"
+          }
+        }
+      }
+    },
+    "light": 1824,
+    "minutesPlayedTotal": "176085",
+    "raceName": "Human",
+    "stats": {
+      "Discipline": 50,
+      "Intellect": 100,
+      "Mobility": 24,
+      "Power": 1824,
+      "Recovery": 104,
+      "Resilience": 100,
+      "Strength": 30
     }
   }
 }
