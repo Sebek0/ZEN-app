@@ -2,7 +2,7 @@ from fastapi import FastAPI
 
 from . import models
 from .database import engine
-from .routers import weapons, armors, guardians, characters
+from .routers import weapons, armors, guardians, characters, token
 
 models.Base.metadata.create_all(bind=engine)
 
@@ -57,6 +57,7 @@ app = FastAPI(
 )
 
 # Including routers in main app file
+app.include_router(token.router)
 app.include_router(guardians.router)
 app.include_router(characters.router)
 app.include_router(weapons.router)
