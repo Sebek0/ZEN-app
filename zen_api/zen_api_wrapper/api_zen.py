@@ -46,3 +46,14 @@ class ZenAPI:
             raise Exception('Could not connect to ZEN API')
         
         return json_response
+    
+    async def post_create_guardian(self, payload):
+        url = 'http://127.0.0.1:8000/guardians/'
+        
+        return await self._post_request(url, payload=payload)
+    
+    async def post_create_character(self, guardian_id, payload):
+        url = 'http://127.0.0.1:8000/guardians/{}/'
+        url = url.format(guardian_id)
+        
+        return await self._post_request(url, payload=payload)
