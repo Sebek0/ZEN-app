@@ -47,9 +47,9 @@ class ZenAPI:
         
         return json_response
     
-    async def get_guardian_db_id(self, destiny_membership_id):
-        url = 'http://127.0.0.1:8000/guardians/{}'
-        url = url.format(destiny_membership_id)
+    async def get_guardian_db_id(self, destiny_membership_id: str):
+        url = 'http://127.0.0.1:8000/guardians/{}/id'
+        url = url.format(str(destiny_membership_id))
         
         return await self._get_request(url)
     
