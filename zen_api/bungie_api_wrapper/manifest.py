@@ -10,7 +10,7 @@ logger = logging.getLogger('bungie_wrapper')
 
 
 class Manifest:
-    def __init__(self, version_check: bool) -> None:
+    def __init__(self, version_check: bool = False) -> None:
         load_dotenv()
         
         self.version_check = version_check
