@@ -46,13 +46,18 @@ class Armor(ArmorBase):
 
 
 class CharacterBase(BaseModel):
-    char_id: int
     char_class: str
+    last_login: str
     stats: dict = {}
-    emblem: str
+    items: dict = {}
+    emblemBackgroundPath: str
+    emblem_name: str
+    emblem_path: str
+    light: int
+    minutesPlayedTotal: str
+    race_name: str
     title: str
-    last_login: str 
-
+    
 
 class CharacterCreate(CharacterBase):
     pass
@@ -69,7 +74,7 @@ class Character(CharacterBase):
 
 
 class GuardianBase(BaseModel):
-    bungie_id: int 
+    bungie_id: str 
     name: str
     platform: int = 3
 
