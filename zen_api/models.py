@@ -9,7 +9,7 @@ class Guardian(Base):
     __tablename__ = 'guardians'
     
     id = Column(Integer, primary_key=True, index=True)
-    bungie_id = Column(Integer, unique=True)
+    bungie_id = Column(String, unique=True)
     name = Column(String, unique=True)
     platform = Column(Integer, default=3)
     
@@ -20,12 +20,17 @@ class Character(Base):
     __tablename__ = "characters"
 
     id = Column(Integer, primary_key=True, index=True)
-    char_id = Column(Integer, unique=True, index=True)
     guardian_id = Column(Integer, ForeignKey("guardians.id"))
     char_class = Column(String)
     last_login = Column(String)
     stats = Column(MutableDict.as_mutable(PickleType), default={})
-    emblem = Column(String)
+    items = Column(MutableDict.as_mutable(PickleType), default={})
+    emblemBackgroundPath = Column(String)
+    emblem_name = Column(String)
+    emblem_path = Column(String)
+    light = Column(Integer)
+    minutesPlayedTotal = Column(String)
+    race_name = Column(String)
     title = Column(String)
 
     weapons = relationship("Weapon", back_populates='character')
@@ -45,7 +50,6 @@ class Weapon(Base):
     stats = Column(MutableDict.as_mutable(PickleType), default={})
     damage_type = Column(String)
     perks = Column(MutableDict.as_mutable(PickleType), default={})
-    damage_type = Column(String)
     
     character = relationship("Character", back_populates='weapons')
 
