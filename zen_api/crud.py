@@ -55,8 +55,11 @@ def create_guardian(db: Session, guardian: schemas.GuardianCreate):
     db.refresh(db_guardian)
     return db_guardian
 
+def get_guardian_id_by_bungie_id(db: Session, bungie_id: int):
+    return db.query(models.Guardian).filter(models.Guardian.bungie_id == bungie_id).first().id
+
 def get_guardian(db: Session, guardian_id: int):
-    return db.query(models.Guardian).filter(models.Guardian.id == guardian_id).first()
+    return db.query(models.Guardian).filter(models.Guardian.id == guardian_id).first().id
 
 def get_guardian_by_bungie_id(db: Session, bungie_id: int):
     return db.query(models.Guardian).filter(models.Guardian.bungie_id == bungie_id).first()
