@@ -48,15 +48,11 @@ async def get_characters(destiny_membership_id: int, platform: int):
     characters_ids = profile['Response']['profile']['data']['characterIds']
     
     # POST guardian to database
-    name = profile['Response']['profile']['data']['userInfo']['bungieGlobalDisplayName']
-    code = profile['Response']['profile']['data']['userInfo']['bungieGlobalDisplayNameCode']
+    n = profile['Response']['profile']['data']['userInfo']['bungieGlobalDisplayName']
+    c = profile['Response']['profile']['data']['userInfo']['bungieGlobalDisplayNameCode']
+    name = f'{n}#{c}'
     plat = profile['Response']['profile']['data']['userInfo']['membershipType']
-    payload = {'bungie_id': destiny_membership_id, 'name': f'{name}#{code}', 'platform': plat}
-    await zen.api.post_create_guardian(payload=payload)
-    
-    #GET ID IN DATABASE FOR GUARDIAN WITH BUNGIE_ID
-    db_id = await zen.api.get_guardian_db_id(destiny_membership_id)
-    
+
     async def character(profile, character_id):
         """Add character information in hash values to characters dictionary.
         
@@ -109,16 +105,6 @@ async def get_characters(destiny_membership_id: int, platform: int):
                 #       Item: {item[i]["itemHash"]} Class: {char_data["classHash"]} \
                 #           ItemInstanceId: {item[i]["itemInstanceId"]}')
         
-        char_payload = {
-            'char_id': character_id,
-            'char_class': char_data['classHash'],
-            'stats': char_data['stats'],
-            'emblem': char_data['emblemPath'],
-            'title': 'Reckoner',
-            'last_login': char_data['dateLastPlayed']
-        }        
-        await zen.api.post_create_character(1, payload=char_payload)
-        
         characters_informations[char_data['classHash']] = {
             'dateLastPlayed': char_data['dateLastPlayed'],
             'emblemBackgroundPath': char_data['emblemBackgroundPath'],
@@ -131,22 +117,47 @@ async def get_characters(destiny_membership_id: int, platform: int):
             'items': items
         }
     
-    
     await asyncio.gather(
         *[character(profile, char_id) for char_id in characters_ids]
     )
-    await destiny.close()
-    await zen.close()
-    #$await save_guardian(json: dict):
-    
     decoded_character = man.decode_characters_from_manifest(characters_informations)
-    print('x')
-    # print(json.dumps(decoded_character, indent=2))
-    # with open('characters.json', 'w') as file:
-    #     json.dump(decoded_character, indent=2, sort_keys=True, fp=file)
+ 
+    await add_guardian_to_db(destiny_membership_id, name, plat, decoded_character)
+    
+    await zen.close()
+    await destiny.close()
     
     return decoded_character
     
+async def add_guardian_to_db(bungie_id: str, name: str, platform: int,
+                             decoded_characters_data: dict):
+    zen = ZENAPI()
+    
+    guardian_payload = {
+        'bungie_id': bungie_id,
+        'name': name,
+        'platform': platform
+    }
+    await zen.api.post_create_guardian(payload=guardian_payload) # Adding new guardian to database
+    
+    db_id = await zen.api.get_guardian_db_id(str(bungie_id)) # Find Id in database of newly created guardian
+    
+    for char, value in decoded_characters_data.items():
+        char_payload = {
+            'char_class': char,
+            'last_login': value['dateLastPlayed'],
+            'emblemBackgroundPath': value['emblemBackgroundPath'],
+            'emblem_name': value['emblemName'],
+            'emblem_path': value['emblemPath'],
+            'light': value['light'],
+            'minutesPlayedTotal': value['minutesPlayedTotal'],
+            'race_name': value['raceName'],
+            'stats': value['stats'],
+            'items': value['items'],
+            'title': 'Reckoner'
+        }        
+        await zen.api.post_create_character(db_id, payload=char_payload)
+        await zen.close()
 
 async def main(destiny_membership_ids: int):
     # Asynchronous context manager
@@ -160,62 +171,18 @@ async def main(destiny_membership_ids: int):
         htmls = await asyncio.gather(*profiles, return_exceptions=True)
         return htmls
 
-
 if __name__ == '__main__':
-    destiny_membership_ids = [4611686018476581013]  # ...
+    destiny_membership_ids = [4611686018476581013, 4611686018476934649, 4611686018471751284,
+4611686018468563973, 4611686018468563973, 4611686018483897586,
+4611686018475651528, 4611686018468196301, 4611686018467812850,
+4611686018513471069, 4611686018468253986, 4611686018484132900,
+4611686018481764970, 4611686018495153165, 4611686018440823371,
+4611686018467608150, 4611686018467699390, 4611686018467291445,
+4611686018474326984, 4611686018474793124, 4611686018467294997,
+4611686018467376948, 4611686018468283789, 4611686018499753710,
+4611686018467609703, 4611686018467353193, 4611686018467264217,
+4611686018513468785, 4611686018470774879, 4611686018474234146,
+4611686018476390756, 4611686018468212594, 4611686018483005277]  # ...
     start_time = time.time()
     asyncio.run(main(destiny_membership_ids))  
     print("--- %s seconds ---" % (time.time() - start_time))
-
-
-
-
-
-# DELETE IF NEW VERSION WILL WORK
-# async def get(
-#     session: aiohttp.ClientSession,
-#     bungie_id: int,
-#     membershipType: int,
-#     **kwargs
-# ) -> dict:
-#     ################### GET PROFILE FROM BUNGIE ##################################
-#     url = f"https://www.bungie.net/Platform/Destiny2/{membershipType}/Profile/{bungie_id}/?components=100"
-#     headers = {'X-API-Key': str(bungie_key)}
-#     encoded_url = urllib.parse.quote(url, safe=':/?&=,.')
-    
-#     print(f"Requesting {url}")
-#     response = await session.get(url=encoded_url, headers=headers, **kwargs)
-#     data = await response.json()
-#     print(f"Received data for {url}")
-    
-#     ##################  GET CHARACTER FROM BUNGIE #############################
-#     characterId = data['Response']['profile']['data']['characterIds']
-#     characters = {}
-#     characters_coro = []
-    
-#     for char in characterId:
-#         character_url = f"https://www.bungie.net/Platform/Destiny2/{membershipType}/Profile/{bungie_id}/Character/{char}/?components=200"
-#         encoded_url = urllib.parse.quote(character_url, safe=':/?&=,.')
-#         character_response = await session.get(url=encoded_url, headers=headers, **kwargs)
-#         character = await character_response.json()
-#         characters_coro.append(character)
-#         print(character["Response"]["character"]["data"]["characterId"])
-        
-#         characters[char] = {
-#             'characterId': character['Response']['character']['data']['characterId'],
-#             'dateLastPlayed': character['Response']['character']['data']['dateLastPlayed']
-#         }
-        
-#     print(characters)
-#     return characters_coro
-
-
-# async def main(bungie_ids, **kwargs):
-#     # Asynchronous context manager
-#     async with aiohttp.ClientSession() as session:
-#         profiles = []
-#         for bungie_id in bungie_ids:
-#             profiles.append(get(session=session, bungie_id=bungie_id, membershipType=3,
-#                                 **kwargs))
-#         htmls = await asyncio.gather(*profiles, return_exceptions=True)
-#         return htmls
