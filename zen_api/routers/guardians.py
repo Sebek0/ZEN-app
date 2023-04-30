@@ -15,21 +15,21 @@ def create_guardian(guardian: schemas.GuardianCreate, db: Session = Depends(get_
         raise HTTPException(status_code=400, detail="Bungie ID already in database")
     return crud.create_guardian(db=db, guardian=guardian)
 
-@router.get('/guardians/{guardian_id}', tags=['Guardians'])
+@router.get('/guardians/id/{guardian_id}', tags=['Guardians'])
 def read_guardian(guardian_id: int, db: Session = Depends(get_db)):
     db_guardian = crud.get_guardian(db, guardian_id=guardian_id)
     if db_guardian is None:
         raise HTTPException(status_code=404, detail="Guardian not found")
     return db_guardian
 
-@router.get('/guardians/', response_model=schemas.Guardian, tags=['Guardians'])
-def read_guardian_id_by_bungie_id(bungie_id: int, db: Session = Depends(get_db)):
+@router.get('/guardians/{bungie_id}/id/', tags=['Guardians'])
+def read_guardian_id_by_bungie_id(bungie_id: str, db: Session = Depends(get_db)):
     db_id = crud.get_guardian_id_by_bungie_id(db=db, bungie_id=bungie_id)
     if db_id is None:
         raise HTTPException(status_code=404, detail='Guardian not found')
     return db_id
 
-@router.get('/guardians/bungieid/{bungie_id}', response_model=schemas.Guardian, tags=['Guardians'])
+@router.get('/guardians/bungie_id/{bungie_id}', response_model=schemas.Guardian, tags=['Guardians'])
 def read_guardian_by_bungie_id(bungie_id: int, db: Session = Depends(get_db)):
     db_guardian = crud.get_guardian_by_bungie_id(db, bungie_id=bungie_id)
     if db_guardian is None:
@@ -44,9 +44,9 @@ def read_guardian_by_name(name: str, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Guardian not found")
     return db_guardian
 
+#api_key: APIKey = Depends(get_api_key)
 @router.get("/guardians/", response_model=list[schemas.Guardian], tags=['Guardians'])
-def read_guardians(skip: int = 0, limit: int = 100, db: Session = Depends(get_db),
-                   api_key: APIKey = Depends(get_api_key)):
+def read_guardians(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     guardians = crud.get_guardians(db, skip=skip, limit=limit)
     return guardians
 
