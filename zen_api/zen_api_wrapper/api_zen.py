@@ -47,6 +47,12 @@ class ZenAPI:
         
         return json_response
     
+    async def get_guardian_db_id(self, destiny_membership_id):
+        url = 'http://127.0.0.1:8000/guardians/{}'
+        url = url.format(destiny_membership_id)
+        
+        return await self._get_request(url)
+    
     async def post_create_guardian(self, payload):
         url = 'http://127.0.0.1:8000/guardians/'
         
@@ -57,3 +63,10 @@ class ZenAPI:
         url = url.format(guardian_id)
         
         return await self._post_request(url, payload=payload)
+    
+    async def post_create_weapon(self, character_id, payload):
+        url = 'http://127.0.0.1:8000/characters/{}/weapons'
+        url = url.format(character_id)
+        
+        return await self._post_request(url, payload=payload)
+        
