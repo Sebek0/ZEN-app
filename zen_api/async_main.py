@@ -54,6 +54,9 @@ async def get_characters(destiny_membership_id: int, platform: int):
     payload = {'bungie_id': destiny_membership_id, 'name': f'{name}#{code}', 'platform': plat}
     await zen.api.post_create_guardian(payload=payload)
     
+    #GET ID IN DATABASE FOR GUARDIAN WITH BUNGIE_ID
+    db_id = await zen.api.get_guardian_db_id(destiny_membership_id)
+    
     async def character(profile, character_id):
         """Add character information in hash values to characters dictionary.
         
@@ -159,7 +162,7 @@ async def main(destiny_membership_ids: int):
 
 
 if __name__ == '__main__':
-    destiny_membership_ids = [4611686018468563973]  # ...
+    destiny_membership_ids = [4611686018476581013]  # ...
     start_time = time.time()
     asyncio.run(main(destiny_membership_ids))  
     print("--- %s seconds ---" % (time.time() - start_time))
