@@ -15,12 +15,18 @@ def create_guardian(guardian: schemas.GuardianCreate, db: Session = Depends(get_
         raise HTTPException(status_code=400, detail="Bungie ID already in database")
     return crud.create_guardian(db=db, guardian=guardian)
 
-@router.get('/guardians/id/{guardian_id}', tags=['Guardians'])
+@router.get('/guardians/{guardian_id}', response_model=schemas.Guardian, tags=['Guardians'])
 def read_guardian(guardian_id: int, db: Session = Depends(get_db)):
     db_guardian = crud.get_guardian(db, guardian_id=guardian_id)
     if db_guardian is None:
         raise HTTPException(status_code=404, detail="Guardian not found")
     return db_guardian
+
+#api_key: APIKey = Depends(get_api_key)
+@router.get("/guardians/", response_model=list[schemas.Guardian], tags=['Guardians'])
+def read_guardians(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+    db_guardians = crud.get_guardians(db, skip=skip, limit=limit)
+    return db_guardians
 
 @router.get('/guardians/{bungie_id}/id/', tags=['Guardians'])
 def read_guardian_id_by_bungie_id(bungie_id: str, db: Session = Depends(get_db)):
@@ -44,12 +50,6 @@ def read_guardian_by_name(name: str, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Guardian not found")
     return db_guardian
 
-#api_key: APIKey = Depends(get_api_key)
-@router.get("/guardians/", response_model=list[schemas.Guardian], tags=['Guardians'])
-def read_guardians(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
-    guardians = crud.get_guardians(db, skip=skip, limit=limit)
-    return guardians
-
 @router.get("/guardians/character/{character_id}", response_model=schemas.Guardian, tags=['Guardians'])
 def read_guardian_by_character_id(character_id: int, db: Session = Depends(get_db)):
     db_guardian = crud.get_guardian_by_character_id(db, character_id=character_id)
@@ -57,9 +57,23 @@ def read_guardian_by_character_id(character_id: int, db: Session = Depends(get_d
         raise HTTPException(status_code=404, detail="Guardian not found")
     return db_guardian
 
-@router.delete("/guardians/{guardian_id}", tags=['Guardians'])
-def delete_user(guardian_id: int, db: Session = Depends(get_db)):
+# UPDATE guardian by guardian_id
+@router.put("/guardians/{guardian_id}", response_model=schemas.Guardian, tags=['Guardians'])
+def update_guardian(guardian_id: int, guardian: schemas.GuardianUpdate, db: Session = Depends(get_db)):
+    db_guardian = crud.get_guardian(db, guardian_id=guardian_id)
+    if db_guardian is None:
+        raise HTTPException(status_code=404, detail="Guardian not found")
+    for field, value in guardian.dict(exclude_unset=True).items():
+        setattr(db_guardian, field, value)
+    db.commit()
+    db.refresh(db_guardian)
+    return db_guardian 
+
+# DELETE a guardian with related characters by guardian_id
+@router.delete("/guardians/{guardian_id}", response_model=schemas.Guardian, tags=['Guardians'])
+def delete_guardian(guardian_id: int, db: Session = Depends(get_db)):
     deleted_guardian = crud.delete_guardian(db, guardian_id=guardian_id)
     if deleted_guardian is None:
         raise HTTPException(status_code=404, detail="Guardian not found")
     return deleted_guardian
+
