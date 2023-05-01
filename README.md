@@ -2,6 +2,8 @@
 ## How to run?
 ``` 
 uvicorn zen_api.main:app --reload
+OR
+python3 -m uvicorn zen_api.main:app --reload
 ```
 
 ## .Env file
