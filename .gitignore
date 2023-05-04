@@ -133,3 +133,4 @@ config.ini
 
 # Database files
 *.db
+frontend/node_modules
