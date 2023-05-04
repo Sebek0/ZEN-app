@@ -1,61 +1,65 @@
 import React from "react";
 import Zen from "../../assets/zen.gif";
-const Sidebar = () => {
+import PropTypes from "prop-types";
 
-    const clanmates = [
-        {
-            id: 1,
-            name: "Andones",
-            emblem: "https://www.bungie.net/common/destiny2_content/icons/8c22047edb1abda0f611c1808b4ae40a.jpg",
-        },
-        {
-            id:2,
-            name: "Filip",
-            emblem: "https://www.bungie.net/common/destiny2_content/icons/8c22047edb1abda0f611c1808b4ae40a.jpg",  
-        },
-        {
-            id:3,
-            name: "Sebek",
-            emblem: "https://www.bungie.net/common/destiny2_content/icons/8c22047edb1abda0f611c1808b4ae40a.jpg",
-        },
-    ]                                                                        
 
+const Sidebar = ({setDisplayedClanmateId}) => {
+	const clanmates = [
+		{
+			id: 1,
+			name: "Andones",
+			emblem:
+				"https://www.bungie.net/common/destiny2_content/icons/a89532752a40cec06120292c3e3ba3ff.jpg",
+		},
+		{
+			id: 2,
+			name: "Filip",
+			emblem:
+				"https://www.bungie.net/common/destiny2_content/icons/a89532752a40cec06120292c3e3ba3ff.jpg",
+		},
+		{
+			id: 3,
+			name: "Sebek",
+			emblem:
+				"https://www.bungie.net/common/destiny2_content/icons/a89532752a40cec06120292c3e3ba3ff.jpg",
+		},
+	];
 
 	return (
-		<div className='bg-secondary lg:w-96'>
-			<div className=' w-full h-1/6 flex align-middle'>
-				<div className='text-gray-500 mx-auto my-auto bg-primary/50 rounded-lg p-3 flex flex-row'>
-
-				<img
-					src={Zen}
-					alt='Zen'
-                    width={50}
-                    height={50}
-					className='mx-auto my-auto rounded-lg'></img>
-				<input className=" ml-5 text-white bg-transparent appearance-none focus:outline-0" placeholder="...?"></input>
-                    </div>
+		<div className='bg-secondary w-full lg:min-w-[22rem] lg:w-[22rem] lg:mr-5'>
+			<div className=' w-10/12 h-1/6 flex align-middle flex-shrink-0 mx-auto my-2'>
+				<div className='text-gray-500 mx-auto my-auto p-3 bg-primary/50 rounded-lg flex flex-row'>
+					<img
+						src={Zen}
+						alt='Zen'
+						width={50}
+						height={50}
+						className='mx-auto my-auto rounded-lg'></img>
+					<input
+						className=' ml-5 text-white bg-transparent appearance-none focus:outline-0'
+						placeholder='...?'></input>
+				</div>
 			</div>
 			<div className=' h-4/6 flex align-middle'>
-				<div className='text-gray-500 w-10/12 mx-auto h-full my-auto bg-primary/50 rounded-lg '>
+				<div className='text-gray-500 w-full lg:w-10/12 mx-auto h-full my-auto bg-primary/50 rounded-lg overflow-y-auto'>
 					{clanmates.map((clanmate) => (
 						<div
-							className='relative p-2'
-							key={clanmate.id}>
+							className='mx-auto my-5 flex flex-row rounded-md p-4 lg:p-2 hover:cursor-pointer hover:shadow-lg transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-101  w-[28rem] lg:w-11/12'
+							key={clanmate.id}
+							onClick={() => setDisplayedClanmateId(clanmate.id)}>
 							<img
 								src={clanmate.emblem}
-								alt={clanmate.name}
-								className='rounded-lg object-cover'></img>
+								alt='Zen'
+								width={50}
+								height={50}
+								className='mx-auto my-auto rounded-lg'></img>
 
-							<div className='text-white text-lg absolute top-1/4 right-1/2 left-20'>
+							<div className='text-white text-lg w-9/12'>
 								<p>{clanmate.name}</p>
-								<strong className='text-xs absolute top-3/4 text-purple-600 drop-shadow-lg'>
+								<strong className='text-xs text-purple-600 drop-shadow-lg tracking-tighter'>
 									Reckoner
 								</strong>
 							</div>
-							<p className='text-yellow-600 text-2xl text-bold absolute top-1/4 right-1/4 left-3/4'>
-								{" "}
-								1337{" "}
-							</p>
 						</div>
 					))}
 				</div>
@@ -72,5 +76,11 @@ const Sidebar = () => {
 		</div>
 	);
 };
+
+
+Sidebar.propTypes = {
+	setDisplayedClanmateId: PropTypes.func.isRequired,
+};
+
 
 export default Sidebar;
