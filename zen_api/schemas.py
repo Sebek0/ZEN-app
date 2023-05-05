@@ -57,7 +57,11 @@ class CharacterBase(BaseModel):
     minutesPlayedTotal: str
     race_name: str
     title: str
-    
+
+
+class CharacterUpdate(CharacterBase):
+    pass
+
 
 class CharacterCreate(CharacterBase):
     pass
@@ -77,6 +81,11 @@ class GuardianBase(BaseModel):
     bungie_id: str 
     name: str
     platform: int = 3
+
+
+class GuardianUpdate(BaseModel):
+    name: str
+    platform: int
 
 
 class GuardianCreate(GuardianBase):
