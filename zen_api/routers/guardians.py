@@ -59,7 +59,7 @@ def read_guardian_by_character_id(character_id: int, db: Session = Depends(get_d
 
 @router.get('/guardians/clanmates/', tags=['Guardians'])
 def read_clanmates_common_data(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
-    db_guardians = crud.test_guardian(db, skip=skip, limit=limit)
+    db_guardians = crud.get_clanmates_common_data(db, skip=skip, limit=limit)
     return db_guardians
 
 # UPDATE guardian by guardian_id
