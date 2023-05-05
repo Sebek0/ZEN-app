@@ -26,18 +26,18 @@ You will be able to:
 
 * **Create Guardians**.
 * **Read Guardains**.
-* **Manage Guardians** (_not implemented_).
+* **Manage Guardians** 
 * **Delete Guardians**.
-* **Update Guardians** (_not implemented_).
+* **Update Guardians**
 
 ## Characters
 
 You will be able to:
 
 * **Create Characters**.
-* **Read Characters** (_not implemented_).
+* **Read Characters** 
 * **Manage Characters** (_not implemented_).
-* **Delete Characters** (_not implemented_).
+* **Delete Characters** 
 * **Update Characters** (_not implemented_).
 
 ## TEMPLATE
@@ -55,6 +55,8 @@ app = FastAPI(
     description=description,
     version="0.0.1",
 )
+
+app.mount('/api/v1', app)
 
 # Including routers in main app file
 app.include_router(token.router)
