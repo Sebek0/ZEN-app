@@ -38,7 +38,6 @@ async def get_characters(destiny_membership_id: int, platform: int):
     """
 
     destiny = BAPI(API_KEY)
-    zen = ZENAPI()
     characters_informations = {}
     
     # get user profile from API request
@@ -123,8 +122,6 @@ async def get_characters(destiny_membership_id: int, platform: int):
     decoded_character = man.decode_characters_from_manifest(characters_informations)
  
     await add_guardian_to_db(destiny_membership_id, name, plat, decoded_character)
-    
-    await zen.close()
     await destiny.close()
     
     return decoded_character
@@ -157,7 +154,7 @@ async def add_guardian_to_db(bungie_id: str, name: str, platform: int,
             'title': 'Reckoner'
         }        
         await zen.api.post_create_character(db_id, payload=char_payload)
-        await zen.close()
+    await zen.close()
 
 async def main(destiny_membership_ids: int):
     # Asynchronous context manager
@@ -173,16 +170,7 @@ async def main(destiny_membership_ids: int):
 
 if __name__ == '__main__':
     destiny_membership_ids = [4611686018476581013, 4611686018476934649, 4611686018471751284,
-4611686018468563973, 4611686018468563973, 4611686018483897586,
-4611686018475651528, 4611686018468196301, 4611686018467812850,
-4611686018513471069, 4611686018468253986, 4611686018484132900,
-4611686018481764970, 4611686018495153165, 4611686018440823371,
-4611686018467608150, 4611686018467699390, 4611686018467291445,
-4611686018474326984, 4611686018474793124, 4611686018467294997,
-4611686018467376948, 4611686018468283789, 4611686018499753710,
-4611686018467609703, 4611686018467353193, 4611686018467264217,
-4611686018513468785, 4611686018470774879, 4611686018474234146,
-4611686018476390756, 4611686018468212594, 4611686018483005277]  # ...
+4611686018468563973, 4611686018468563973, 4611686018483897586]  # ...
     start_time = time.time()
     asyncio.run(main(destiny_membership_ids))  
     print("--- %s seconds ---" % (time.time() - start_time))
