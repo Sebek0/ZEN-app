@@ -36,6 +36,34 @@ def get_guardian_id_by_bungie_id(db: Session, bungie_id: str):
 def get_guardians_by_platform(db: Session, platform: int):
     return db.query(models.Guardian).filter(models.Guardian.platform == platform).all()
 
+def get_clanmates_common_data(db: Session, skip: int = 0, limit: int = 100):
+    all_guardians_data = []
+    all_guardians = db.query(models.Guardian).offset(skip).limit(limit).all()
+
+    for guardian in all_guardians:
+        guardian_data = {}
+        characters_data = []
+        db_characters = db.query(models.Guardian).filter(models.Guardian.id == guardian.id).first().characters
+        
+        for character in db_characters:
+            data_dict = {
+                'char_class': character.char_class,
+                'title': 'Dredgen', # CHANGE THIS AFTER IMPLEMENTING TITLE FROM BUNGIE API
+                'char_emblem': character.emblem_name,
+                'char_emblem_path': character.emblem_path,
+                'char_emblembackground_path': character.emblemBackgroundPath
+            }
+            characters_data.append(data_dict)
+            
+        guardian_data = {
+            "name": guardian.name,
+            "guardian_id": guardian.id,
+            "characters_info": characters_data
+        }
+        all_guardians_data.append(guardian_data)
+    
+    return all_guardians_data
+
 def delete_guardian(db: Session, guardian_id: int):
     db_guardian = db.query(models.Guardian).filter(models.Guardian.id == guardian_id).first()
     db_characters = db.query(models.Character).filter(models.Character.guardian_id == guardian_id).all()
