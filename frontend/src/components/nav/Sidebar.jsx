@@ -1,9 +1,8 @@
+import PropTypes from "prop-types";
 import React from "react";
 import Zen from "../../assets/zen.gif";
-import PropTypes from "prop-types";
 
-
-const Sidebar = ({setDisplayedClanmateId}) => {
+const Sidebar = ({ setDisplayedClanmateId }) => {
 	const clanmates = [
 		{
 			id: 1,
@@ -77,10 +76,8 @@ const Sidebar = ({setDisplayedClanmateId}) => {
 	);
 };
 
-
 Sidebar.propTypes = {
 	setDisplayedClanmateId: PropTypes.func.isRequired,
 };
-
 
 export default Sidebar;

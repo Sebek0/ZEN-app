@@ -1,13 +1,13 @@
-import Sidebar from "./components/nav/Sidebar";
-import Main from "./components/content/Main";
 import { useState } from "react";
+import Main from "./components/content/Main";
+import Sidebar from "./components/nav/Sidebar";
 
-  import { QueryClient, QueryClientProvider } from "react-query";
-	import { ReactQueryDevtools } from "react-query-devtools";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query-devtools";
 
-	const queryClient = new QueryClient({});
-function App() {        
-	const [displayedClanmateId, setDisplayedClanmateId] = useState(0);                         
+const queryClient = new QueryClient({});
+function App() {
+	const [displayedClanmateId, setDisplayedClanmateId] = useState(0);
 	return (
 		<QueryClientProvider client={queryClient}>
 			<>
@@ -16,7 +16,7 @@ function App() {
 					<Main displayedClanmateId={displayedClanmateId}></Main>
 				</div>
 			</>
-			<ReactQueryDevtools initialIsOpen={true} />
+			{/* <ReactQueryDevtools /> */}
 		</QueryClientProvider>
 	);
 }
