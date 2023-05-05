@@ -57,6 +57,11 @@ def read_guardian_by_character_id(character_id: int, db: Session = Depends(get_d
         raise HTTPException(status_code=404, detail="Guardian not found")
     return db_guardian
 
+@router.get('/guardians/clanmates/', tags=['Guardians'])
+def read_clanmates_common_data(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+    db_guardians = crud.test_guardian(db, skip=skip, limit=limit)
+    return db_guardians
+
 # UPDATE guardian by guardian_id
 @router.put("/guardians/{guardian_id}", response_model=schemas.Guardian, tags=['Guardians'])
 def update_guardian(guardian_id: int, guardian: schemas.GuardianUpdate, db: Session = Depends(get_db)):
@@ -76,4 +81,5 @@ def delete_guardian(guardian_id: int, db: Session = Depends(get_db)):
     if deleted_guardian is None:
         raise HTTPException(status_code=404, detail="Guardian not found")
     return deleted_guardian
+
 
