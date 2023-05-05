@@ -134,4 +134,4 @@ config.ini
 frontend/node_modules
 # Database files
 *.db
-zen_api/bungie_api_wrapper/Manifest/*.json
+zen_api/bungie_api_wrapper/Manifest/
