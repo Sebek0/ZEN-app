@@ -56,7 +56,8 @@ class CharacterBase(BaseModel):
     light: int
     minutesPlayedTotal: str
     race_name: str
-    title: str
+    title: dict = {}
+    subclass: dict = {}
 
 
 class CharacterUpdate(CharacterBase):

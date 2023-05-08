@@ -31,7 +31,8 @@ class Character(Base):
     light = Column(Integer)
     minutesPlayedTotal = Column(String)
     race_name = Column(String)
-    title = Column(String)
+    title = Column(MutableDict.as_mutable(PickleType), default={})
+    subclass = Column(MutableDict.as_mutable(PickleType), default={})
 
     weapons = relationship("Weapon", back_populates='character')
     armors = relationship("Armor", back_populates='character')
