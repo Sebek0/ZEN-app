@@ -47,6 +47,9 @@ class Manifest:
             with open(rf'{self.project_dir}/ZEN-app/zen_api/bungie_api_wrapper/Manifest/DestinySandboxPerkDefinition.json') as perk_man:
                 self.perk_manifest = json.load(perk_man) 
                 print('Loaded Manifest7')
+            with open(rf'{self.project_dir}/ZEN-app/zen_api/bungie_api_wrapper/Manifest/DestinyRecordDefinition.json') as record_man:
+                self.record_manifest = json.load(record_man)
+                print('Loaded Manifest8')
         
     def check_manifest(self):
         """Check manifest files and manifest version.
@@ -93,7 +96,8 @@ class Manifest:
                                 'DestinySandboxPerkDefinition',
                                 'DestinyClassDefinition',
                                 'DestinyRaceDefinition',
-                                'DestinyActivityDefinition']
+                                'DestinyActivityDefinition',
+                                'DestinyRecordDefinition']
             
             for definition in tqdm(definition_keys, desc='Fetching manifest files'):
                 download_manifest_url = 'http://www.bungie.net' + \
@@ -138,6 +142,22 @@ class Manifest:
                 
                 emblem_hash = characters_data[character]['emblemHash']
                 emblem_name = self.item_manifest[str(emblem_hash)]['displayProperties']['name']
+                
+                title_hash = characters_data[character]['title']
+                title_data = {
+                    'name': self.record_manifest[str(title_hash)]['displayProperties']['name'],
+                    'description': self.record_manifest[str(title_hash)]['displayProperties']['description'],
+                    'icon': self.record_manifest[str(title_hash)]['displayProperties']['icon']
+                }
+                print(title_data)
+                
+                subclass_hash = characters_data[character]['subclass']
+                subclass_data = {
+                    'name': self.item_manifest[str(subclass_hash)]['displayProperties']['name'],
+                    'icon': self.item_manifest[str(subclass_hash)]['displayProperties']['icon']
+                }
+                print(subclass_data)
+                
                 character_stat = {}
                 for s_hash, s_value in characters_data[character]['stats'].items():
                     stat_name = self.stat_manifest[s_hash]['displayProperties']['name']
@@ -219,6 +239,8 @@ class Manifest:
                     'light': char['light'],
                     'minutesPlayedTotal': char['minutesPlayedTotal'],
                     'raceName': race_name,
+                    'title': title_data,
+                    'subclass': subclass_data,
                     'stats': character_stat,
                     'items': items_details                        
                     }
