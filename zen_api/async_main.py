@@ -42,7 +42,7 @@ async def get_characters(destiny_membership_id: int, platform: int):
     
     # get user profile from API request
     profile = await destiny.api.get_destiny_profile(destiny_membership_id,
-                                                    platform, [100, 200, 205])
+                                                    platform, [100, 200, 205, 203])
     
     characters_ids = profile['Response']['profile']['data']['characterIds']
     
@@ -63,6 +63,8 @@ async def get_characters(destiny_membership_id: int, platform: int):
             profile (dict): Informations about Bungie user profile.
             character_id (str): Destiny2 user Character ID.
         """
+        
+        subclass = profile['Response']['characterRenderData']['data'][character_id]
         
         char_data = profile['Response']['characters']['data'][character_id]
         items_data = profile['Response']['characterEquipment']['data'] \
@@ -109,6 +111,8 @@ async def get_characters(destiny_membership_id: int, platform: int):
             'emblemBackgroundPath': char_data['emblemBackgroundPath'],
             'emblemHash': char_data['emblemHash'],
             'emblemPath': char_data['emblemPath'],
+            'title': char_data['titleRecordHash'],
+            'subclass': subclass['peerView']['equipment'][0]['itemHash'],
             'light': char_data['light'],
             'minutesPlayedTotal': char_data['minutesPlayedTotal'],
             'raceHash': char_data['raceHash'],
@@ -151,7 +155,8 @@ async def add_guardian_to_db(bungie_id: str, name: str, platform: int,
             'race_name': value['raceName'],
             'stats': value['stats'],
             'items': value['items'],
-            'title': 'Reckoner'
+            'title': value['title'],
+            'subclass': value['subclass']
         }        
         await zen.api.post_create_character(db_id, payload=char_payload)
     await zen.close()
@@ -170,7 +175,7 @@ async def main(destiny_membership_ids: int):
 
 if __name__ == '__main__':
     destiny_membership_ids = [4611686018476581013, 4611686018476934649, 4611686018471751284,
-4611686018468563973, 4611686018468563973, 4611686018483897586]  # ...
+4611686018468563973, 4611686018483897586]  # ...
     start_time = time.time()
     asyncio.run(main(destiny_membership_ids))  
     print("--- %s seconds ---" % (time.time() - start_time))
