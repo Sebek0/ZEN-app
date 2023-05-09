@@ -1,23 +1,20 @@
 import { useState } from "react";
 import Main from "./components/content/Main";
 import Sidebar from "./components/nav/Sidebar";
+import TimeAgo from "javascript-time-ago";
 
-import { QueryClient, QueryClientProvider } from "react-query";
-import { ReactQueryDevtools } from "react-query-devtools";
+import en from "javascript-time-ago/locale/en.json";
 
-const queryClient = new QueryClient({});
+TimeAgo.addDefaultLocale(en);
+
+
 function App() {
 	const [displayedClanmateId, setDisplayedClanmateId] = useState(0);
 	return (
-		<QueryClientProvider client={queryClient}>
-			<>
-				<div className='h-screen w-screen bg-primary font-mono flex flex-col flex-shrink-0 lg:flex-row overflow-y-hidden'>
+				<div className='h-screen bg-primary font-mono flex flex-col flex-shrink-0 lg:flex-row'>
 					<Sidebar setDisplayedClanmateId={setDisplayedClanmateId}></Sidebar>
-					<Main displayedClanmateId={displayedClanmateId}></Main>
+					{displayedClanmateId !== 0 && <Main displayedClanmateId={displayedClanmateId}></Main>}
 				</div>
-			</>
-			{/* <ReactQueryDevtools /> */}
-		</QueryClientProvider>
 	);
 }
 
