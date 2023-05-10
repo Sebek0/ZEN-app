@@ -58,7 +58,7 @@ const Sidebar = ({ setDisplayedClanmateId }) => {
 						))}
 				</div>
 			</div>
-			<footer className='hidden lg:flex align-middle mt-20'>
+			<footer className='hidden lg:flex align-middle mt-5'>
 				<div className='text-white w-10/12 mx-auto h-1/4 my-auto bg-primary/50 rounded-lg '>
 					<div className='flex text-xs align-baseline'>
 						<p className='mx-auto pt-3 flex flex-row'>
