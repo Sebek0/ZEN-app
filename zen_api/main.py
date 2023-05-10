@@ -40,14 +40,6 @@ You will be able to:
 * **Manage Characters** (_not implemented_).
 * **Delete Characters** 
 * **Update Characters** (_not implemented_).
-
-## TEMPLATE
-functionality	    method	    path
-create a todo item	    POST	    /todo
-read a todo list item	GET	        todo/{id}
-update a todo item	    PUT	        /todo/{id}
-delete a todo item	    DELETE	    /todo/{id}
-read all todo items	    GET	        /todo
 """
 
 app = FastAPI(openapi_tags=tags_metadata)
