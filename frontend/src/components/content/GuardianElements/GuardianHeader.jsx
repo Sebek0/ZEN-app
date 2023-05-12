@@ -10,12 +10,12 @@ const GuardianHeader = ({guardian}) => {
 				backgroundImage: `url(${BUNGIE_URL + guardian.emblemBackgroundPath})`,
 				backgroundSize: "cover",
 			}}>
-			<div className='flex flex-col justify-center ml-12 p-4'>
-				<span className='text-white text-center text-2xl drop-shadow-2xl text-bold '>
+			<div className='flex flex-col justify-start ml-12 p-4'>
+				<span className='text-white text-2xl drop-shadow-2xl text-bold'>
 					{guardian.char_class}
 				</span>
 
-				<span className='text-purple-500'>{guardian.title}</span>
+				<span className='text-purple-500'>{guardian.title.name}</span>
 			</div>
 			<div className='flex flex-col justify-center'>
 				<div className='flex flex-row mb-1 drop-shadow-2xl bg-secondary/75 rounded-xl mx-auto'>

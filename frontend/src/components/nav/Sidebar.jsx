@@ -14,7 +14,6 @@ const Sidebar = ({ setDisplayedClanmateId }) => {
 	const { isLoading, isError, data, error } = useQuery(["clanmates"], () =>
 		axios.get("http://127.0.0.1:8000/api/v1/guardians/clanmates/").then((res) => res.data)
 	);
-
 	return (
 		<div className='bg-secondary w-full lg:min-w-[22rem] lg:w-[22rem] hidden lg:block'>
 			<div className=' w-10/12 h-1/6 flex align-middle flex-shrink-0 mx-auto my-2'>
