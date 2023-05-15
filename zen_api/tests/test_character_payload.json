@@ -1,0 +1,518 @@
+{
+    "char_class": "Warlock",
+    "last_login": "2023-05-08T15:12:40Z",
+    "stats": {
+      "Power": 1832,
+      "Mobility": 23,
+      "Resilience": 100,
+      "Recovery": 100,
+      "Discipline": 100,
+      "Intellect": 60,
+      "Strength": 22
+    },
+    "items": {
+      "Kinetic Weapons": {
+        "common_data": {
+          "item_name": "Bite of the Fox",
+          "item_bucket": "Kinetic Weapons",
+          "item_icon": "/common/destiny2_content/icons/79f1a1e640cf2077d134fe78a6a72e43.jpg",
+          "item_watermark": "/common/destiny2_content/icons/e6af18ae79b74e76dab327ec183f8228.png"
+        },
+        "perks": {
+          "Aggressive Frame": {
+            "name": "Aggressive Frame",
+            "icon": "/common/destiny2_content/icons/d1ff65162c4a9d54a9612d9874b9fa88.png"
+          },
+          "Snapshot Sights": {
+            "name": "Snapshot Sights",
+            "icon": "/common/destiny2_content/icons/49df9d90b3f27bd5ec6a9b35f4c10def.png"
+          },
+          "Moving Target": {
+            "name": "Moving Target",
+            "icon": "/common/destiny2_content/icons/274a7f773a1bec5feb48bda6d9ecaa10.png"
+          },
+          "Targeting Adjuster": {
+            "name": "Targeting Adjuster",
+            "icon": "/common/destiny2_content/icons/ecd83da9150cf023cbc859b2c8331f2c.png"
+          },
+          "Skulking Wolf": {
+            "name": "Skulking Wolf",
+            "icon": "/common/destiny2_content/icons/a80e7c5edc83fc573b7fba87f73940f2.png"
+          }
+        },
+        "stats": {
+          "Rounds Per Minute": {
+            "value": "72",
+            "icon": null
+          },
+          "Impact": {
+            "value": "90",
+            "icon": null
+          },
+          "Range": {
+            "value": "90",
+            "icon": null
+          },
+          "Stability": {
+            "value": "30",
+            "icon": null
+          },
+          "Handling": {
+            "value": "35",
+            "icon": null
+          },
+          "Reload Speed": {
+            "value": "28",
+            "icon": null
+          },
+          "Magazine": {
+            "value": "3",
+            "icon": null
+          },
+          "Aim Assistance": {
+            "value": "46",
+            "icon": null
+          },
+          "Zoom": {
+            "value": "43",
+            "icon": null
+          },
+          "Recoil Direction": {
+            "value": "68",
+            "icon": null
+          },
+          "Airborne Effectiveness": {
+            "value": "4",
+            "icon": null
+          }
+        }
+      },
+      "Energy Weapons": {
+        "common_data": {
+          "item_name": "Mechabre",
+          "item_bucket": "Energy Weapons",
+          "item_icon": "/common/destiny2_content/icons/41cbbb69982bc0e5b93c5269ae66c347.jpg",
+          "item_watermark": "/common/destiny2_content/icons/215100c99216b9c0bd83b9daa50ace45.png"
+        },
+        "perks": {
+          "damage_type": {
+            "name": "Arc",
+            "icon": "/common/destiny2_content/icons/DestinyDamageTypeDefinition_092d066688b879c807c3b460afdd61e6.png"
+          },
+          "Aggressive Frame": {
+            "name": "Aggressive Frame",
+            "icon": "/common/destiny2_content/icons/d1ff65162c4a9d54a9612d9874b9fa88.png"
+          },
+          "Snapshot Sights": {
+            "name": "Snapshot Sights",
+            "icon": "/common/destiny2_content/icons/49df9d90b3f27bd5ec6a9b35f4c10def.png"
+          },
+          "Opening Shot": {
+            "name": "Opening Shot",
+            "icon": "/common/destiny2_content/icons/0fd9dbe1c09b8cc7d0be888c68ff4526.png"
+          },
+          "Targeting Adjuster": {
+            "name": "Targeting Adjuster",
+            "icon": "/common/destiny2_content/icons/ecd83da9150cf023cbc859b2c8331f2c.png"
+          },
+          "Search Party": {
+            "name": "Search Party",
+            "icon": "/common/destiny2_content/icons/a389e9ce0e6f1e584bd845517d1c84e1.png"
+          }
+        },
+        "stats": {
+          "Rounds Per Minute": {
+            "value": "72",
+            "icon": null
+          },
+          "Impact": {
+            "value": "90",
+            "icon": null
+          },
+          "Range": {
+            "value": "99",
+            "icon": null
+          },
+          "Stability": {
+            "value": "36",
+            "icon": null
+          },
+          "Handling": {
+            "value": "34",
+            "icon": null
+          },
+          "Reload Speed": {
+            "value": "33",
+            "icon": null
+          },
+          "Magazine": {
+            "value": "3",
+            "icon": null
+          },
+          "Aim Assistance": {
+            "value": "46",
+            "icon": null
+          },
+          "Zoom": {
+            "value": "45",
+            "icon": null
+          },
+          "Recoil Direction": {
+            "value": "77",
+            "icon": null
+          },
+          "Airborne Effectiveness": {
+            "value": "5",
+            "icon": null
+          }
+        }
+      },
+      "Power Weapons": {
+        "common_data": {
+          "item_name": "Bad Omens",
+          "item_bucket": "Power Weapons",
+          "item_icon": "/common/destiny2_content/icons/8309d7c64b21a5c5e861379d0230d405.jpg",
+          "item_watermark": "/common/destiny2_content/icons/0669efb55951e8bc9e99f3989eacc861.png"
+        },
+        "perks": {
+          "damage_type": {
+            "name": "Void",
+            "icon": "/common/destiny2_content/icons/DestinyDamageTypeDefinition_ceb2f6197dccf3958bb31cc783eb97a0.png"
+          },
+          "Aggressive Frame": {
+            "name": "Aggressive Frame",
+            "icon": "/common/destiny2_content/icons/d1ff65162c4a9d54a9612d9874b9fa88.png"
+          },
+          "Tracking Module": {
+            "name": "Tracking Module",
+            "icon": "/common/destiny2_content/icons/50b794dcc2a372cbc216e287790f9aa5.png"
+          },
+          "Cluster Bomb": {
+            "name": "Cluster Bomb",
+            "icon": "/common/destiny2_content/icons/26eb5d8ffd1c09e212ad2ea51ffd5ef9.png"
+          },
+          "Boss Spec": {
+            "name": "Boss Spec",
+            "icon": "/common/destiny2_content/icons/3380d1210d16224ca4fcd5da53915a97.png"
+          }
+        },
+        "stats": {
+          "Rounds Per Minute": {
+            "value": "25",
+            "icon": null
+          },
+          "Blast Radius": {
+            "value": "45",
+            "icon": null
+          },
+          "Velocity": {
+            "value": "67",
+            "icon": null
+          },
+          "Stability": {
+            "value": "37",
+            "icon": null
+          },
+          "Handling": {
+            "value": "15",
+            "icon": null
+          },
+          "Reload Speed": {
+            "value": "61",
+            "icon": null
+          },
+          "Magazine": {
+            "value": "1",
+            "icon": null
+          },
+          "Aim Assistance": {
+            "value": "34",
+            "icon": null
+          },
+          "Zoom": {
+            "value": "20",
+            "icon": null
+          },
+          "Recoil Direction": {
+            "value": "76",
+            "icon": null
+          },
+          "Airborne Effectiveness": {
+            "value": "3",
+            "icon": null
+          }
+        }
+      },
+      "Helmet": {
+        "common_data": {
+          "item_name": "Corrupting Echo Cover",
+          "item_bucket": "Helmet",
+          "item_icon": "/common/destiny2_content/icons/9e2d95c70866147a79f4dfd8f0df58bd.jpg",
+          "item_watermark": "/common/destiny2_content/icons/dd4dd93c5606998595d9e5a06d5bfc9c.png"
+        },
+        "perks": {
+          "Stat Increase": {
+            "name": "Stat Increase",
+            "icon": "/common/destiny2_content/icons/236085f26c0677c200d46d9314bef5e6.png"
+          },
+          "Strand Targeting": {
+            "name": "Strand Targeting",
+            "icon": "/common/destiny2_content/icons/d7a82b1fc8d4e38f2b176e7e80156ef6.png"
+          },
+          "Solar Targeting": {
+            "name": "Solar Targeting",
+            "icon": "/common/destiny2_content/icons/a44780c933cf36be29053b3b3cae76dd.png"
+          }
+        },
+        "stats": {
+          "Mobility": {
+            "value": "4",
+            "icon": "/common/destiny2_content/icons/e26e0e93a9daf4fdd21bf64eb9246340.png"
+          },
+          "Resilience": {
+            "value": "18",
+            "icon": "/common/destiny2_content/icons/202ecc1c6febeb6b97dafc856e863140.png"
+          },
+          "Recovery": {
+            "value": "26",
+            "icon": "/common/destiny2_content/icons/128eee4ee7fc127851ab32eac6ca91cf.png"
+          },
+          "Discipline": {
+            "value": "27",
+            "icon": "/common/destiny2_content/icons/ca62128071dc254fe75891211b98b237.png"
+          },
+          "Intellect": {
+            "value": "8",
+            "icon": "/common/destiny2_content/icons/59732534ce7060dba681d1ba84c055a6.png"
+          },
+          "Strength": {
+            "value": "4",
+            "icon": "/common/destiny2_content/icons/c7eefc8abbaa586eeab79e962a79d6ad.png"
+          }
+        }
+      },
+      "Gauntlets": {
+        "common_data": {
+          "item_name": "Ophidian Aspect",
+          "item_bucket": "Gauntlets",
+          "item_icon": "/common/destiny2_content/icons/3995951ee0fdf3fb77d757370458e031.jpg",
+          "item_watermark": "/common/destiny2_content/icons/591f14483308beaad3278c3cd397e284.png"
+        },
+        "perks": {
+          "Stat Increase": {
+            "name": "Stat Increase",
+            "icon": "/common/destiny2_content/icons/236085f26c0677c200d46d9314bef5e6.png"
+          },
+          "Strand Loader": {
+            "name": "Strand Loader",
+            "icon": "/common/destiny2_content/icons/c417a0270465bf3c4a58faf63f589045.png"
+          },
+          "Grenade Kickstart": {
+            "name": "Grenade Kickstart",
+            "icon": "/common/destiny2_content/icons/172aec971d8f1de939453cc428288c88.png"
+          },
+          "Cobra Totemic": {
+            "name": "Cobra Totemic",
+            "icon": "/common/destiny2_content/icons/c2afac9ab85081b228bc217d3ce743ba.png"
+          }
+        },
+        "stats": {
+          "Mobility": {
+            "value": "9",
+            "icon": "/common/destiny2_content/icons/e26e0e93a9daf4fdd21bf64eb9246340.png"
+          },
+          "Resilience": {
+            "value": "24",
+            "icon": "/common/destiny2_content/icons/202ecc1c6febeb6b97dafc856e863140.png"
+          },
+          "Recovery": {
+            "value": "18",
+            "icon": "/common/destiny2_content/icons/128eee4ee7fc127851ab32eac6ca91cf.png"
+          },
+          "Discipline": {
+            "value": "28",
+            "icon": "/common/destiny2_content/icons/ca62128071dc254fe75891211b98b237.png"
+          },
+          "Intellect": {
+            "value": "4",
+            "icon": "/common/destiny2_content/icons/59732534ce7060dba681d1ba84c055a6.png"
+          },
+          "Strength": {
+            "value": "8",
+            "icon": "/common/destiny2_content/icons/c7eefc8abbaa586eeab79e962a79d6ad.png"
+          }
+        }
+      },
+      "Chest Armor": {
+        "common_data": {
+          "item_name": "Eidolon Pursuant Robe",
+          "item_bucket": "Chest Armor",
+          "item_icon": "/common/destiny2_content/icons/1f5bb6a86665897016e7eb65c8750879.jpg",
+          "item_watermark": "/common/destiny2_content/icons/81edbfbf0bacf8e2117c00d1d6115f1b.png"
+        },
+        "perks": {
+          "Stat Increase": {
+            "name": "Stat Increase",
+            "icon": "/common/destiny2_content/icons/236085f26c0677c200d46d9314bef5e6.png"
+          },
+          "Unflinching Strand Aim": {
+            "name": "Unflinching Strand Aim",
+            "icon": "/common/destiny2_content/icons/a00c151442c7b9e424fc5fdb98cb3586.png"
+          },
+          "Unflinching Solar Aim": {
+            "name": "Unflinching Solar Aim",
+            "icon": "/common/destiny2_content/icons/155cf2f9be48259e46381b155f141c00.png"
+          },
+          "Visage of the Reaper": {
+            "name": "Visage of the Reaper",
+            "icon": "/common/destiny2_content/icons/460bd24f86d190fbf538e367e15aaf49.png"
+          }
+        },
+        "stats": {
+          "Mobility": {
+            "value": "4",
+            "icon": "/common/destiny2_content/icons/e26e0e93a9daf4fdd21bf64eb9246340.png"
+          },
+          "Resilience": {
+            "value": "24",
+            "icon": "/common/destiny2_content/icons/202ecc1c6febeb6b97dafc856e863140.png"
+          },
+          "Recovery": {
+            "value": "22",
+            "icon": "/common/destiny2_content/icons/128eee4ee7fc127851ab32eac6ca91cf.png"
+          },
+          "Discipline": {
+            "value": "9",
+            "icon": "/common/destiny2_content/icons/ca62128071dc254fe75891211b98b237.png"
+          },
+          "Intellect": {
+            "value": "25",
+            "icon": "/common/destiny2_content/icons/59732534ce7060dba681d1ba84c055a6.png"
+          },
+          "Strength": {
+            "value": "4",
+            "icon": "/common/destiny2_content/icons/c7eefc8abbaa586eeab79e962a79d6ad.png"
+          }
+        }
+      },
+      "Leg Armor": {
+        "common_data": {
+          "item_name": "Eidolon Pursuant Pants",
+          "item_bucket": "Leg Armor",
+          "item_icon": "/common/destiny2_content/icons/f7bf3e876a487207de496f6b049df1ad.jpg",
+          "item_watermark": "/common/destiny2_content/icons/81edbfbf0bacf8e2117c00d1d6115f1b.png"
+        },
+        "perks": {
+          "Stat Increase": {
+            "name": "Stat Increase",
+            "icon": "/common/destiny2_content/icons/3157c9969cf206c9383ac1e32d02a519.png"
+          },
+          "Innervation": {
+            "name": "Innervation",
+            "icon": "/common/destiny2_content/icons/8d4ff6be1e86ffb1af2a61c987c027b5.png"
+          },
+          "Insulation": {
+            "name": "Insulation",
+            "icon": "/common/destiny2_content/icons/bf91aa03df6599cb3fd7eac78ecf778f.png"
+          },
+          "Absolution": {
+            "name": "Absolution",
+            "icon": "/common/destiny2_content/icons/a3cd4b61619a426bd5787a9aa5e8e4b4.png"
+          },
+          "Visage of the Reaper": {
+            "name": "Visage of the Reaper",
+            "icon": "/common/destiny2_content/icons/460bd24f86d190fbf538e367e15aaf49.png"
+          }
+        },
+        "stats": {
+          "Mobility": {
+            "value": "4",
+            "icon": "/common/destiny2_content/icons/e26e0e93a9daf4fdd21bf64eb9246340.png"
+          },
+          "Resilience": {
+            "value": "12",
+            "icon": "/common/destiny2_content/icons/202ecc1c6febeb6b97dafc856e863140.png"
+          },
+          "Recovery": {
+            "value": "22",
+            "icon": "/common/destiny2_content/icons/128eee4ee7fc127851ab32eac6ca91cf.png"
+          },
+          "Discipline": {
+            "value": "24",
+            "icon": "/common/destiny2_content/icons/ca62128071dc254fe75891211b98b237.png"
+          },
+          "Intellect": {
+            "value": "21",
+            "icon": "/common/destiny2_content/icons/59732534ce7060dba681d1ba84c055a6.png"
+          },
+          "Strength": {
+            "value": "4",
+            "icon": "/common/destiny2_content/icons/c7eefc8abbaa586eeab79e962a79d6ad.png"
+          }
+        }
+      },
+      "Class Armor": {
+        "common_data": {
+          "item_name": "Medal Bond",
+          "item_bucket": "Class Armor",
+          "item_icon": "/common/destiny2_content/icons/cf28238da4c76757bbd3a865dcaf51c6.jpg",
+          "item_watermark": "/common/destiny2_content/icons/97c65a76255ef764a9a98f24e50b859d.png"
+        },
+        "perks": {
+          "Stat Increase": {
+            "name": "Stat Increase",
+            "icon": "/common/destiny2_content/icons/236085f26c0677c200d46d9314bef5e6.png"
+          },
+          "Utility Kickstart": {
+            "name": "Utility Kickstart",
+            "icon": "/common/destiny2_content/icons/4a90f8bea82933593483bd469975249a.png"
+          },
+          "Bomber": {
+            "name": "Bomber",
+            "icon": "/common/destiny2_content/icons/25c877c27b991ac3980891f1ecc2e385.png"
+          }
+        },
+        "stats": {
+          "Mobility": {
+            "value": "2",
+            "icon": "/common/destiny2_content/icons/e26e0e93a9daf4fdd21bf64eb9246340.png"
+          },
+          "Resilience": {
+            "value": "12",
+            "icon": "/common/destiny2_content/icons/202ecc1c6febeb6b97dafc856e863140.png"
+          },
+          "Recovery": {
+            "value": "2",
+            "icon": "/common/destiny2_content/icons/128eee4ee7fc127851ab32eac6ca91cf.png"
+          },
+          "Discipline": {
+            "value": "2",
+            "icon": "/common/destiny2_content/icons/ca62128071dc254fe75891211b98b237.png"
+          },
+          "Intellect": {
+            "value": "2",
+            "icon": "/common/destiny2_content/icons/59732534ce7060dba681d1ba84c055a6.png"
+          },
+          "Strength": {
+            "value": "2",
+            "icon": "/common/destiny2_content/icons/c7eefc8abbaa586eeab79e962a79d6ad.png"
+          }
+        }
+      }
+    },
+    "emblemBackgroundPath": "/common/destiny2_content/icons/f97acbe1ff747a86946f98272d4397c9.jpg",
+    "emblem_name": "Ferrous Ferocity",
+    "emblem_path": "/common/destiny2_content/icons/f487163bdfc52e126e86b35e7c4a05b0.jpg",
+    "light": 1832,
+    "minutesPlayedTotal": "281849",
+    "race_name": "Exo",
+    "title": {
+      "name": "Crucible",
+      "description": "Complete all Crucible Triumphs.\n\nComplete this Title to unlock Seasonal gilding.",
+      "icon": "/common/destiny2_content/icons/17e32d11b0f3ce7f15b2c9aac69bedd9.png"
+    },
+    "subclass": {
+      "name": "Dawnblade",
+      "icon": "/common/destiny2_content/icons/fedcb91b7ab0584c12f0e9fec730702b.png"
+    }
+  }
