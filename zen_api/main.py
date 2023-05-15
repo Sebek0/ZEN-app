@@ -1,5 +1,4 @@
-from fastapi import FastAPI, BackgroundTasks
-
+from fastapi import FastAPI
 from . import models
 from .database import engine
 from .routers import weapons, armors, guardians, characters, token
