@@ -45,7 +45,6 @@ def read_guardian_by_bungie_id(bungie_id: int, db: Session = Depends(get_db)):
 @router.get('/guardians/name/{name}', response_model=schemas.Guardian, tags=['Guardians'])
 def read_guardian_by_name(name: str, db: Session = Depends(get_db)):
     db_guardian = crud.get_guardian_by_name(db, name=name)
-    print(db_guardian)
     if db_guardian is None:
         raise HTTPException(status_code=404, detail="Guardian not found")
     return db_guardian
