@@ -149,14 +149,12 @@ class Manifest:
                     'description': self.record_manifest[str(title_hash)]['displayProperties']['description'],
                     'icon': self.record_manifest[str(title_hash)]['displayProperties']['icon']
                 }
-                print(title_data)
                 
                 subclass_hash = characters_data[character]['subclass']
                 subclass_data = {
                     'name': self.item_manifest[str(subclass_hash)]['displayProperties']['name'],
                     'icon': self.item_manifest[str(subclass_hash)]['displayProperties']['icon']
                 }
-                print(subclass_data)
                 
                 character_stat = {}
                 for s_hash, s_value in characters_data[character]['stats'].items():
