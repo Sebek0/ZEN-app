@@ -114,7 +114,7 @@ def get_characters_by_race_name(db: Session, race_name: str):
     return db.query(models.Character).filter(models.Character.race_name == race_name).all()
 
 def delete_character(db: Session, character_id: int):
-    db_character = db.query(models.Character).filter(models.Column.id == character_id).first()
+    db_character = db.query(models.Character).filter(models.Character.id == character_id).first()
     db.delete(db_character)
     db.commit()
     return db_character
