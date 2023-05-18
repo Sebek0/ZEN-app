@@ -50,9 +50,9 @@ def create_character_for_guardian(guardian_id: int, character: schemas.Character
     return crud.create_character(db=db, character=character, guardian_id=guardian_id)
 
 # UPDATE guardian by guardian_id
-@router.put("/characters/{characters_id}", response_model=schemas.Character, tags=['Characters'])
+@router.put("/characters/{character_id}", response_model=schemas.Character, tags=['Characters'])
 def update_character(character_id: int, character: schemas.CharacterUpdate, db: Session = Depends(get_db)):
-    db_character = crud.get_guardian(db, guardian_id=character_id)
+    db_character = crud.get_character(db, character_id=character_id)
     if db_character is None:
         raise HTTPException(status_code=404, detail="Guardian not found")
     for field, value in character.dict(exclude_unset=True).items():
