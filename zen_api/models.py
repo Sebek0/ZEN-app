@@ -1,9 +1,9 @@
 from sqlalchemy import Boolean, Column, ForeignKey, Integer, String, Date
 from sqlalchemy import PickleType
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, declarative_base
 from sqlalchemy.ext.mutable import MutableList, MutableDict
 
-from .database import Base
+Base = declarative_base()
 
 class Guardian(Base):
     __tablename__ = 'guardians'
