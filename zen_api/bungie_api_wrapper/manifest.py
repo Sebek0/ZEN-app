@@ -143,13 +143,20 @@ class Manifest:
                 emblem_hash = characters_data[character]['emblemHash']
                 emblem_name = self.item_manifest[str(emblem_hash)]['displayProperties']['name']
                 
-                title_hash = characters_data[character]['title']
-                title_data = {
-                    'name': self.record_manifest[str(title_hash)]['displayProperties']['name'],
-                    'description': self.record_manifest[str(title_hash)]['displayProperties']['description'],
-                    'icon': self.record_manifest[str(title_hash)]['displayProperties']['icon']
-                }
-                
+                if characters_data[character].get('title'):
+                    title_hash = characters_data[character]['title']
+                    title_data = {
+                        'name': self.record_manifest[str(title_hash)]['displayProperties'].get('name', 'No Name'),
+                        'description': self.record_manifest[str(title_hash)]['displayProperties'].get('description', 'No description'),
+                        'icon': self.record_manifest[str(title_hash)]['displayProperties'].get('icon', 'No icon')
+                    }
+                else:
+                    title_data = {
+                        'name': "No title",
+                        'description': 'No description',
+                        'icon': 'No icon'
+                    }
+            
                 subclass_hash = characters_data[character]['subclass']
                 subclass_data = {
                     'name': self.item_manifest[str(subclass_hash)]['displayProperties']['name'],
