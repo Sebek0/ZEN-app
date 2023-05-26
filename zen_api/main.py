@@ -23,21 +23,21 @@ ZENApp API helps you maintain ZEN clan data.
 
 You will be able to:
 
-* **Create Guardians**.
-* **Read Guardains**.
+* **Create Guardians**
+* **Read Guardains**
 * **Manage Guardians** 
-* **Delete Guardians**.
+* **Delete Guardians**
 * **Update Guardians**
 
 ## Characters
 
 You will be able to:
 
-* **Create Characters**.
-* **Read Characters** 
-* **Manage Characters** (_not implemented_).
-* **Delete Characters** 
-* **Update Characters** (_not implemented_).
+* **Create Characters**
+* **Read Characters**
+* **Manage Characters**
+* **Delete Characters**
+* **Update Characters**
 """
 
 app = FastAPI(openapi_tags=tags_metadata)
