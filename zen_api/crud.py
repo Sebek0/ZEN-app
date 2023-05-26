@@ -48,7 +48,7 @@ def get_clanmates_common_data(db: Session, skip: int = 0, limit: int = 100):
         for character in db_characters:
             data_dict = {
                 'char_class': character.char_class,
-                'title': 'Dredgen', # CHANGE THIS AFTER IMPLEMENTING TITLE FROM BUNGIE API
+                'title': character.title.get('name'),
                 'char_emblem': character.emblem_name,
                 'char_emblem_path': character.emblem_path,
                 'char_emblembackground_path': character.emblemBackgroundPath
