@@ -48,17 +48,14 @@ class ZenAPI:
         return json_response
     
     async def _put_request(self, url, payload):
-        """_summary_
+        """Make an async PUT request and return json.
 
         Args:
-            url (_type_): _description_
-            payload (_type_): _description_
-
-        Raises:
-            Exception: _description_
+            url (str): ZEN API POST endpoint url.
+            payload (json): POST request body.
 
         Returns:
-            _type_: _description_
+            json: request Response.
         """
         enconded_url = urllib.parse.quote(url, safe=':/?&=,.')
         try:
