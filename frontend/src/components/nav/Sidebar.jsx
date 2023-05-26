@@ -60,7 +60,7 @@ const Sidebar = ({ setDisplayedClanmateId }) => {
 			<footer className='hidden lg:flex align-middle mt-5'>
 				<div className='text-white w-10/12 mx-auto h-1/4 my-auto bg-primary/50 rounded-lg '>
 					<div className='flex text-xs align-baseline'>
-						<p className='mx-auto pt-3 flex flex-row'>
+						<p className='mx-auto p-3 flex flex-row'>
 							Made by Andones, Filip, Sebek <span className='text-md pl-2'> ❤️</span>
 						</p>
 					</div>
