@@ -131,8 +131,10 @@ dmypy.json
 # Configuration files
 config.ini
 
+frontend/node_modules
 # Database files
 *.db
 
 #Testing files TO BE DELETED AFTER IMPLEMENTED 
 testing_manifest_model.py
+zen_api/bungie_api_wrapper/Manifest/
