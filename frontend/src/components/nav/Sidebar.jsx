@@ -12,10 +12,10 @@ import { BUNGIE_URL } from "../../const/BungieUrl";
  */
 const Sidebar = ({ setDisplayedClanmateId }) => {
 	const { isLoading, isError, data, error } = useQuery(["clanmates"], () =>
-		axios.get("http://13.38.120.84:8000/api/v1/guardians/clanmates/").then((res) => res.data)
+		axios.get("http://127.0.0.1:8000/api/v1/guardians/clanmates/").then((res) => res.data)
 	);
 	return (
-		<div className='bg-secondary w-full lg:min-w-[22rem] lg:w-[22rem]'>
+		<div className='bg-secondary w-full lg:min-w-[22rem] lg:w-[22rem] shadow-lg rounded-lg'>
 			<div className=' w-10/12 h-1/6 flex align-middle flex-shrink-0 mx-auto my-2'>
 				<div className='text-gray-500 mx-auto my-auto p-3 bg-primary/50 rounded-lg flex flex-row'>
 					<img
@@ -29,16 +29,24 @@ const Sidebar = ({ setDisplayedClanmateId }) => {
 						placeholder='...?'></input>
 				</div>
 			</div>
-			<div className=' h-4/6 flex align-middle'>
-				<div className='text-gray-500 w-full lg:w-10/12 mx-auto h-full my-auto bg-primary/50 rounded-lg overflow-y-auto'>
-					{isLoading && <p>Loading...</p>}
+			<div className=' h-4/6 flex align-middle mt-5'>
+				<div className='text-gray-500 w-full lg:w-10/12 mx-auto h-full my-auto bg-primary/50 rounded-lg overflow-x-hidden overflow-y-auto'>
+					{isLoading && 
+						<div className='flex flex-col mx-auto'>
+							<span className='text-white text-md text-center my-5'>Loading...</span>
+						</div>
+					}
 					{isError && <p>Error: {error.message}</p>}
 					{!isLoading &&
 						!isError &&
 						data.map((clanmate) => (
 							<div
-								className='mx-auto my-5 flex flex-row rounded-md p-4 lg:p-2 hover:cursor-pointer hover:shadow-lg transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-101  w-[28rem] lg:w-11/12'
-								key={clanmate.guardian_id}
+								className='mx-auto opacity-0 my-5 flex flex-row rounded-md p-4 lg:p-2 hover:cursor-pointer hover:shadow-lg transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-101  w-[28rem] lg:w-11/12 appear'
+								style={
+									{
+										animationDelay: `${clanmate.guardian_id * 0.1}s`,
+									}
+								}								key={clanmate.guardian_id}
 								onClick={() => setDisplayedClanmateId(clanmate.guardian_id)}>
 								<img
 									src={BUNGIE_URL + clanmate.characters_info[0].char_emblem_path}

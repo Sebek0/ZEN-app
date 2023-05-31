@@ -5,7 +5,6 @@ const Stat = ({ stat }) => {
 
 	// Calculate the width based on the stat value
 	const width = `${stat[1]}%`;
-	console.log(stat);
 	return (
 		<div className='flex flex-row w-24 m-0 p-0 mx-3'>
 			<img

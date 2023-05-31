@@ -1,6 +1,6 @@
 import React from "react";
 import { BUNGIE_URL } from "../../../../const/BungieUrl.js";
-const Perk = ({ perk }) => {
+const Perk = ({ perk, size }) => {
 	return (
 		<div
 			key={perk[1].name}
@@ -9,8 +9,8 @@ const Perk = ({ perk }) => {
 			<img
 				src={BUNGIE_URL + perk[1].icon}
 				alt='Zen'
-				width={25}
-				height={25}></img>
+				width={size}
+				height={size}></img>
 		</div>
 	);
 };
