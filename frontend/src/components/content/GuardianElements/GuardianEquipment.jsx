@@ -7,7 +7,7 @@ const GuardianEquipment = ({ guardian }) => {
 	const armor = items.filter((item) => ARMOR_SLOTS.includes(item[0]));
 
 	return (
-		<div className='flex flex-row justify-around m-5'>
+		<div className='flex flex-row justify-between'>
 			<div className='flex flex-col'>
 				{weapons.map((weapon) => (
 					<div
@@ -24,6 +24,7 @@ const GuardianEquipment = ({ guardian }) => {
 								alt='Zen'
 								className='absolute top-0 start-0'></img>
 						</div>
+						<span className='text-white text-xxs'>{weapon[1].common_data.item_name}</span>
 					</div>
 				))}
 			</div>
@@ -32,7 +33,7 @@ const GuardianEquipment = ({ guardian }) => {
 					<div
 						key={armor[0]}
 						className='m-3 cursor-pointer'>
-						<div className='relative w-10'>
+						<div className='relative w-10 '>
 							<img
 								src={BUNGIE_URL + armor[1].common_data.item_icon}
 								alt='Zen'
@@ -43,6 +44,7 @@ const GuardianEquipment = ({ guardian }) => {
 								height={10}
 								className='absolute top-0 start-0'></img>
 						</div>
+						<span className='text-white text-xxs'>{armor[1].common_data.item_name}</span>
 					</div>
 				))}
 			</div>

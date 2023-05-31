@@ -12,7 +12,7 @@ const GuardianHeader = ({ guardian }) => {
 			}}>
 			<div className='flex flex-col justify-start ml-12 p-4'>
 				<span className='text-white drop-shadow-2xl text-bold'>{guardian.char_class}</span>
-				<span className='text-purple-500 text-xxs'>{guardian.title.name}</span>
+				<span className='text-purple-500 text-xxs text-bold tex'>{guardian.title.name}</span>
 			</div>
 			<div className='flex flex-col justify-center'>
 				<div className='flex flex-col mb-1 drop-shadow-2xl bg-secondary/75 rounded-xl mx-auto'>

@@ -8,7 +8,7 @@ const Stat = ({ stat }) => {
 	const width = `${stat[1]}%`;
 
 	return (
-		<div className='flex flex-row w-3/6'>
+		<div className='flex flex-row w-24 m-0 p-0'>
 			<img
 				src={icon}
 				alt='Zen'
@@ -17,10 +17,10 @@ const Stat = ({ stat }) => {
 				className='ms-0 my-auto rounded-lg'
 			/>
 			<div className='flex flex-col w-5/12 mx-auto'>
-				<span className='text-white'>{stat[1]}</span>
-				<div className='mb-6 h-2 w-full bg-neutral-500'>
+				<span className='text-white text-xxs'>{stat[1]}</span>
+				<div className='mb-6 h-2 w-full bg-primary'>
 					<div
-						className='h-2 bg-primary'
+						className='h-2 bg-neutral-500'
 						style={{ width }}></div>
 				</div>
 			</div>
