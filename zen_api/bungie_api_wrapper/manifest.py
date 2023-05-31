@@ -146,15 +146,15 @@ class Manifest:
                 if characters_data[character].get('title'):
                     title_hash = characters_data[character]['title']
                     title_data = {
-                        'name': self.record_manifest[str(title_hash)]['displayProperties'].get('name', 'No Name'),
-                        'description': self.record_manifest[str(title_hash)]['displayProperties'].get('description', 'No description'),
-                        'icon': self.record_manifest[str(title_hash)]['displayProperties'].get('icon', 'No icon')
+                        'name': self.record_manifest[str(title_hash)]['displayProperties'].get('name', ""),
+                        'description': self.record_manifest[str(title_hash)]['displayProperties'].get('description', ""),
+                        'icon': self.record_manifest[str(title_hash)]['displayProperties'].get('icon', "")
                     }
                 else:
                     title_data = {
-                        'name': "No title",
-                        'description': 'No description',
-                        'icon': 'No icon'
+                        'name': "",
+                        'description': "",
+                        'icon': ""
                     }
             
                 subclass_hash = characters_data[character]['subclass']
@@ -164,10 +164,17 @@ class Manifest:
                 }
                 
                 character_stat = {}
-                for s_hash, s_value in characters_data[character]['stats'].items():
-                    stat_name = self.stat_manifest[s_hash]['displayProperties']['name']
+                for s_hash in characters_data[character]['stats'].keys():
                     
-                    character_stat[stat_name] = s_value
+                    stat_name = self.stat_manifest[s_hash]['displayProperties']['name']
+                    stat_icon = self.stat_manifest[s_hash]['displayProperties']['icon']
+                    
+                    stat_data = {
+                        "name": stat_name,
+                        "icon": stat_icon
+                    }
+                    
+                    character_stat[stat_name] = stat_data
             
                 items_details = {}
                 for v in characters_data[character]['items'].values():
