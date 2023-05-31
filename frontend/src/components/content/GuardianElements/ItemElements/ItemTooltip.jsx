@@ -11,6 +11,9 @@ const ItemTooltip = ({ item, hovered }) => {
 				<div className='flex flex-col rounded-b-lg bg-gradient-to-b from-secondary to-primary shadow-xl'>
 					<div className='flex flex-row justify-between'>
 						<div className='flex flex-col space-y-5 m-5'>
+							<span className='text-white text-lg text-bold'>
+								Perks
+							</span>
 							{Object.entries(item[1].perks).map((perk) => {
 								return (
 									<div className='flex flex-row'>
@@ -24,6 +27,9 @@ const ItemTooltip = ({ item, hovered }) => {
 							})}
 						</div>
 						<div className='flex flex-col space-y-5 m-5'>
+							<span className='text-white text-lg text-bold'>
+								Stats
+							</span>
 							{Object.entries(item[1].stats).map((stat) => {
 								return (
 									<div className='flex flex-row justify-between'>

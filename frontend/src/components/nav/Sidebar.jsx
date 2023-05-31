@@ -16,7 +16,7 @@ const Sidebar = ({ setDisplayedClanmateId }) => {
 	);
 	return (
 		<div className='bg-secondary w-full lg:min-w-[22rem] lg:w-[22rem] shadow-lg rounded-lg'>
-			<div className=' w-10/12 h-1/6 flex align-middle flex-shrink-0 mx-auto my-2'>
+			<div className=' w-10/12 lg:h-1/6 flex align-middle flex-shrink-0 mx-auto my-2'>
 				<div className='text-gray-500 mx-auto my-auto p-3 bg-primary/50 rounded-lg flex flex-row'>
 					<img
 						src={Zen}
@@ -29,7 +29,7 @@ const Sidebar = ({ setDisplayedClanmateId }) => {
 						placeholder='...?'></input>
 				</div>
 			</div>
-			<div className=' h-4/6 flex align-middle mt-5'>
+			<div className='h-96 lg:h-4/6 flex align-middle mt-5'>
 				<div className='text-gray-500 w-full lg:w-10/12 mx-auto h-full my-auto bg-primary/50 rounded-lg overflow-x-hidden overflow-y-auto'>
 					{isLoading && 
 						<div className='flex flex-col mx-auto'>

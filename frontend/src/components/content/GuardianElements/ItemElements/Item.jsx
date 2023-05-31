@@ -30,17 +30,17 @@ const Item = ({ item }) => {
 								className='absolute top-0 start-0'></img>
 						) : null}
 					</div>
-					<div className='flex flex-col'>
-						<span className='text-white text-md ms-5'>
+					<div className='flex flex-col space-y-2'>
+						<span className='text-white text-lg text-bold ms-5'>
 							{item[1].common_data.item_name} {item[1].perks[0]}
 						</span>
 						<div className='flex flex-row ms-5 space-x-3'>
 							{Object.entries(item[1].perks)
-								.slice(0, 6)
+								.slice(0, 5)
 								.map((perk) => {
 									return (
 										<Perk
-											size={25}
+											size={40}
 											key={perk[1].name}
 											perk={perk}></Perk>
 									);
