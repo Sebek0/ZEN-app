@@ -25,7 +25,6 @@ const ItemTooltip = ({ item, hovered }) => {
 						</div>
 						<div className='flex flex-col space-y-5 m-5'>
 							{Object.entries(item[1].stats).map((stat) => {
-                                console.log(stat)
 								return (
 									<div className='flex flex-row justify-between'>
 										<span className='text-white text-xs me-5'>{stat[0]}</span>
