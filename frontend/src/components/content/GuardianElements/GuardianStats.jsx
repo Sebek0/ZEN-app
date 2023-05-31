@@ -2,7 +2,6 @@ import React from "react";
 import { BUNGIE_URL } from "../../../const/BungieUrl";
 import Stat from "./Stat";
 const GuardianStats = ({ guardian }) => {
-	console.log(guardian);
 	let stats = Object.entries(guardian.stats);
 	stats = stats.filter((stat) => stat[0] !== "Power");
 

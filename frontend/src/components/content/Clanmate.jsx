@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import React from "react";
 import Guardian from "./Guardian";
 const Clanmate = ({ clanmate }) => {
-	console.log(clanmate);
 	return (
 		<div className='mx-auto p-5 h-full w-full flex flex-col'>
 			<div className='mx-auto'>
