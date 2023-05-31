@@ -5,17 +5,19 @@ import { BUNGIE_URL } from "../../../const/BungieUrl";
 const GuardianHeader = ({ guardian }) => {
 	return (
 		<div
-			className='flex flex-row w-full h-[4rem] rounded-t-xl justify-around items-center'
+			className='flex flex-row w-full h-[95px] rounded-t-xl justify-between items-center shadow-lg'
 			style={{
 				backgroundImage: `url(${BUNGIE_URL + guardian.emblemBackgroundPath})`,
-				backgroundSize: "cover",
+				backgroundSize: "fit",
 			}}>
-			<div className='flex flex-col justify-start ml-12 p-4'>
-				<span className='text-white drop-shadow-2xl text-bold'>{guardian.char_class}</span>
-				<span className='text-purple-500 text-xxs text-bold tex'>{guardian.title.name}</span>
+			<div className='flex flex-col justify-start ml-20 p-4'>
+				<span className='text-white text-lg text-bold drop-shadow-custom'>
+					{guardian.char_class}
+				</span>
+				<span className='text-purple-500 text-bold text-md'>{guardian.title.name}</span>
 			</div>
-			<div className='flex flex-col justify-center'>
-				<div className='flex flex-col mb-1 drop-shadow-2xl bg-secondary/75 rounded-xl mx-auto'>
+			<div className='flex flex-col justify-end bg-secondary/20 rounded-xl'>
+				<div className='flex flex-col mb-1 drop-shadow-2xl'>
 					<div className='flex flex-row justify-center items-center'>
 						<svg
 							version='1.1'
@@ -44,7 +46,7 @@ const GuardianHeader = ({ guardian }) => {
 							/>
 						</svg>
 
-						<span className='text-white text-center text-xxs p-1 drop-shadow-2xl text-bold '>
+						<span className='text-white text-center text-md p-1 drop-shadow-2xl text-bold '>
 							<ReactTimeAgo
 								date={guardian.last_login}
 								locale='en'

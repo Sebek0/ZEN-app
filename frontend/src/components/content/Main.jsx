@@ -15,7 +15,7 @@ const Main = ({ displayedClanmateId }) => {
 	if (isError) return <p>Error: {error.message}</p>;
 
 	return (
-		<div className='flex flex-row w-full overflow-y-auto'>
+		<div className='flex flex-row w-full lg:overflow-y-auto'>
 			<Clanmate clanmate={data} />
 		</div>
 	);

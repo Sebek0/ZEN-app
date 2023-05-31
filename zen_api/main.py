@@ -3,6 +3,7 @@ from fastapi import FastAPI, BackgroundTasks
 from . import models
 from .database import engine
 from .routers import weapons, armors, guardians, characters, token
+from fastapi.middleware.cors import CORSMiddleware
 
 models.Base.metadata.create_all(bind=engine)
 
@@ -48,12 +49,10 @@ app = FastAPI(
     version="0.0.1",
 )
 
-app.mount('/api/v1', app)
+app.mount("/api/v1", app)
 # CORS middleware
-# TODO: Change for prod 
-origins = [
-    "*"
-]
+# TODO: Change for prod
+origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
@@ -62,7 +61,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 
 # Including routers in main app file
