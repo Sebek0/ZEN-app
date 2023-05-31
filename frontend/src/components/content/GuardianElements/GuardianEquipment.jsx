@@ -6,7 +6,7 @@ const GuardianEquipment = ({ guardian }) => {
 	const weapons = items.filter((item) => WEAPON_SLOTS.includes(item[0]));
 	const armor = items.filter((item) => ARMOR_SLOTS.includes(item[0]));
 	return (
-		<div className='flex flex-col justify-center space-y-10'>
+		<div className='flex flex-col justify-center space-y-10 pt-5'>
 			<div className='flex flex-col'>
 				{weapons.map((weapon) => (
 					<Item
