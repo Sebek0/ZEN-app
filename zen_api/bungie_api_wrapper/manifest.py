@@ -164,14 +164,15 @@ class Manifest:
                 }
                 
                 character_stat = {}
-                for s_hash in characters_data[character]['stats'].keys():
+                for s_hash, value in characters_data[character]['stats'].items():
                     
                     stat_name = self.stat_manifest[s_hash]['displayProperties']['name']
                     stat_icon = self.stat_manifest[s_hash]['displayProperties']['icon']
                     
                     stat_data = {
                         "name": stat_name,
-                        "icon": stat_icon
+                        "icon": stat_icon,
+                        "value": value
                     }
                     
                     character_stat[stat_name] = stat_data
