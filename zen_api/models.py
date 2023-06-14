@@ -34,8 +34,6 @@ class Character(Base):
     title = Column(MutableDict.as_mutable(PickleType), default={})
     subclass = Column(MutableDict.as_mutable(PickleType), default={})
 
-    weapons = relationship("Weapon", back_populates='character')
-    armors = relationship("Armor", back_populates='character')
     guardian = relationship("Guardian", back_populates="characters")
 
 
