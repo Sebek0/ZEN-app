@@ -39,36 +39,6 @@ class Character(Base):
     guardian = relationship("Guardian", back_populates="characters")
 
 
-class Weapon(Base):
-    __tablename__ = 'weapons'
-    
-    id = Column(Integer, primary_key=True, index=True)
-    weapon_instance_id = Column(Integer, unique=True)
-    character_id = Column(Integer, ForeignKey('characters.id'))
-    name = Column(String)
-    slot = Column(String)
-    state = Column(String)
-    stats = Column(MutableDict.as_mutable(PickleType), default={})
-    damage_type = Column(String)
-    perks = Column(MutableDict.as_mutable(PickleType), default={})
-    
-    character = relationship("Character", back_populates='weapons')
-
-
-class Armor(Base):
-    __tablename__ = 'armors'
-
-    id = Column(Integer, primary_key=True, index=True)
-    armor_instance_id = Column(String, unique=True, index=True)
-    character_id = Column(Integer, ForeignKey('characters.id'))
-    name = Column(String)
-    inventory_slot = Column(String)
-    state = Column(Integer)
-    stats = Column(MutableDict.as_mutable(PickleType), default={})
-
-    character = relationship("Character", back_populates='armors')
-
-
 class DestinyStatDefinition(Base):
     __tablename__ = 'DestinyStatDefinition'
 
