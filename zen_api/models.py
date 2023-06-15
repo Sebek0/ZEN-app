@@ -232,6 +232,13 @@ class DestinyActivityDefinition(Base):
     blacklisted = Column(String)
 
 
+class ManifestVersion(Base):
+    __tablename__ = 'ManifestVersion'
+
+    id = Column(Integer, primary_key=True, index=True)
+    version = Column(String)
+
+
 
     
 
