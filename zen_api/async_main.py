@@ -206,6 +206,7 @@ async def main(destiny_membership_ids: int):
 
 if __name__ == '__main__':
     destiny_membership_ids = [4611686018476581013, 4611686018476934649, 4611686018471751284]  # ...
+
     start_time = time.time()
     asyncio.run(main(destiny_membership_ids))  
     print("--- %s seconds ---" % (time.time() - start_time))

@@ -51,12 +51,10 @@ app = FastAPI(
     version="0.0.1",
 )
 
-app.mount('/api/v1', app)
+app.mount("/api/v1", app)
 # CORS middleware
-# TODO: Change for prod 
-origins = [
-    "*"
-]
+# TODO: Change for prod
+origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
@@ -65,7 +63,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 
 # Including routers in main app file

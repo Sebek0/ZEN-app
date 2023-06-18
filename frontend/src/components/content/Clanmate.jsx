@@ -2,11 +2,10 @@ import PropTypes from "prop-types";
 import React from "react";
 import Guardian from "./Guardian";
 const Clanmate = ({ clanmate }) => {
-	console.log(clanmate);
 	return (
 		<div className='mx-auto p-5 h-full w-full flex flex-col'>
-			<div className="mx-auto">
-				<span className='bg-secondary text-white rounded-xl text-center p-3 text-4xl w-auto'>
+			<div className='mx-auto'>
+				<span className=' text-white rounded-xl text-center p-3 text-xl w-auto'>
 					{clanmate.name}
 				</span>
 			</div>
