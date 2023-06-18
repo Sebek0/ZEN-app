@@ -348,6 +348,7 @@ class Manifest:
         
         start_time = time.time()
         
+        time.sleep(0.05)
         db = SessionLocal()
         characters = {}
         try:
@@ -374,7 +375,7 @@ class Manifest:
                     }
                 else:
                     title_data = {
-                        'name': "No title",
+                        'name': None,
                         'description': 'No description',
                         'icon': 'No icon'
                     }
