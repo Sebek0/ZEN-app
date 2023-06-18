@@ -6,14 +6,15 @@ const GuardianStats = ({ guardian }) => {
 	stats = stats.filter((stat) => stat[0] !== "Power");
 
 	return (
-		<div className='flex flex-row w-full h-3/12 rounded-t-xl p-5'>
+		<div className='flex flex-row h-3/12 p-3 bg-primary/50'>
 			<img
+				title={guardian.subclass.name}
 				src={BUNGIE_URL + guardian.subclass.icon}
 				alt='Zen'
-				width={75}
-				height={75}
-				className='ms-0 my-auto rounded-lg'></img>
-			<div className='text-white text-lg flex flex-wrap w-full ml-3'>
+				width={95}
+				height={95}
+				className='my-auto rounded-lg'></img>
+			<div className='text-white text-xs flex flex-wrap ml-5'>
 				{stats.map((stat) => (
 					<Stat
 						stat={stat}
