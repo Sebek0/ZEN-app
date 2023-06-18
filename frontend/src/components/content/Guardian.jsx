@@ -4,7 +4,6 @@ import GuardianHeader from "./GuardianElements/GuardianHeader.jsx";
 import GuardianStats from "./GuardianElements/GuardianStats";
 
 const Guardian = ({ guardian }) => {
-	console.log(guardian);
 	return (
 		<div className='mx-auto p-2 m-5 flex flex-row w-full h-full md:min-w-[30.5rem] md:max-w-[30rem] appear'>
 			<div className='rounded-xl h-full bg-secondary w-full flex flex-col justify-between'>

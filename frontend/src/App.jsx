@@ -12,7 +12,7 @@ function App() {
 	const [displayedClanmateId, setDisplayedClanmateId] = useState(0);
 	return (
 				<div className='h-screen bg-primary font-mono flex flex-col flex-shrink-0 lg:flex-row'>
-					<Sidebar setDisplayedClanmateId={setDisplayedClanmateId}></Sidebar>
+					<Sidebar setDisplayedClanmateId={setDisplayedClanmateId} displayedId={displayedClanmateId}></Sidebar>
 					{displayedClanmateId !== 0 && <Main displayedClanmateId={displayedClanmateId}></Main>}
 				</div>
 	);
