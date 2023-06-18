@@ -390,9 +390,14 @@ class Manifest:
                 for s_hash, s_value in characters_data[character]['stats'].items():
                     stat_query = db.query(models.DestinyStatDefinition).filter(models.DestinyStatDefinition.hash == s_hash).first()
                     stat_name = stat_query.displayProperties.get('name', 'No name')
-                    
-                    character_stat[stat_name] = s_value
-            
+                    stat_icon = stat_query.displayProperties.get('icon', 'No icon')
+
+                    stat_data = {
+                        'icon': stat_icon,
+                        'value': s_value
+                    }
+                    character_stat[stat_name] = stat_data
+
                 items_details = {}
                 for v in characters_data[character]['items'].values():
                     item_hash = v['common_data']['itemHash']
@@ -416,13 +421,9 @@ class Manifest:
                         stat_value = stat['value']
 
                         stat_query = db.query(models.DestinyStatDefinition).filter(models.DestinyStatDefinition.hash == stat_hash).first()
-         
-                        if not 'icon' in stat_query.displayProperties.keys():
-                            stat_name = stat_query.displayProperties.get('name', 'No name')
-                            stat_icon = None
-                        else:
-                            stat_name = stat_query.displayProperties.get('name', 'No name')
-                            stat_icon = stat_query.displayProperties.get('icon', 'No icon')
+
+                        stat_name = stat_query.displayProperties.get('name', 'No name')
+                        stat_icon = stat_query.displayProperties.get('icon', 'No icon')
                         
                         item_stats[stat_name] = {
                             'value': stat_value,
