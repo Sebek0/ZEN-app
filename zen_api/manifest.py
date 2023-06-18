@@ -374,7 +374,7 @@ class Manifest:
                     }
                 else:
                     title_data = {
-                        'name': "No title",
+                        'name': None,
                         'description': 'No description',
                         'icon': 'No icon'
                     }
