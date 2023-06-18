@@ -347,7 +347,7 @@ class Manifest:
         """
         
         start_time = time.time()
-        
+        time.sleep(0.05)
         db = SessionLocal()
         characters = {}
         try:
