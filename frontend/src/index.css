@@ -15,16 +15,19 @@
 	::-webkit-scrollbar-thumb {
 		background: #181a1c;
 	}
+	.font-shadow {
+		text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+	}
 	html {
 		width: 100%;
 		height: 100%;
 		background-color: #36393f;
 	}
-	.rollDown{
+	.rollDown {
 		animation: rollDown 0.5s ease-in-out;
 		z-index: 9999;
 	}
-	.appear{
+	.appear {
 		animation: appear 0.5s ease-in-out forwards;
 		z-index: 9999;
 	}
