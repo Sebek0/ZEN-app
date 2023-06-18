@@ -446,7 +446,7 @@ class Manifest:
                                 'name': dmg_type_name,
                                 'icon': dmg_type_icon
                             }
-                        elif perk_query.isDisplayable is True:
+                        elif perk_query.isDisplayable == '1':
                             perk_name = perk_query.displayProperties.get('name', 'No name')
                             perk_icon = perk_query.displayProperties.get('icon', 'No icon')
 
