@@ -138,3 +138,4 @@ frontend/node_modules
 #Testing files TO BE DELETED AFTER IMPLEMENTED 
 testing_manifest_model.py
 zen_api/bungie_api_wrapper/Manifest/
+zen_api/display_manifest.py
