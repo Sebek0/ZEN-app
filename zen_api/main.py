@@ -1,11 +1,13 @@
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi import FastAPI, BackgroundTasks
+from fastapi import FastAPI
 
 from . import models
 from .database import engine
-from .routers import weapons, armors, guardians, characters, token
+from .routers import guardians, characters, token
 
-models.Base.metadata.create_all(bind=engine)
+tables = [models.Character, models.Guardian]
+for table in tables:
+    table.__table__.create(bind=engine, checkfirst=True)
 
 tags_metadata = [
     {
@@ -70,5 +72,4 @@ app.add_middleware(
 app.include_router(token.router)
 app.include_router(guardians.router)
 app.include_router(characters.router)
-app.include_router(weapons.router)
-app.include_router(armors.router)
+
