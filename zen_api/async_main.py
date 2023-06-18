@@ -8,17 +8,16 @@ from dotenv import load_dotenv
 
 #Bungie API
 from bungie_api_wrapper import BAPI
-from bungie_api_wrapper.manifest import Manifest
+from manifest import Manifest
 
 # ZEN API
 from zen_api_wrapper import ZENAPI
 
 #DATABASE
-from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from models import Guardian, Character
+from database import engine
 
-engine = create_engine("sqlite:///./sql_app.db")
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 man = Manifest() # When declaring Manifest() it will load all manifest files
@@ -46,7 +45,6 @@ async def get_characters(destiny_membership_id: int, platform: int):
         # get user profile from API request
         profile = await destiny.api.get_destiny_profile(destiny_membership_id,
                                                         platform, [100, 200, 205, 203])
-        
         characters_ids = profile['Response']['profile']['data']['characterIds']
         
         # POST guardian to database
@@ -133,7 +131,7 @@ async def get_characters(destiny_membership_id: int, platform: int):
         
         return decoded_character
     except Exception as err:
-        print(err)
+        print(f'{err} + {destiny_membership_id}')
     
 async def add_guardian_to_db(bungie_id: str, name: str, platform: int,
                              decoded_characters_data: dict):
@@ -207,17 +205,8 @@ async def main(destiny_membership_ids: int):
         return htmls
 
 if __name__ == '__main__':
-    destiny_membership_ids = [4611686018476581013, 4611686018476934649, 4611686018471751284,
-4611686018468563973, 4611686018468563973, 4611686018483897586,
-4611686018475651528, 4611686018468196301, 4611686018467812850,
-4611686018513471069, 4611686018468253986, 4611686018484132900,
-4611686018481764970, 4611686018495153165, 4611686018440823371,
-4611686018467608150, 4611686018467699390, 4611686018467291445,
-4611686018474326984, 4611686018474793124, 4611686018467294997,
-4611686018467376948, 4611686018468283789, 4611686018499753710,
-4611686018467609703, 4611686018467353193, 4611686018467264217,
-4611686018513468785, 4611686018470774879, 4611686018474234146,
-4611686018476390756, 4611686018468212594, 4611686018483005277]  # ...
+    destiny_membership_ids = [4611686018476581013, 4611686018476934649, 4611686018471751284]  # ...
+
     start_time = time.time()
     asyncio.run(main(destiny_membership_ids))  
     print("--- %s seconds ---" % (time.time() - start_time))

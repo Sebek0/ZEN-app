@@ -34,40 +34,213 @@ class Character(Base):
     title = Column(MutableDict.as_mutable(PickleType), default={})
     subclass = Column(MutableDict.as_mutable(PickleType), default={})
 
-    weapons = relationship("Weapon", back_populates='character')
-    armors = relationship("Armor", back_populates='character')
     guardian = relationship("Guardian", back_populates="characters")
 
 
-class Weapon(Base):
-    __tablename__ = 'weapons'
-    
-    id = Column(Integer, primary_key=True, index=True)
-    weapon_instance_id = Column(Integer, unique=True)
-    character_id = Column(Integer, ForeignKey('characters.id'))
-    name = Column(String)
-    slot = Column(String)
-    state = Column(String)
-    stats = Column(MutableDict.as_mutable(PickleType), default={})
-    damage_type = Column(String)
-    perks = Column(MutableDict.as_mutable(PickleType), default={})
-    
-    character = relationship("Character", back_populates='weapons')
-
-
-class Armor(Base):
-    __tablename__ = 'armors'
+class DestinyStatDefinition(Base):
+    __tablename__ = 'DestinyStatDefinition'
 
     id = Column(Integer, primary_key=True, index=True)
-    armor_instance_id = Column(String, unique=True, index=True)
-    character_id = Column(Integer, ForeignKey('characters.id'))
-    name = Column(String)
-    inventory_slot = Column(String)
-    state = Column(Integer)
-    stats = Column(MutableDict.as_mutable(PickleType), default={})
+    hash = Column(Integer)
+    displayProperties = Column(MutableDict.as_mutable(PickleType), default={})
+    aggregationType = Column(Integer)
+    hasComputedBlock = Column(String)
+    statCategory = Column(Integer)
+    interpolate = Column(String)
+    index = Column(Integer)
+    redacted = Column(String)
+    blacklisted = Column(String)
 
-    character = relationship("Character", back_populates='armors')
-    
+
+class DestinySandboxPerkDefinition(Base):
+    __tablename__ = 'DestinySandboxPerkDefinition'
+
+    id = Column(Integer, primary_key=True, index=True)
+    hash = Column(Integer)
+    displayProperties = Column(MutableDict.as_mutable(PickleType), default={})
+    isDisplayable = Column(String)
+    damageType = Column(Integer)
+    damageTypeHash = Column(Integer)
+    index = Column(Integer)
+    redacted = Column(String)
+    blacklisted = Column(String)
+
+
+class DestinyRecordDefinition(Base):
+    __tablename__ = 'DestinyRecordDefinition'
+
+    id = Column(Integer, primary_key=True, index=True)
+    hash = Column(Integer)
+    displayProperties = Column(MutableDict.as_mutable(PickleType), default={})
+    scope = Column(Integer)
+    objectiveHashes = Column(MutableList.as_mutable(PickleType), default=[])
+    recordValueStyle = Column(Integer)
+    forTitleGilding = Column(String)
+    shouldShowLargeIcons = Column(String)
+    titleInfo = Column(MutableDict.as_mutable(PickleType), default={})
+    completionInfo = Column(MutableDict.as_mutable(PickleType), default={})
+    stateInfo = Column(MutableDict.as_mutable(PickleType), default={})
+    requirements = Column(MutableDict.as_mutable(PickleType), default={})
+    expirationInfo = Column(MutableDict.as_mutable(PickleType), default={})
+    intervalInfo = Column(MutableDict.as_mutable(PickleType), default={})
+    rewardItems = Column(MutableList.as_mutable(PickleType), default=[])
+    anyRewardHasConditionalVisibility = Column(String)
+    recordTypeName = Column(String)
+    presentationNodeType = Column(Integer)
+    traitIds = Column(MutableList.as_mutable(PickleType), default=[])
+    traitHashes = Column(MutableList.as_mutable(PickleType), default=[])
+    parentNodeHashes = Column(MutableList.as_mutable(PickleType), default=[])
+    index = Column(Integer)
+    redacted = Column(String)
+    blacklisted = Column(String)
+
+
+class DestinyRaceDefinition(Base):
+    __tablename__ = 'DestinyRaceDefinition'
+
+    id = Column(Integer, primary_key=True, index=True)
+    hash = Column(Integer)
+    displayProperties = Column(MutableDict.as_mutable(PickleType), default={})
+    raceType = Column(Integer)
+    genderedRaceNames = Column(MutableDict.as_mutable(PickleType), default={})
+    genderedRaceNamesByGenderHash = Column(MutableDict.as_mutable(PickleType), default={})
+    index = Column(Integer)
+    redacted = Column(String)
+    blacklisted = Column(String)
+
+
+class DestinyInventoryItemDefinition(Base):
+    __tablename__ = 'DestinyInventoryItemDefinition'
+
+    id = Column(Integer, primary_key=True, index=True)
+    hash = Column(Integer)
+    displayProperties = Column(MutableDict.as_mutable(PickleType), default={})
+    tooltipNotifications = Column(MutableList.as_mutable(PickleType), default=[])
+    backgroundColor = Column(MutableDict.as_mutable(PickleType), default={})
+    screenshot = Column(String)
+    itemTypeDisplayName = Column(String)
+    flavorText = Column(String)
+    uiItemDisplayStyle = Column(String)
+    itemTypeAndTierDisplayName = Column(String)
+    displaySource = Column(String)
+    iconWatermark = Column(String)
+    action = Column(MutableDict.as_mutable(PickleType), default={})
+    inventory = Column(MutableDict.as_mutable(PickleType), default={})
+    stats = Column(MutableDict.as_mutable(PickleType), default={})
+    equippingBlock = Column(MutableDict.as_mutable(PickleType), default={})
+    translationBlock = Column(MutableDict.as_mutable(PickleType), default={})
+    quality = Column(MutableDict.as_mutable(PickleType), default={})
+    acquireRewardSiteHash = Column(Integer)
+    acquireUnlockHash = Column(Integer)
+    talentGrid = Column(MutableDict.as_mutable(PickleType), default={})
+    investmentStats = Column(MutableList.as_mutable(PickleType), default=[])
+    perks = Column(MutableList.as_mutable(PickleType), default=[])
+    allowActions = Column(String)
+    doesPostmasterPullHaveSideEffects = Column(String)
+    nonTransferrable = Column(String)
+    itemCategoryHashes = Column(MutableList.as_mutable(PickleType), default=[])
+    specialItemType = Column(Integer)
+    itemType = Column(Integer)
+    itemSubType = Column(Integer)
+    classType = Column(Integer)
+    breakerType = Column(Integer)
+    equippable = Column(String)
+    defaultDamageType = Column(Integer)
+    isWrapper = Column(String)
+    traitIds = Column(MutableList.as_mutable(PickleType), default=[])
+    traitHashes = Column(MutableList.as_mutable(PickleType), default=[])
+    index = Column(Integer)
+    redacted = Column(String)
+    blacklisted = Column(String)
+
+
+class DestinyInventoryBucketDefinition(Base):
+    __tablename__ = 'DestinyInventoryBucketDefinition'
+
+    id = Column(Integer, primary_key=True, index=True)
+    hash = Column(Integer)
+    displayProperties = Column(MutableDict.as_mutable(PickleType), default={})
+    scope = Column(Integer)
+    category = Column(Integer)
+    bucketOrder = Column(Integer)
+    itemCount = Column(Integer)
+    location = Column(Integer)
+    hasTransferDestination = Column(String)
+    enabled = Column(String)
+    fifo = Column(String)
+    index = Column(Integer)
+    redacted = Column(String)
+    blacklisted = Column(String)
+
+
+class DestinyDamageTypeDefinition(Base):
+    __tablename__ = 'DestinyDamageTypeDefinition'
+
+    id = Column(Integer, primary_key=True, index=True)
+    hash = Column(Integer)
+    displayProperties = Column(MutableDict.as_mutable(PickleType), default={})
+    transparentIconPath = Column(String)
+    showIcon = Column(String)
+    enumValue = Column(Integer)
+    color = Column(MutableDict.as_mutable(PickleType), default={})
+    index = Column(Integer)
+    redacted = Column(String)
+    blacklisted = Column(String)
+
+
+class DestinyClassDefinition(Base):
+    __tablename__ = 'DestinyClassDefinition'
+
+    id = Column(Integer, primary_key=True, index=True)
+    hash = Column(Integer)
+    displayProperties = Column(MutableDict.as_mutable(PickleType), default={})
+    classType = Column(Integer)
+    genderedClassNames = Column(MutableDict.as_mutable(PickleType), default={})
+    genderedClassNamesByGenderHash = Column(MutableDict.as_mutable(PickleType), default={})
+    index = Column(Integer)
+    redacted = Column(String)
+    blacklisted = Column(String)
+
+
+class DestinyActivityDefinition(Base):
+    __tablename__ = 'DestinyActivityDefinition'
+
+    id = Column(Integer, primary_key=True, index=True)
+    hash = Column(Integer)
+    displayProperties = Column(MutableDict.as_mutable(PickleType), default={})
+    originalDisplayProperties = Column(MutableDict.as_mutable(PickleType), default={})
+    releaseIcon = Column(String)
+    releaseTime = Column(Integer)
+    completionUnlockHash = Column(Integer)
+    activityLightLevel = Column(Integer)
+    destinationHash = Column(Integer)
+    placeHash = Column(Integer)
+    activityTypeHash = Column(Integer)
+    tier = Column(Integer)
+    rewards = Column(MutableList.as_mutable(PickleType), default=[])
+    modifiers = Column(MutableList.as_mutable(PickleType), default=[])
+    isPlaylist = Column(String)
+    challenges = Column(MutableList.as_mutable(PickleType), default=[])
+    optionalUnlockStrings = Column(MutableList.as_mutable(PickleType), default=[])
+    inheritFromFreeRoam = Column(String)
+    suppressOtherRewards = Column(String)
+    playlistItems = Column(MutableList.as_mutable(PickleType), default=[])
+    matchmaking = Column(MutableDict.as_mutable(PickleType), default={})
+    isPvP = Column(String)
+    inserationPoints = Column(MutableList.as_mutable(PickleType), default=[])
+    activityLocationMappings = Column(MutableList.as_mutable(PickleType), default=[])
+    index = Column(Integer)
+    redacted = Column(String)
+    blacklisted = Column(String)
+
+
+class ManifestVersion(Base):
+    __tablename__ = 'ManifestVersion'
+
+    id = Column(Integer, primary_key=True, index=True)
+    version = Column(String)
+
+
 
     
 
