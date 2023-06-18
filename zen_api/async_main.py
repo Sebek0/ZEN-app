@@ -8,17 +8,16 @@ from dotenv import load_dotenv
 
 #Bungie API
 from bungie_api_wrapper import BAPI
-from bungie_api_wrapper.manifest import Manifest
+from manifest import Manifest
 
 # ZEN API
 from zen_api_wrapper import ZENAPI
 
 #DATABASE
-from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from models import Guardian, Character
+from database import engine
 
-engine = create_engine("sqlite:///./sql_app.db")
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 man = Manifest() # When declaring Manifest() it will load all manifest files
@@ -46,7 +45,6 @@ async def get_characters(destiny_membership_id: int, platform: int):
         # get user profile from API request
         profile = await destiny.api.get_destiny_profile(destiny_membership_id,
                                                         platform, [100, 200, 205, 203])
-        
         characters_ids = profile['Response']['profile']['data']['characterIds']
         
         # POST guardian to database
@@ -133,7 +131,7 @@ async def get_characters(destiny_membership_id: int, platform: int):
         
         return decoded_character
     except Exception as err:
-        print(err)
+        print(f'{err} + {destiny_membership_id}')
     
 async def add_guardian_to_db(bungie_id: str, name: str, platform: int,
                              decoded_characters_data: dict):
@@ -207,7 +205,7 @@ async def main(destiny_membership_ids: int):
         return htmls
 
 if __name__ == '__main__':
-    destiny_membership_ids = [4611686018468563973]  # ...
+    destiny_membership_ids = [4611686018476581013, 4611686018476934649, 4611686018471751284]  # ...
     start_time = time.time()
     asyncio.run(main(destiny_membership_ids))  
     print("--- %s seconds ---" % (time.time() - start_time))
