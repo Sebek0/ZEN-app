@@ -67,29 +67,76 @@ class ZenAPI:
         return json_response
     
     async def get_guardian(self, destiny_membership_id: str):
+        """Returns guardian from ZEN API database.
+
+        Args:
+            destiny_membership_id (str): Bungie destinyMembershipId.
+
+        Returns:
+            json: request Response.
+        """
+
         url = 'http://127.0.0.1:8000/guardians/bungie_id/{}'
         url = url.format(destiny_membership_id)
         
         return await self._get_request(url)
            
     async def get_guardian_db_id(self, destiny_membership_id: str):
+        """Returns guardian database index.
+
+        Args:
+            destiny_membership_id (str): Bungie destinyMembershipId.
+
+        Returns:
+            json: request Response.
+        """
+
         url = 'http://127.0.0.1:8000/guardians/{}/id'
         url = url.format(str(destiny_membership_id))
         
         return await self._get_request(url)
     
     async def post_create_guardian(self, payload):
+        """Creates guardian in ZEN API database
+
+        Args:
+            payload (json): POST request body with guardian information.
+
+        Returns:
+            json: request Response.
+        """
+
         url = 'http://127.0.0.1:8000/guardians/'
         
         return await self._post_request(url, payload=payload)
     
     async def post_create_character(self, guardian_id, payload):
+        """Creates character for given guardian in ZEN API database.
+
+        Args:
+            guardian_id (int): Guardian index id from ZEN API database.
+            payload (json): POST request body with character information.
+
+        Returns:
+            json: request Response
+        """
+
         url = 'http://127.0.0.1:8000/guardians/{}/'
         url = url.format(guardian_id)
         
         return await self._post_request(url, payload=payload)
     
     async def put_update_character(self, character_id, payload):
+        """Updates information about character in ZEN API database.
+
+        Args:
+            character_id (int): Character index id from ZEN API database.
+            payload (json): POST request body with character information.
+
+        Returns:
+            json: request Response.
+        """
+        
         url = 'http://127.0.0.1:8000/characters/{}'
         url = url.format(character_id)
         
