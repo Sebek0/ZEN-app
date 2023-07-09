@@ -8,21 +8,25 @@ from dotenv import load_dotenv
 
 #Bungie API
 from bungie_api_wrapper import BAPI
-from manifest import Manifest
 
 # ZEN API
 from zen_api_wrapper import ZENAPI
+from manifest import Manifest
 
 #DATABASE
 from sqlalchemy.orm import sessionmaker
 from models import Guardian, Character
 from database import engine
 
+API_KEY = os.getenv('BUNGIE_API_KEY')
+
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
-man = Manifest() # When declaring Manifest() it will load all manifest files
-load_dotenv() # Loads environment variables from .env
-API_KEY = os.getenv('BUNGIE_API_KEY')
+# Loads environment variables from .env
+load_dotenv() 
+
+man = Manifest()
+
 
 async def get_characters(destiny_membership_id: int, platform: int):
     """Return characters information in hash values.
@@ -135,6 +139,14 @@ async def get_characters(destiny_membership_id: int, platform: int):
     
 async def add_guardian_to_db(bungie_id: str, name: str, platform: int,
                              decoded_characters_data: dict):
+    """Add and update data about guardian to ZEN API database.
+
+    Args:
+        bungie_id (str): Bungie ID related to this guardian.
+        name (str): Guardian name in Bungie.net
+        platform (int): Destiny2 membershipType.
+        decoded_characters_data (dict): Dictionary with guardian data.
+    """
     try:
         zen = ZENAPI()
         db = SessionLocal()
@@ -147,7 +159,8 @@ async def add_guardian_to_db(bungie_id: str, name: str, platform: int,
             'name': name,
             'platform': platform
             }
-            guardian = await zen.api.post_create_guardian(payload=guardian_payload) # Adding new guardian to database
+            # Adding new guardian to database
+            guardian = await zen.api.post_create_guardian(payload=guardian_payload)
             
             for char, value in decoded_characters_data.items():
                 char_payload = {
@@ -193,6 +206,14 @@ async def add_guardian_to_db(bungie_id: str, name: str, platform: int,
         db.close()
 
 async def main(destiny_membership_ids: int):
+    """Main async function that handles fetching data from Bungie.net API.
+
+    Args:
+        destiny_membership_ids (int): Destiny2 membershipid.
+
+    Returns:
+        list: List of future aggregating results from the given coroutines/futures.
+    """
     # Asynchronous context manager
     async with aiohttp.ClientSession():
         profiles = []
