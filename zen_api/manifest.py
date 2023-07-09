@@ -34,11 +34,17 @@ for table in tables:
     table.__table__.create(bind=engine, checkfirst=True)
 
 class Manifest:
+    """Main manifest class that handles creating manifestdb and decoding guardian data."""
     def __init__(self) -> None:
         pass
 
     def check_manifest_version(self):
-        """"""
+        """Check if manifest version is up to date.
+
+        Returns:
+            bool: Return "True" if manifest version from bungie.net is up to date
+                to manifest version in application. Otherwise returns False.
+        """
 
         headers = {'X-API-Key': str(API_KEY)}
         get_manifest = requests.get(url=str(MANIFEST_URL), headers=headers)
@@ -88,7 +94,12 @@ class Manifest:
                 json.dump({'version': version}, fp=version_file)
 
     def create_table(self, table_name, manifest_path):
-        """"""
+        """Create table for specific manifest table name.
+
+        Args:
+            table_name (str): Name of manifest file.
+            manifest_path (str): Path to downloaded manifest file.
+        """
         f = manifest_path+table_name
         with open(f, 'r') as file:
             data = json.load(file)
@@ -302,7 +313,7 @@ class Manifest:
         db.close()
 
     def create_manifest_tables(self):
-        """"""
+        """Create manifest table in manifestdb for every file in Manifest dir."""
         manifest_path = f'{ROOT_PATH}/ZEN-app/zen_api/bungie_api_wrapper/Manifest/'
         manifest_files_list = os.listdir(manifest_path)
 
@@ -310,6 +321,7 @@ class Manifest:
             self.create_table(manifest_file, manifest_path)
 
     def remove_manifest_files(self):
+        """Remove existing manifest files."""
         definition_keys = ['DestinyInventoryItemDefinition',
                             'DestinyInventoryBucketDefinition',
                             'DestinyDamageTypeDefinition',
@@ -326,6 +338,7 @@ class Manifest:
                 os.remove(f'{ROOT_PATH}/ZEN-app/zen_api/bungie_api_wrapper/Manifest/{definition}.json')
 
     def setup_manifest_definitions(self):
+        """Handles setuping manifest definitions. Adding and removing manifest files."""
         if not self.check_manifest_version():
             self.download_manifest_files()
             self.create_manifest_tables()
@@ -345,9 +358,7 @@ class Manifest:
         Returns:
             characters (dict): Decoded hash values from characters_data.
         """
-        
-        start_time = time.time()
-        
+    
         time.sleep(0.05)
         db = SessionLocal()
         characters = {}
@@ -481,7 +492,6 @@ class Manifest:
                     'items': items_details                        
                     }
             db.close()
-            print("--- %s seconds ---" % (time.time() - start_time))
         except KeyError as key_error:
             logger.error(f'{key_error} in characters manifest function.')
         except ValueError as value_error:
