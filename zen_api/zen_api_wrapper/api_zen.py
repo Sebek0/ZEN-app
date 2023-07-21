@@ -67,13 +67,13 @@ class ZenAPI:
         return json_response
     
     async def get_guardian(self, destiny_membership_id: str):
-        url = 'http://127.0.0.1:8000/guardians/bungie_id/{}'
+        url = 'http://0.0.0.0:8000/guardians/bungie_id/{}'
         url = url.format(destiny_membership_id)
         
         return await self._get_request(url)
            
     async def get_guardian_db_id(self, destiny_membership_id: str):
-        url = 'http://127.0.0.1:8000/guardians/{}/id'
+        url = 'http://0.0.0.0:8000/guardians/{}/id'
         url = url.format(str(destiny_membership_id))
         
         return await self._get_request(url)
@@ -84,13 +84,13 @@ class ZenAPI:
         return await self._post_request(url, payload=payload)
     
     async def post_create_character(self, guardian_id, payload):
-        url = 'http://127.0.0.1:8000/guardians/{}/'
+        url = 'http://0.0.0.0:8000/guardians/{}/'
         url = url.format(guardian_id)
         
         return await self._post_request(url, payload=payload)
     
     async def put_update_character(self, character_id, payload):
-        url = 'http://127.0.0.1:8000/characters/{}'
+        url = 'http://0.0.0.0:8000/characters/{}'
         url = url.format(character_id)
         
         return await self._put_request(url, payload=payload)

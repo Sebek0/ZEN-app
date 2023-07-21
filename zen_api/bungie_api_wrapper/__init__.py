@@ -1,7 +1,6 @@
 import aiohttp
 import asyncio
-
-from bungie_api_wrapper.bungie_api import BungieAPI
+from .bungie_api import BungieAPI
 
 class BAPI:
     def __init__(self, api_key, loop=None):

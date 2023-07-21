@@ -4,7 +4,7 @@ import os
 import logging
 import time
 
-import models
+from . import models
 
 from dotenv import load_dotenv
 from tqdm import tqdm
@@ -488,7 +488,10 @@ class Manifest:
             logger.error(f'{value_error} in characters manifest function.')
             
         return characters
-
-if __name__ == '__main__':
+    
+def run_manifest():
     manifest = Manifest()
     manifest.setup_manifest_definitions()
+
+if __name__ == '__main__':
+    run_manifest()

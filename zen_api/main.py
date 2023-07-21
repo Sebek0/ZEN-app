@@ -4,6 +4,10 @@ from fastapi import FastAPI
 from . import models
 from .database import engine
 from .routers import guardians, characters, token
+from zen_api.async_worker.async_main import run_update
+from .manifest import run_manifest
+
+from fastapi_utils.tasks import repeat_every
 
 tables = [models.Character, models.Guardian]
 for table in tables:
@@ -70,3 +74,11 @@ app.include_router(token.router)
 app.include_router(guardians.router)
 app.include_router(characters.router)
 
+@app.on_event("startup")
+@repeat_every(seconds=60*5)
+def update_guardians():
+    run_update()
+    
+@repeat_every(seconds=60*60*24*7)
+def update_manifest():
+    run_manifest()

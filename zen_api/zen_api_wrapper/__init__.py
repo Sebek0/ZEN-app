@@ -1,7 +1,7 @@
 import aiohttp
 import asyncio
 
-from zen_api_wrapper.api_zen import ZenAPI
+from .api_zen import ZenAPI
 
 class ZENAPI:
     def __init__(self, loop=None):
